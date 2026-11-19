@@ -26,11 +26,6 @@ export const solarServices: NavItem[] = [
     description: "High-capacity solar infrastructure for businesses, factories, and warehouses.",
   },
   {
-    title: "Solar Calculator",
-    href: "/solar-calculator",
-    description: "Interactive requirement estimator to evaluate your facility's solar potential.",
-  },
-  {
     title: "Solar Subsidy",
     href: "/solar-subsidy",
     description: "Official guidance on PM Surya Ghar eligibility and government rooftop incentives.",

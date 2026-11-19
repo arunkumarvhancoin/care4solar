@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solar-pricing",
     "/solar-for-apartments",
     "/commercial-industrial-solar",
-    "/solar-calculator",
     "/solar-subsidy",
     "/operations-maintenance",
     "/projects",

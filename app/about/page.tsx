@@ -113,6 +113,15 @@ export default function AboutPage() {
                 title="Engineering discipline in every solar watt."
                 description="Our mission is to make solar reliable, durable, and transparent."
               />
+              <div className="relative aspect-[16/10] overflow-hidden border border-[#E5E8E3] bg-[#F7F7F3] mt-4">
+                <Image
+                  src="https://images.unsplash.com/photo-1660330589243-4c640d878052?q=80&w=1200&auto=format&fit=crop"
+                  alt="Care4Solar rooftop engineers inspecting solar array"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
 
             <div className="lg:col-span-7 space-y-4 text-[#374151] text-base leading-relaxed">
@@ -201,36 +210,96 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-white border border-[#E5E8E3] space-y-2.5">
-              <Award className="w-6 h-6 text-[#15532E]" />
-              <h3 className="text-base font-semibold text-[#202720]">Tier-1 PV Modules</h3>
-              <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
-                IEC 61215 &amp; IEC 61730 certified, BIS compliant, with positive power tolerance and 25-year linear output warranty.
-              </p>
+            <div className="bg-white border border-[#E5E8E3] flex flex-col overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1719848574124-2f66fa842fd6?q=80&w=800&auto=format&fit=crop"
+                  alt="Tier-1 PV Modules"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center space-x-2 text-[#15532E] mb-1.5">
+                    <Award className="w-5 h-5 text-[#15532E]" />
+                    <h3 className="text-base font-semibold text-[#202720]">Tier-1 PV Modules</h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
+                    IEC 61215 &amp; IEC 61730 certified, BIS compliant, with positive power tolerance and 25-year linear output warranty.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 bg-white border border-[#E5E8E3] space-y-2.5">
-              <Compass className="w-6 h-6 text-[#15532E]" />
-              <h3 className="text-base font-semibold text-[#202720]">Wind-Rated Superstructures</h3>
-              <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
-                Hot-dip galvanized structural steel (IS 4759, min 80μm coating) engineered to withstand wind gusts up to 180 km/h.
-              </p>
+            <div className="bg-white border border-[#E5E8E3] flex flex-col overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?q=80&w=800&auto=format&fit=crop"
+                  alt="Wind-Rated Superstructures"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center space-x-2 text-[#15532E] mb-1.5">
+                    <Compass className="w-5 h-5 text-[#15532E]" />
+                    <h3 className="text-base font-semibold text-[#202720]">Wind-Rated Superstructures</h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
+                    Hot-dip galvanized structural steel (IS 4759, min 80μm coating) engineered to withstand wind gusts up to 180 km/h.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 bg-white border border-[#E5E8E3] space-y-2.5">
-              <ShieldCheck className="w-6 h-6 text-[#15532E]" />
-              <h3 className="text-base font-semibold text-[#202720]">Electrical Protection</h3>
-              <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
-                Dual chemical earthing pits (resistance &lt; 2 Ohms), Class-II surge arrestors, and UV-stabilized solar cabling.
-              </p>
+            <div className="bg-white border border-[#E5E8E3] flex flex-col overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1780445392417-68b9dccc45f2?q=80&w=800&auto=format&fit=crop"
+                  alt="Electrical Protection"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center space-x-2 text-[#15532E] mb-1.5">
+                    <ShieldCheck className="w-5 h-5 text-[#15532E]" />
+                    <h3 className="text-base font-semibold text-[#202720]">Electrical Protection</h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
+                    Dual chemical earthing pits (resistance &lt; 2 Ohms), Class-II surge arrestors, and UV-stabilized solar cabling.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 bg-white border border-[#E5E8E3] space-y-2.5">
-              <Cpu className="w-6 h-6 text-[#15532E]" />
-              <h3 className="text-base font-semibold text-[#202720]">Industrial Inverters</h3>
-              <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
-                IP65 outdoor ingress protection, European weighted efficiency &gt; 98.4%, with integrated DC arc-fault circuit interrupters.
-              </p>
+            <div className="bg-white border border-[#E5E8E3] flex flex-col overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?q=80&w=800&auto=format&fit=crop"
+                  alt="Industrial Inverters"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center space-x-2 text-[#15532E] mb-1.5">
+                    <Cpu className="w-5 h-5 text-[#15532E]" />
+                    <h3 className="text-base font-semibold text-[#202720]">Industrial Inverters</h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
+                    IP65 outdoor ingress protection, European weighted efficiency &gt; 98.4%, with integrated DC arc-fault circuit interrupters.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </Container>

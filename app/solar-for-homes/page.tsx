@@ -59,11 +59,11 @@ export default function ResidentialSolarPage() {
                 available roof space and electricity requirements.
               </p>
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                <Button href="/solar-calculator" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
-                  Calculate Rooftop Requirement
-                </Button>
-                <Button href="/contact" variant="outline" size="lg" className="w-full sm:w-auto">
+                <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request Site Survey
+                </Button>
+                <Button href="/solar-pricing" variant="outline" size="lg" className="w-full sm:w-auto">
+                  Explore Pricing
                 </Button>
               </div>
             </div>
@@ -162,92 +162,125 @@ export default function ResidentialSolarPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* On-Grid */}
-            <div className="bg-white border border-[#E5E8E3] p-8 flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#15532E] block">
-                  Grid-Tied Standard
-                </span>
-                <h3 className="text-xl font-semibold text-[#202720]">On-Grid System</h3>
-                <p className="text-sm text-[#374151] leading-relaxed">
-                  Directly synchronized with the utility grid. Excess generation is exported via a bi-directional net meter. Shuts down during power outages to protect utility line workers.
-                </p>
-                <ul className="space-y-2 text-xs text-[#202720] pt-2">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Lowest upfront capital investment</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Bi-directional net-metering credits</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Eligible for central PM Surya Ghar subsidy</span>
-                  </li>
-                </ul>
+            <div className="bg-white border border-[#E5E8E3] flex flex-col justify-between overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=800&auto=format&fit=crop"
+                  alt="On-Grid Residential Rooftop Solar"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                />
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
-                Best for areas with stable electrical grid power.
+              <div className="p-7 space-y-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#15532E] block">
+                    Grid-Tied Standard
+                  </span>
+                  <h3 className="text-xl font-semibold text-[#202720] mt-1">On-Grid System</h3>
+                  <p className="mt-2 text-sm text-[#374151] leading-relaxed">
+                    Directly synchronized with the utility grid. Excess generation is exported via a bi-directional net meter. Shuts down during power outages to protect utility line workers.
+                  </p>
+                  <ul className="space-y-2 text-xs text-[#202720] pt-4">
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Lowest upfront capital investment</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Bi-directional net-metering credits</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Eligible for central PM Surya Ghar subsidy</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
+                  Best for areas with stable electrical grid power.
+                </div>
               </div>
             </div>
 
             {/* Hybrid */}
-            <div className="bg-white border-2 border-[#15532E] p-8 flex flex-col justify-between space-y-6 relative shadow-xs">
-              <div className="space-y-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#E5A100] block">
-                  Battery-Backed Resilience
-                </span>
-                <h3 className="text-xl font-semibold text-[#202720]">Hybrid System</h3>
-                <p className="text-sm text-[#374151] leading-relaxed">
-                  Combines the financial benefits of net-metering with battery storage. When the grid fails, intelligent transfer switches power your critical household appliances seamlessly.
-                </p>
-                <ul className="space-y-2 text-xs text-[#202720] pt-2">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Continuous power during utility blackouts</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Net-metering energy export capability</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Maximizes self-consumption ratio</span>
-                  </li>
-                </ul>
+            <div className="bg-white border-2 border-[#15532E] flex flex-col justify-between overflow-hidden relative shadow-xs">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?q=80&w=800&auto=format&fit=crop"
+                  alt="Hybrid Battery-Backed Solar System"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                />
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
-                Best for areas experiencing recurring power outages.
+              <div className="p-7 space-y-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#E5A100] block">
+                    Battery-Backed Resilience
+                  </span>
+                  <h3 className="text-xl font-semibold text-[#202720] mt-1">Hybrid System</h3>
+                  <p className="mt-2 text-sm text-[#374151] leading-relaxed">
+                    Combines the financial benefits of net-metering with battery storage. When the grid fails, intelligent transfer switches power your critical household appliances seamlessly.
+                  </p>
+                  <ul className="space-y-2 text-xs text-[#202720] pt-4">
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Continuous power during utility blackouts</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Net-metering energy export capability</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Maximizes self-consumption ratio</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
+                  Best for areas experiencing recurring power outages.
+                </div>
               </div>
             </div>
 
             {/* Off-Grid */}
-            <div className="bg-white border border-[#E5E8E3] p-8 flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#374151] block">
-                  Standalone Autonomy
-                </span>
-                <h3 className="text-xl font-semibold text-[#202720]">Off-Grid System</h3>
-                <p className="text-sm text-[#374151] leading-relaxed">
-                  Operates entirely independent of the electrical grid. Requires extensive battery banks sized for multiple days of autonomy and solar irradiance fluctuations.
-                </p>
-                <ul className="space-y-2 text-xs text-[#202720] pt-2">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Total independence from utility infrastructure</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Dedicated high-capacity storage bank</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                    <span>Engineered for farmhouses &amp; remote estates</span>
-                  </li>
-                </ul>
+            <div className="bg-white border border-[#E5E8E3] flex flex-col justify-between overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=800&auto=format&fit=crop"
+                  alt="Off-Grid Remote Solar System"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                />
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
-                Best where grid connectivity is absent or unreliable.
+              <div className="p-7 space-y-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#374151] block">
+                    Standalone Autonomy
+                  </span>
+                  <h3 className="text-xl font-semibold text-[#202720] mt-1">Off-Grid System</h3>
+                  <p className="mt-2 text-sm text-[#374151] leading-relaxed">
+                    Operates entirely independent of the electrical grid. Requires extensive battery banks sized for multiple days of autonomy and solar irradiance fluctuations.
+                  </p>
+                  <ul className="space-y-2 text-xs text-[#202720] pt-4">
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Total independence from utility infrastructure</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Dedicated high-capacity storage bank</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
+                      <span>Engineered for farmhouses &amp; remote estates</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
+                  Best where grid connectivity is absent or unreliable.
+                </div>
               </div>
             </div>
           </div>
@@ -365,8 +398,8 @@ export default function ResidentialSolarPage() {
         description="Share your monthly electricity bill details or request a preliminary site inspection with the Care4Solar team."
         primaryCtaText="Speak with an Engineer"
         primaryCtaHref="/contact"
-        secondaryCtaText="Solar Calculator"
-        secondaryCtaHref="/solar-calculator"
+        secondaryCtaText="Explore Pricing"
+        secondaryCtaHref="/solar-pricing"
       />
     </div>
   );

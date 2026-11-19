@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
@@ -34,21 +35,33 @@ export default function FAQsPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative pt-12 pb-16 lg:pt-16 lg:pb-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 text-xs font-semibold tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3">
-              <span>FREQUENTLY ASKED QUESTIONS</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-5">
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
+                Questions about solar?
+                <br />
+                <span className="text-[#202720]">Start here.</span>
+              </h1>
+              <p className="max-w-xl text-base sm:text-lg text-[#374151] leading-relaxed">
+                Find clear, technically grounded answers regarding rooftop engineering, grid-tied
+                regulations, operations and maintenance, and government schemes.
+              </p>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
-              Questions about solar?
-              <br />
-              <span className="text-[#202720]">Start here.</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-[#374151] leading-relaxed">
-              Find clear, technically grounded answers regarding rooftop engineering, grid-tied
-              regulations, operations and maintenance, and government schemes.
-            </p>
+
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden border border-[#E5E8E3] bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1660330589243-4c640d878052?q=80&w=1200&auto=format&fit=crop"
+                  alt="Care4Solar engineer answering technical solar questions"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </Container>
       </section>

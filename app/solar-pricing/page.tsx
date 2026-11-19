@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
@@ -23,22 +24,37 @@ export default function SolarPricingPage() {
       {/* Hero Section */}
       <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
-          <div className="max-w-3xl space-y-5">
-            <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
-              Understand the investment behind solar.
-            </h1>
-            <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
-              Solar system costs depend on capacity, equipment selection, rooftop conditions and
-              installation requirements. We believe in transparent engineering clarity without
-              hidden charges.
-            </p>
-            <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-              <Button href="/contact" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
-                Request a Custom Quotation
-              </Button>
-              <Button href="/solar-calculator" variant="outline" size="lg" className="w-full sm:w-auto">
-                Estimate Sizing Requirements
-              </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-5">
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
+                Understand the investment behind solar.
+              </h1>
+              <p className="max-w-xl text-base sm:text-lg text-[#374151] leading-relaxed">
+                Solar system costs depend on capacity, equipment selection, rooftop conditions and
+                installation requirements. We believe in transparent engineering clarity without
+                hidden charges.
+              </p>
+              <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+                <Button href="/contact" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
+                  Request a Custom Quotation
+                </Button>
+                <Button href="/solar-subsidy" variant="outline" size="lg" className="w-full sm:w-auto">
+                  Subsidy Guide
+                </Button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden border border-[#E5E8E3] bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1200&auto=format&fit=crop"
+                  alt="Precision rooftop solar installation"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </Container>
@@ -161,6 +177,16 @@ export default function SolarPricingPage() {
                   offerings remain subject to final site inspection and local utility guidelines.
                 </span>
               </div>
+
+              <div className="relative aspect-[16/10] overflow-hidden border border-[#E5E8E3] bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?q=80&w=1000&auto=format&fit=crop"
+                  alt="High-grade elevated solar structure and BOS wiring"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
 
             <div className="lg:col-span-7 bg-[#F7F7F3] border border-[#E5E8E3] p-6 sm:p-8">
@@ -209,8 +235,8 @@ export default function SolarPricingPage() {
         description="Share your monthly consumption and rooftop profile to receive an itemized proposal with transparent engineering specifications."
         primaryCtaText="Request a Quotation"
         primaryCtaHref="/contact"
-        secondaryCtaText="Solar Calculator"
-        secondaryCtaHref="/solar-calculator"
+        secondaryCtaText="Subsidy Guide"
+        secondaryCtaHref="/solar-subsidy"
       />
     </div>
   );

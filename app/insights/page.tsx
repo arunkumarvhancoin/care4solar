@@ -23,16 +23,13 @@ export default function InsightsPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative pt-12 pb-16 lg:pt-16 lg:pb-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 text-xs font-semibold tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3">
-              <span>SOLAR ENGINEERING &amp; TECHNICAL RESEARCH</span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
+          <div className="max-w-3xl space-y-5">
+            <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
               Knowledge for better solar decisions.
             </h1>
-            <p className="text-lg sm:text-xl text-[#374151] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
               Explore technical insights, photovoltaic physics, engineering standards, and maintenance
               best practices authored by the Care4Solar technical advisory desk.
             </p>

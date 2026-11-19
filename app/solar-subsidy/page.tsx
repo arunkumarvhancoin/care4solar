@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
@@ -24,21 +25,36 @@ export default function SolarSubsidyPage() {
       {/* Hero Section */}
       <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
-          <div className="max-w-3xl space-y-5">
-            <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
-              Understand the support available for rooftop solar.
-            </h1>
-            <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
-              Explore the subsidy process, eligibility considerations and documentation involved in
-              residential rooftop solar under current central government frameworks.
-            </p>
-            <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-              <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
-                Speak with Subsidy Specialist
-              </Button>
-              <Button href="/solar-calculator" variant="outline" size="lg" className="w-full sm:w-auto">
-                Estimate Capacity Sizing
-              </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-5">
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
+                Understand the support available for rooftop solar.
+              </h1>
+              <p className="max-w-xl text-base sm:text-lg text-[#374151] leading-relaxed">
+                Explore the subsidy process, eligibility considerations and documentation involved in
+                residential rooftop solar under current central government frameworks.
+              </p>
+              <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+                <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
+                  Speak with Subsidy Specialist
+                </Button>
+                <Button href="/solar-pricing" variant="outline" size="lg" className="w-full sm:w-auto">
+                  View Pricing
+                </Button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden border border-[#E5E8E3] bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1200&auto=format&fit=crop"
+                  alt="Modern residence with rooftop solar panels"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </Container>
@@ -59,6 +75,16 @@ export default function SolarSubsidyPage() {
                 delivers direct financial incentives transferred directly into the consumer&apos;s bank
                 account following successful inspection and net-meter commissioning.
               </p>
+
+              <div className="relative aspect-[16/9] overflow-hidden border border-[#E5E8E3] bg-[#F7F7F3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1660330589243-4c640d878052?q=80&w=1000&auto=format&fit=crop"
+                  alt="DISCOM net meter inspection and solar commissioning"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
 
               {/* Official Disclaimer Alert */}
               <div className="p-4 bg-[#F7F7F3] border-l-4 border-[#E5A100] text-xs text-[#202720] space-y-1">
@@ -192,6 +218,16 @@ export default function SolarSubsidyPage() {
                     <span>{doc}</span>
                   </div>
                 ))}
+              </div>
+
+              <div className="relative aspect-[16/8] overflow-hidden border border-[#E5E8E3] bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=1000&auto=format&fit=crop"
+                  alt="Care4Solar engineer verifying technical compliance and paperwork"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 55vw"
+                  className="object-cover"
+                />
               </div>
             </div>
 

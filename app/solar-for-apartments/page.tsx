@@ -22,21 +22,25 @@ export default function SolarForApartmentsPage() {
       title: "Common Area & Perimeter Lighting",
       desc: "Continuous power for basement parking, driveway floodlights, stairwells, and security perimeter luminaires.",
       icon: Lightbulb,
+      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Elevator & Lift Operations",
       desc: "Offsetting substantial continuous power demand from passenger and service elevators operating throughout the day.",
       icon: Building2,
+      image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Water Filtration & Booster Pumps",
       desc: "Powering heavy electrical induction motors for STP (Sewage Treatment Plants), borewells, and overhead tank water pumps.",
       icon: Droplets,
+      image: "https://images.unsplash.com/photo-1780445392417-68b9dccc45f2?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Clubhouse & Amenities Infrastructure",
       desc: "Energy supply for common clubhouses, swimming pool circulation pumps, gymnasium HVAC, and community halls.",
       icon: Zap,
+      image: "https://images.unsplash.com/photo-1793119985840-10f7beb15e1a?q=80&w=800&auto=format&fit=crop",
     },
   ];
 
@@ -98,8 +102,8 @@ export default function SolarForApartmentsPage() {
                 <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request RWA Presentation
                 </Button>
-                <Button href="/solar-calculator" variant="outline" size="lg" className="w-full sm:w-auto">
-                  Estimate Society Potential
+                <Button href="/solar-pricing" variant="outline" size="lg" className="w-full sm:w-auto">
+                  Explore Pricing Breakdown
                 </Button>
               </div>
             </div>
@@ -130,19 +134,32 @@ export default function SolarForApartmentsPage() {
             className="mb-14"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {commonApplications.map((app) => {
               const IconComponent = app.icon;
               return (
                 <div
                   key={app.title}
-                  className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3 group hover:border-[#15532E] transition-colors"
+                  className="bg-[#F7F7F3] border border-[#E5E8E3] flex flex-col overflow-hidden group hover:border-[#15532E] transition-colors"
                 >
-                  <div className="w-10 h-10 bg-white border border-[#E5E8E3] flex items-center justify-center text-[#15532E]">
-                    <IconComponent className="w-5 h-5" />
+                  <div className="relative aspect-[16/10] overflow-hidden bg-white">
+                    <Image
+                      src={app.image}
+                      alt={app.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <h3 className="text-base font-semibold text-[#202720]">{app.title}</h3>
-                  <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">{app.desc}</p>
+                  <div className="p-5 flex-1 flex flex-col justify-between space-y-2.5">
+                    <div>
+                      <div className="flex items-center space-x-2 text-[#15532E] mb-1.5">
+                        <IconComponent className="w-4 h-4 text-[#15532E]" />
+                        <h3 className="text-base font-semibold text-[#202720]">{app.title}</h3>
+                      </div>
+                      <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">{app.desc}</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}

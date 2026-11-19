@@ -15,8 +15,8 @@ export default function CTASection({
   description = "Talk to our engineering team about rooftop feasibility, pricing, and how net metering works for your property.",
   primaryCtaText = "Get in Touch",
   primaryCtaHref = "/contact",
-  secondaryCtaText = "Calculate Savings",
-  secondaryCtaHref = "/solar-calculator",
+  secondaryCtaText = "Explore Pricing",
+  secondaryCtaHref = "/solar-pricing",
 }: CTASectionProps) {
   return (
     <section className="bg-white py-20 lg:py-24 border-t border-[#E5E8E3]">

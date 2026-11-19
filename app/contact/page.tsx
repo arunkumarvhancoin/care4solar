@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { companyInfo } from "@/data/company";
@@ -210,6 +211,25 @@ export default function ContactPage() {
                     <span className="font-semibold text-[#202720] block">Working Hours</span>
                     <span className="text-[#374151] text-xs mt-0.5 block">
                       {companyInfo.workingHours}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Site Survey Visual Box */}
+                <div className="relative aspect-[16/10] overflow-hidden border border-[#E5E8E3] bg-[#F7F7F3]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?q=80&w=800&auto=format&fit=crop"
+                    alt="Care4Solar engineer during on-site rooftop survey"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-3.5 text-white">
+                    <span className="text-xs font-semibold block text-[#E5A100]">
+                      Complimentary On-Site Survey
+                    </span>
+                    <span className="text-[11px] text-white/90 block mt-0.5">
+                      Our engineers evaluate shadow patterns &amp; structural load directly on your roof.
                     </span>
                   </div>
                 </div>

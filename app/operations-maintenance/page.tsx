@@ -134,8 +134,8 @@ export default function OperationsMaintenancePage() {
                 <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request Maintenance Enquiry
                 </Button>
-                <Button href="/solar-calculator" variant="outline" size="lg" className="w-full sm:w-auto">
-                  System Requirement Check
+                <Button href="/solar-pricing" variant="outline" size="lg" className="w-full sm:w-auto">
+                  View Pricing
                 </Button>
               </div>
 

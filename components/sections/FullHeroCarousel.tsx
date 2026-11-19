@@ -31,8 +31,8 @@ const slides: HeroSlide[] = [
       "Cut your monthly electricity bills with high-efficiency rooftop panels. We handle roof sizing, PM Surya Ghar subsidy filing, and turnkey installation.",
     primaryText: "Solar for Homes",
     primaryHref: "/solar-for-homes",
-    secondaryText: "Calculate Savings",
-    secondaryHref: "/solar-calculator",
+    secondaryText: "Explore Pricing",
+    secondaryHref: "/solar-pricing",
     image:
       "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1800&auto=format&fit=crop",
     imageAlt: "Solar panels installed on residential rooftop",

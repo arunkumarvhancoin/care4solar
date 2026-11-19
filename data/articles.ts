@@ -47,7 +47,7 @@ export const sampleArticles: ArticleItem[] = [
     readTime: "5 min read",
     date: "Sample Educational Preview",
     image:
-      "https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=1000&auto=format&fit=crop",
     featured: false,
   },
   {
@@ -95,7 +95,7 @@ export const sampleArticles: ArticleItem[] = [
     readTime: "6 min read",
     date: "Sample Educational Preview",
     image:
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1000&auto=format&fit=crop",
     featured: false,
   },
 ];

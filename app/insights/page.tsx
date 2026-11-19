@@ -26,7 +26,7 @@ export default function InsightsPage() {
       <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="mb-6">
-            <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold">
+            <span className="text-sm font-mono uppercase tracking-wider text-[#15532E] font-semibold">
               Featured Analysis
             </span>
           </div>
@@ -44,27 +44,27 @@ export default function InsightsPage() {
             </div>
 
             <div className="lg:col-span-6 space-y-4">
-              <div className="flex items-center space-x-4 text-xs text-[#374151]">
-                <span className="flex items-center space-x-1">
-                  <Clock className="w-3.5 h-3.5 text-[#15532E]" />
+              <div className="flex items-center space-x-4 text-sm text-[#374151]">
+                <span className="flex items-center space-x-1.5">
+                  <Clock className="w-4 h-4 text-[#15532E]" />
                   <span>{featuredArticle.readTime}</span>
                 </span>
                 <span>•</span>
-                <span className="flex items-center space-x-1">
-                  <UserCheck className="w-3.5 h-3.5 text-[#15532E]" />
+                <span className="flex items-center space-x-1.5">
+                  <UserCheck className="w-4 h-4 text-[#15532E]" />
                   <span>{featuredArticle.author}</span>
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#202720] leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#202720] leading-tight">
                 {featuredArticle.title}
               </h2>
 
-              <p className="text-sm sm:text-base text-[#374151] leading-relaxed">
+              <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
                 {featuredArticle.excerpt}
               </p>
 
-              <div className="pt-2 flex items-center space-x-2 text-xs font-mono text-[#15532E] font-semibold">
+              <div className="pt-2 flex items-center space-x-2 text-sm font-mono text-[#15532E] font-semibold">
                 <BookOpen className="w-4 h-4" />
                 <span>Care4Solar Technical Paper</span>
               </div>
@@ -100,26 +100,26 @@ export default function InsightsPage() {
                     </div>
 
                     <div className="p-6 space-y-3">
-                      <div className="flex items-center space-x-1 text-xs text-[#374151]">
-                        <Clock className="w-3.5 h-3.5 text-[#15532E]" />
+                      <div className="flex items-center space-x-1.5 text-sm text-[#374151]">
+                        <Clock className="w-4 h-4 text-[#15532E]" />
                         <span>{article.readTime}</span>
                       </div>
 
-                      <h3 className="text-lg font-semibold text-[#202720] group-hover:text-[#15532E] transition-colors leading-snug">
+                      <h3 className="text-xl font-semibold text-[#202720] group-hover:text-[#15532E] transition-colors leading-snug">
                         {article.title}
                       </h3>
 
-                      <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
+                      <p className="text-sm sm:text-base text-[#374151] leading-relaxed">
                         {article.excerpt}
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-6 pt-0 border-t border-[#E5E8E3]/60 mt-4 text-[11px] font-mono text-[#374151] flex items-center justify-between">
+                  <div className="p-6 pt-0 border-t border-[#E5E8E3]/60 mt-4 text-xs sm:text-sm font-mono text-[#374151] flex items-center justify-between">
                     <span>{article.author}</span>
                     <span className="text-[#15532E] font-medium flex items-center space-x-1 group-hover:translate-x-0.5 transition-transform">
                       <span>Read Paper</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </div>

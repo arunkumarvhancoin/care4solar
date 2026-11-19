@@ -19,7 +19,7 @@ const solutions = [
     description:
       "Cut 80–90% of electricity bills with rooftop solar for villas and apartment societies, with seamless net metering and durable mounting.",
     image:
-      "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=800&auto=format&fit=crop",
     href: "/residential-solar",
   },
   {
@@ -98,7 +98,7 @@ const processSteps = [
     description:
       "We install Tier-1 hardware and coordinate with your electricity board (BESCOM/DISCOM) to commission your net meter.",
     image:
-      "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?q=80&w=800&auto=format&fit=crop",
   },
   {
     number: "4",
@@ -152,7 +152,7 @@ const testimonials = [
     role: "Homeowner · 5 kWp System",
     location: "Whitefield, Bengaluru",
     image:
-      "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
   },
   {
     id: "2",
@@ -162,7 +162,7 @@ const testimonials = [
     role: "RWA Committee Member",
     location: "Sarjapur Road, Bengaluru",
     image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop",
   },
   {
     id: "3",
@@ -172,7 +172,7 @@ const testimonials = [
     role: "Operations Manager · 60 kWp Array",
     location: "Peenya Industrial Area",
     image:
-      "https://images.unsplash.com/photo-1745187794292-ba0014281746?q=80&w=400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
   },
 ];
 
@@ -251,20 +251,20 @@ export default function HomePage() {
 
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                     <div>
-                      <span className="text-xs text-[#374151] block">
+                      <span className="text-sm font-semibold text-[#15532E] block">
                         {solution.tagline}
                       </span>
-                      <h3 className="text-lg font-semibold text-[#202720] group-hover:text-[#15532E] transition-colors mt-0.5">
+                      <h3 className="text-xl font-semibold text-[#202720] group-hover:text-[#15532E] transition-colors mt-0.5">
                         {solution.title}
                       </h3>
-                      <p className="mt-1.5 text-xs sm:text-sm text-[#374151] leading-relaxed">
+                      <p className="mt-1.5 text-sm sm:text-base text-[#374151] leading-relaxed">
                         {solution.description}
                       </p>
                     </div>
 
-                    <div className="pt-2 border-t border-[#E5E8E3] flex items-center text-xs font-semibold text-[#15532E] group-hover:text-[#E5A100] transition-colors">
+                    <div className="pt-2 border-t border-[#E5E8E3] flex items-center text-sm font-semibold text-[#15532E] group-hover:text-[#E5A100] transition-colors">
                       <span>Learn more</span>
-                      <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform group-hover:translate-x-1" />
+                      <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
                 </Link>
@@ -299,9 +299,9 @@ export default function HomePage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-4 flex-1 flex flex-col justify-between space-y-1.5">
-                  <h3 className="text-base font-semibold text-[#202720]">{item.title}</h3>
-                  <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
+                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-2">
+                  <h3 className="text-lg font-semibold text-[#202720]">{item.title}</h3>
+                  <p className="text-sm text-[#374151] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -335,15 +335,15 @@ export default function HomePage() {
                     sizes="(max-width: 768px) 100vw, 25vw"
                     className="object-cover"
                   />
-                  <div className="absolute top-2.5 left-2.5 w-7 h-7 bg-[#15532E] text-white text-xs font-bold font-mono flex items-center justify-center">
+                  <div className="absolute top-2.5 left-2.5 w-7 h-7 bg-[#15532E] text-white text-sm font-bold font-mono flex items-center justify-center">
                     {step.number}
                   </div>
                 </div>
-                <div className="p-4 flex-1 flex flex-col justify-between space-y-1.5">
-                  <h3 className="text-base font-semibold text-[#202720]">
+                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-2">
+                  <h3 className="text-lg font-semibold text-[#202720]">
                     {step.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
+                  <p className="text-sm text-[#374151] leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -419,22 +419,22 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover"
                     />
-                    <div className="absolute top-3 left-3 bg-[#15532E] text-white text-[11px] font-medium px-2 py-0.5">
-                      {project.category}
-                    </div>
                   </div>
 
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                     <div>
-                      <h3 className="text-base font-semibold text-[#202720]">
+                      <span className="text-sm font-semibold text-[#15532E] block mb-1">
+                        {project.category}
+                      </span>
+                      <h3 className="text-lg font-semibold text-[#202720]">
                         {project.title}
                       </h3>
-                      <p className="mt-1 text-xs sm:text-sm text-[#374151] leading-relaxed">
+                      <p className="mt-1 text-sm text-[#374151] leading-relaxed">
                         {project.description}
                       </p>
                     </div>
 
-                    <div className="pt-2.5 border-t border-[#E5E8E3] flex items-center justify-between text-xs text-[#374151]">
+                    <div className="pt-3 border-t border-[#E5E8E3] flex items-center justify-between text-sm text-[#374151]">
                       <span>{project.location}</span>
                       <span className="font-semibold text-[#15532E]">{project.capacity}</span>
                     </div>
@@ -460,33 +460,33 @@ export default function HomePage() {
             {testimonials.map((t) => (
               <div
                 key={t.id}
-                className="bg-[#F7F7F3] border border-[#E5E8E3] p-5 flex flex-col justify-between space-y-4"
+                className="bg-[#F7F7F3] border border-[#E5E8E3] p-6 flex flex-col justify-between space-y-4"
               >
-                <div className="space-y-2.5">
+                <div className="space-y-3">
                   <div className="flex items-center space-x-1 text-[#E5A100]">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                      <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <p className="text-sm text-[#202720] leading-relaxed italic">
+                  <p className="text-base text-[#202720] leading-relaxed italic">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-[#E5E8E3] flex items-center space-x-3">
-                  <div className="relative w-10 h-10 shrink-0 overflow-hidden rounded-full border border-[#E5E8E3]">
+                <div className="pt-3.5 border-t border-[#E5E8E3] flex items-center space-x-3.5">
+                  <div className="relative w-11 h-11 shrink-0 overflow-hidden rounded-full border border-[#E5E8E3]">
                     <Image
                       src={t.image}
                       alt={t.author}
                       fill
-                      sizes="40px"
+                      sizes="44px"
                       className="object-cover"
                     />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm text-[#202720]">{t.author}</div>
-                    <div className="text-xs text-[#15532E] font-medium">{t.role}</div>
-                    <div className="text-[11px] text-[#374151]">{t.location}</div>
+                    <div className="font-semibold text-base text-[#202720]">{t.author}</div>
+                    <div className="text-sm text-[#15532E] font-medium">{t.role}</div>
+                    <div className="text-xs sm:text-sm text-[#374151]">{t.location}</div>
                   </div>
                 </div>
               </div>

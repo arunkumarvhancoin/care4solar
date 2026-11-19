@@ -13,14 +13,14 @@ export default function Footer() {
         <Container className="py-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="space-y-1">
-              <div className="flex items-center space-x-2 text-[#E5A100] text-xs font-semibold uppercase tracking-wider">
-                <Zap className="w-3.5 h-3.5" />
+              <div className="flex items-center space-x-2 text-[#E5A100] text-sm font-semibold uppercase tracking-wider">
+                <Zap className="w-4 h-4" />
                 <span>Turnkey Solar EPC &amp; Asset Care</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                 Planning a rooftop or commercial solar transition?
               </h3>
-              <p className="text-xs sm:text-sm text-[#F7F7F3]/70">
+              <p className="text-sm sm:text-base text-[#F7F7F3]/80">
                 Speak directly with our senior electrical and structural engineers for a complimentary technical survey.
               </p>
             </div>
@@ -28,14 +28,14 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-3 shrink-0">
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/15 text-white border border-white/20 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-sm transition-colors"
+                className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/15 text-white border border-white/20 text-sm font-semibold px-4 py-2.5 rounded-sm transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#E5A100]" />
                 <span>{companyInfo.phone}</span>
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center space-x-2 bg-[#E5A100] hover:bg-[#d49400] text-[#124526] text-xs sm:text-sm font-bold px-4 py-2.5 rounded-sm transition-colors shadow-xs"
+                className="inline-flex items-center space-x-2 bg-[#E5A100] hover:bg-[#d49400] text-[#124526] text-sm font-bold px-4 py-2.5 rounded-sm transition-colors shadow-xs"
               >
                 <span>Book Site Survey</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -57,7 +57,7 @@ export default function Footer() {
               Care4Solar designs, permits, and installs high-yield rooftop solar infrastructure and guarantees long-term generation through structured maintenance and cloud telemetry.
             </p>
             <div className="pt-1">
-              <span className="text-xs font-mono uppercase tracking-wider text-[#E5A100] block">
+              <span className="text-sm font-mono uppercase tracking-wider text-[#E5A100] block">
                 {companyInfo.tagline}
               </span>
             </div>
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Column 02: Solutions */}
           <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-[#E5A100]">
+            <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-[#E5A100]">
               Solar Solutions
             </h3>
             <ul className="space-y-3 text-sm">
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Column 03: Company & Resources */}
           <div className="lg:col-span-2 space-y-4">
-            <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-[#E5A100]">
+            <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-[#E5A100]">
               Company
             </h3>
             <ul className="space-y-3 text-sm">
@@ -105,19 +105,19 @@ export default function Footer() {
 
           {/* Column 04: Engineering Office & Hours */}
           <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-[#E5A100]">
+            <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-[#E5A100]">
               Engineering Office
             </h3>
             <div className="space-y-3 text-sm text-[#F7F7F3]/80">
               <div className="flex items-start space-x-2.5">
                 <MapPin className="w-4 h-4 text-[#E5A100] shrink-0 mt-0.5" />
-                <span className="text-xs sm:text-sm leading-relaxed">{companyInfo.address}</span>
+                <span className="text-sm leading-relaxed">{companyInfo.address}</span>
               </div>
               <div className="flex items-center space-x-2.5">
                 <Phone className="w-4 h-4 text-[#E5A100] shrink-0" />
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="hover:text-white transition-colors text-xs sm:text-sm"
+                  className="hover:text-white transition-colors text-sm"
                 >
                   {companyInfo.phone}
                 </a>
@@ -126,13 +126,13 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#E5A100] shrink-0" />
                 <a
                   href={`mailto:${companyInfo.email}`}
-                  className="hover:text-white transition-colors text-xs sm:text-sm"
+                  className="hover:text-white transition-colors text-sm"
                 >
                   {companyInfo.email}
                 </a>
               </div>
-              <div className="flex items-center space-x-2.5 text-xs text-[#F7F7F3]/65 pt-1">
-                <Clock className="w-3.5 h-3.5 text-[#E5A100] shrink-0" />
+              <div className="flex items-center space-x-2.5 text-sm text-[#F7F7F3]/75 pt-1">
+                <Clock className="w-4 h-4 text-[#E5A100] shrink-0" />
                 <span>{companyInfo.workingHours}</span>
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom row: Legal & Social */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-[#F7F7F3]/60 gap-4">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs sm:text-sm text-[#F7F7F3]/60 gap-4">
           <div>
             &copy; 2026 Care4Solar. All rights reserved. Clean Energy Infrastructure &amp; Asset Care.
           </div>

@@ -26,7 +26,7 @@ export default function ResidentialSolarPage() {
       description:
         "Custom-engineered for single-family residences. Sized accurately to your monthly consumption, air conditioning loads, and home EV charging without over-spending on unneeded hardware.",
       image:
-        "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?q=80&w=1200&auto=format&fit=crop",
       highlights: [
         "Typically sizes from 3 kWp to 15 kWp based on past 12-month power bills",
         "Direct DISCOM net metering rolling back peak grid charges",
@@ -41,7 +41,7 @@ export default function ResidentialSolarPage() {
       description:
         "Shared terrace solar systems engineered specifically for residential societies. Directly offsets the heavy recurring costs of elevators, basement lighting, water filtration, and clubhouse loads.",
       image:
-        "https://images.unsplash.com/photo-1793119985840-10f7beb15e1a?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
       highlights: [
         "Powers common amenities: lifts, STPs, water pumps, and campus security lights",
         "Smart DG synchronization prevents reverse feed-in during diesel generator running",
@@ -125,7 +125,7 @@ export default function ResidentialSolarPage() {
                         <span className="p-2 bg-white rounded-sm border border-[#E5E8E3] text-[#15532E]">
                           <IconComp className="w-5 h-5" />
                         </span>
-                        <span className="text-xs font-semibold text-[#15532E] uppercase tracking-wider">
+                        <span className="text-sm font-semibold text-[#15532E] uppercase tracking-wider">
                           {sol.type}
                         </span>
                       </div>
@@ -134,14 +134,14 @@ export default function ResidentialSolarPage() {
                         {sol.headline}
                       </h3>
 
-                      <p className="text-sm text-[#374151] leading-relaxed">
+                      <p className="text-base text-[#374151] leading-relaxed">
                         {sol.description}
                       </p>
 
                       <ul className="space-y-2.5 pt-2">
                         {sol.highlights.map((h, i) => (
-                          <li key={i} className="flex items-start space-x-2 text-xs sm:text-sm text-[#374151]">
-                            <CheckCircle2 className="w-4 h-4 text-[#15532E] shrink-0 mt-0.5" />
+                          <li key={i} className="flex items-start space-x-2.5 text-sm sm:text-base text-[#374151]">
+                            <CheckCircle2 className="w-4 h-4 text-[#15532E] shrink-0 mt-1" />
                             <span>{h}</span>
                           </li>
                         ))}
@@ -187,8 +187,8 @@ export default function ResidentialSolarPage() {
                   />
                 </div>
                 <div className="p-5 space-y-2 flex-1">
-                  <h3 className="text-base font-semibold text-[#202720]">{comp.title}</h3>
-                  <p className="text-xs text-[#374151] leading-relaxed">{comp.desc}</p>
+                  <h3 className="text-lg font-semibold text-[#202720]">{comp.title}</h3>
+                  <p className="text-sm text-[#374151] leading-relaxed">{comp.desc}</p>
                 </div>
               </div>
             ))}

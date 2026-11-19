@@ -27,9 +27,9 @@ export default function Button({
     "group relative overflow-hidden inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#15532E] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-none";
 
   const sizeClasses = {
-    sm: "text-xs px-3.5 py-2 min-h-[38px] space-x-1.5",
-    md: "text-sm px-5 py-2.5 min-h-[44px] space-x-2",
-    lg: "text-base px-6 sm:px-7 py-3.5 min-h-[48px] space-x-2.5",
+    sm: "text-sm px-4 py-2 min-h-[38px] space-x-1.5",
+    md: "text-sm sm:text-base px-5 py-2.5 min-h-[44px] space-x-2",
+    lg: "text-base sm:text-lg px-6 sm:px-7 py-3.5 min-h-[48px] space-x-2.5",
   };
 
   const variantClasses = {

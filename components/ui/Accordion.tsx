@@ -39,7 +39,7 @@ export default function Accordion({
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between py-5 text-left transition-colors hover:text-[#15532E] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#15532E]"
             >
-              <span className="text-base sm:text-lg font-medium text-[#202720] pr-6">
+              <span className="text-base sm:text-lg font-semibold text-[#202720] pr-6">
                 {item.question}
               </span>
               <motion.span
@@ -60,7 +60,7 @@ export default function Accordion({
                   transition={{ duration: 0.25, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="pb-6 pt-1 text-sm sm:text-base leading-relaxed text-[#374151]">
+                  <div className="pb-6 pt-1 text-base sm:text-lg leading-relaxed text-[#374151]">
                     {item.answer}
                   </div>
                 </motion.div>

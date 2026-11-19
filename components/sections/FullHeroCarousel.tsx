@@ -33,7 +33,7 @@ const slides: HeroSlide[] = [
     secondaryText: "Request Site Survey",
     secondaryHref: "/contact",
     image:
-      "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392694-c95056ed12e2?q=80&w=1800&auto=format&fit=crop",
     imageAlt: "Solar panels installed on residential rooftop",
     projectTag: "Residential Installation · 10 kWp · Bengaluru",
   },

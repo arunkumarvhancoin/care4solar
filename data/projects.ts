@@ -64,7 +64,7 @@ export const projectsData: ProjectItem[] = [
     mountingType: "Architectural low-profile flush mounting on ceramic tile roof",
     inverterSetup: "Hybrid 10 kW battery-ready inverter with rapid automatic transfer switch",
     image:
-      "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1400&auto=format&fit=crop",
     description:
       "An all-black mono PERC architectural rooftop system engineered to match modern villa aesthetics while providing uninterrupted back-up power for climate control, home automation, and EV charging.",
     highlights: [

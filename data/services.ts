@@ -17,7 +17,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc:
       "Engineered rooftop systems designed around your home's actual load profile, roof architecture, and long-term energy goals.",
     image:
-      "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392694-c95056ed12e2?q=80&w=1200&auto=format&fit=crop",
     bullets: [
       "On-grid, hybrid, and off-grid configurations",
       "Structural assessment and shadow analysis",

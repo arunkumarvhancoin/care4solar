@@ -61,7 +61,7 @@ export const sampleArticles: ArticleItem[] = [
     date: "September 2024",
     author: "Grid Interconnection Team",
     image:
-      "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392417-68b9dccc45f2?q=80&w=1000&auto=format&fit=crop",
     featured: false,
   },
   {

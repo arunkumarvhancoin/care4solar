@@ -59,7 +59,7 @@ export default function Navbar() {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "relative px-3.5 py-2 text-[15px] xl:text-base tracking-tight transition-colors z-10 flex items-center",
+                      "relative px-3.5 py-2 text-base xl:text-[17px] tracking-tight transition-colors z-10 flex items-center",
                       isActive
                         ? "text-[#15532E] font-semibold"
                         : "text-[#374151] hover:text-[#15532E] font-medium"
@@ -91,7 +91,7 @@ export default function Navbar() {
                   magnetic={true}
                   className={cn(
                     pathname === "/contact" &&
-                      "ring-2 ring-[#15532E] ring-offset-2 ring-offset-[#F7F7F3]"
+                    "ring-2 ring-[#15532E] ring-offset-2 ring-offset-[#F7F7F3]"
                   )}
                 >
                   Contact Us

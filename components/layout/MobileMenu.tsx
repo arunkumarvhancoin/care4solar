@@ -91,7 +91,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       key={item.href}
                       href={item.href}
                       className={cn(
-                        "flex items-center min-h-[44px] text-sm font-medium px-3 py-2 border-b border-[#E5E8E3]/60 transition-colors",
+                        "flex items-center min-h-[48px] text-base font-medium px-3 py-2.5 border-b border-[#E5E8E3]/60 transition-colors",
                         isCurrent
                           ? "text-[#15532E] font-semibold bg-white"
                           : "text-[#202720] hover:bg-white"
@@ -104,20 +104,20 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </nav>
 
               {/* Direct Tap-to-Call & Tap-to-Email Quick Actions */}
-              <div className="pt-2 pb-1 space-y-2 border-t border-[#E5E8E3]">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-[#374151] block px-3">
+              <div className="pt-3 pb-1 space-y-2 border-t border-[#E5E8E3]">
+                <span className="text-xs font-mono uppercase tracking-wider text-[#374151] block px-3">
                   Direct Engineering Support
                 </span>
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="flex items-center space-x-2.5 min-h-[40px] px-3 py-1.5 text-xs text-[#202720] hover:text-[#15532E] transition-colors"
+                  className="flex items-center space-x-2.5 min-h-[42px] px-3 py-1.5 text-sm text-[#202720] hover:text-[#15532E] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#15532E] shrink-0" />
                   <span className="font-medium">{companyInfo.phone}</span>
                 </a>
                 <a
                   href={`mailto:${companyInfo.email}`}
-                  className="flex items-center space-x-2.5 min-h-[40px] px-3 py-1.5 text-xs text-[#202720] hover:text-[#15532E] transition-colors"
+                  className="flex items-center space-x-2.5 min-h-[42px] px-3 py-1.5 text-sm text-[#202720] hover:text-[#15532E] transition-colors"
                 >
                   <Mail className="w-4 h-4 text-[#15532E] shrink-0" />
                   <span>{companyInfo.email}</span>

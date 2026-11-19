@@ -6,7 +6,7 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import PageHero from "@/components/sections/PageHero";
 import { companyInfo } from "@/data/company";
-import { MapPin, Phone, Mail, Clock, MessageSquare, CheckCircle2, RotateCcw } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle2, RotateCcw } from "lucide-react";
 
 interface ContactFormData {
   fullName: string;
@@ -133,77 +133,68 @@ export default function ContactPage() {
             {/* LEFT COLUMN: Contact Details */}
             <div className="lg:col-span-5 space-y-8">
               <div>
-                <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold block mb-2">
+                <span className="text-sm font-mono uppercase tracking-wider text-[#15532E] font-semibold block mb-2">
                   Head Office & Advisory
                 </span>
-                <h2 className="text-2xl font-semibold text-[#202720]">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-[#202720]">
                   Care4Solar Engineering Office
                 </h2>
-                <p className="mt-2 text-sm text-[#374151] leading-relaxed">
+                <p className="mt-2 text-base text-[#374151] leading-relaxed">
                   Our engineers are available for technical assessments, rooftop shadow studies,
                   and Annual Maintenance Contract evaluations.
                 </p>
               </div>
 
               <div className="space-y-6 pt-2">
-                {/* Address */}
-                <div className="flex items-start space-x-3.5 p-4 bg-[#F7F7F3] border border-[#E5E8E3]">
-                  <MapPin className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
-                  <div className="text-sm">
-                    <span className="font-semibold text-[#202720] block">Office Address</span>
-                    <span className="text-[#374151] text-xs leading-relaxed mt-0.5 block">
-                      {companyInfo.address}
-                    </span>
+                <div className="bg-[#F7F7F3] border border-[#E5E8E3] divide-y divide-[#E5E8E3]">
+                  {/* Address */}
+                  <div className="flex items-start space-x-3.5 p-4 sm:p-5">
+                    <MapPin className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-base text-[#202720] block">Office Address</span>
+                      <span className="text-[#374151] text-sm leading-relaxed mt-0.5 block">
+                        {companyInfo.address}
+                      </span>
+                    </div>
                   </div>
-                </div>
 
-                {/* Phone */}
-                <div className="flex items-start space-x-3.5 p-4 bg-[#F7F7F3] border border-[#E5E8E3]">
-                  <Phone className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
-                  <div className="text-sm">
-                    <span className="font-semibold text-[#202720] block">Phone Enquiries</span>
-                    <a
-                      href={`tel:${companyInfo.phone}`}
-                      className="text-[#15532E] font-medium text-xs hover:underline mt-0.5 block"
-                    >
-                      {companyInfo.phone}
-                    </a>
+                  {/* Phone & WhatsApp */}
+                  <div className="flex items-start space-x-3.5 p-4 sm:p-5">
+                    <Phone className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-base text-[#202720] block">Phone & WhatsApp</span>
+                      <a
+                        href={`tel:${companyInfo.phone}`}
+                        className="text-[#15532E] font-medium text-sm hover:underline mt-0.5 block"
+                      >
+                        {companyInfo.phone}
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                {/* Email */}
-                <div className="flex items-start space-x-3.5 p-4 bg-[#F7F7F3] border border-[#E5E8E3]">
-                  <Mail className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
-                  <div className="text-sm">
-                    <span className="font-semibold text-[#202720] block">Email Support</span>
-                    <a
-                      href={`mailto:${companyInfo.email}`}
-                      className="text-[#15532E] font-medium text-xs hover:underline mt-0.5 block"
-                    >
-                      {companyInfo.email}
-                    </a>
+                  {/* Email */}
+                  <div className="flex items-start space-x-3.5 p-4 sm:p-5">
+                    <Mail className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-base text-[#202720] block">Email Support</span>
+                      <a
+                        href={`mailto:${companyInfo.email}`}
+                        className="text-[#15532E] font-medium text-sm hover:underline mt-0.5 block"
+                      >
+                        {companyInfo.email}
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                {/* WhatsApp */}
-                <div className="flex items-start space-x-3.5 p-4 bg-[#F7F7F3] border border-[#E5E8E3]">
-                  <MessageSquare className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
-                  <div className="text-sm">
-                    <span className="font-semibold text-[#202720] block">WhatsApp Business</span>
-                    <span className="text-[#374151] text-xs mt-0.5 block">
-                      {companyInfo.phone}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Working hours */}
-                <div className="flex items-start space-x-3.5 p-4 bg-[#F7F7F3] border border-[#E5E8E3]">
-                  <Clock className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
-                  <div className="text-sm">
-                    <span className="font-semibold text-[#202720] block">Working Hours</span>
-                    <span className="text-[#374151] text-xs mt-0.5 block">
-                      {companyInfo.workingHours}
-                    </span>
+                  {/* Working hours */}
+                  <div className="flex items-start space-x-3.5 p-4 sm:p-5">
+                    <Clock className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-base text-[#202720] block">Working Hours</span>
+                      <span className="text-[#374151] text-sm mt-0.5 block">
+                        {companyInfo.workingHours}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -216,11 +207,11 @@ export default function ContactPage() {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-3.5 text-white">
-                    <span className="text-xs font-semibold block text-[#E5A100]">
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-4 text-white">
+                    <span className="text-sm font-semibold block text-[#E5A100]">
                       Complimentary On-Site Survey
                     </span>
-                    <span className="text-[11px] text-white/90 block mt-0.5">
+                    <span className="text-xs sm:text-sm text-white/90 block mt-0.5">
                       Our engineers evaluate shadow patterns &amp; structural load directly on your roof.
                     </span>
                   </div>
@@ -283,8 +274,8 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-semibold text-[#202720]">Project Enquiry Form</h3>
-                    <p className="text-xs text-[#374151] mt-1">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-[#202720]">Project Enquiry Form</h3>
+                    <p className="text-sm text-[#374151] mt-1">
                       Fields marked with <span className="text-red-600">*</span> are mandatory.
                     </p>
                   </div>
@@ -292,7 +283,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Full Name */}
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Full Name <span className="text-red-600">*</span>
                       </label>
                       <input
@@ -301,16 +292,16 @@ export default function ContactPage() {
                         value={formData.fullName}
                         onChange={handleChange}
                         placeholder="Your full name"
-                        className="w-full bg-white border border-[#E5E8E3] px-3.5 py-3 text-base sm:text-sm min-h-[44px] text-[#202720] focus:outline-none focus:border-[#15532E]"
+                        className="w-full bg-white border border-[#E5E8E3] px-4 py-3 text-base min-h-[46px] text-[#202720] focus:outline-none focus:border-[#15532E]"
                       />
                       {errors.fullName && (
-                        <p className="mt-1 text-xs text-red-600">{errors.fullName}</p>
+                        <p className="mt-1 text-sm text-red-600">{errors.fullName}</p>
                       )}
                     </div>
 
                     {/* Phone */}
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Phone Number <span className="text-red-600">*</span>
                       </label>
                       <input
@@ -319,16 +310,16 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="10-digit mobile number"
-                        className="w-full bg-white border border-[#E5E8E3] px-3.5 py-3 text-base sm:text-sm min-h-[44px] text-[#202720] focus:outline-none focus:border-[#15532E]"
+                        className="w-full bg-white border border-[#E5E8E3] px-4 py-3 text-base min-h-[46px] text-[#202720] focus:outline-none focus:border-[#15532E]"
                       />
                       {errors.phone && (
-                        <p className="mt-1 text-xs text-red-600">{errors.phone}</p>
+                        <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
                       )}
                     </div>
 
                     {/* Email */}
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Email Address <span className="text-red-600">*</span>
                       </label>
                       <input
@@ -337,16 +328,16 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="you@company.com"
-                        className="w-full bg-white border border-[#E5E8E3] px-3.5 py-3 text-base sm:text-sm min-h-[44px] text-[#202720] focus:outline-none focus:border-[#15532E]"
+                        className="w-full bg-white border border-[#E5E8E3] px-4 py-3 text-base min-h-[46px] text-[#202720] focus:outline-none focus:border-[#15532E]"
                       />
                       {errors.email && (
-                        <p className="mt-1 text-xs text-red-600">{errors.email}</p>
+                        <p className="mt-1 text-sm text-red-600">{errors.email}</p>
                       )}
                     </div>
 
                     {/* Location */}
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Site Location / City <span className="text-red-600">*</span>
                       </label>
                       <input
@@ -355,23 +346,23 @@ export default function ContactPage() {
                         value={formData.location}
                         onChange={handleChange}
                         placeholder="e.g. Whitefield, Bangalore"
-                        className="w-full bg-white border border-[#E5E8E3] px-3.5 py-3 text-base sm:text-sm min-h-[44px] text-[#202720] focus:outline-none focus:border-[#15532E]"
+                        className="w-full bg-white border border-[#E5E8E3] px-4 py-3 text-base min-h-[46px] text-[#202720] focus:outline-none focus:border-[#15532E]"
                       />
                       {errors.location && (
-                        <p className="mt-1 text-xs text-red-600">{errors.location}</p>
+                        <p className="mt-1 text-sm text-red-600">{errors.location}</p>
                       )}
                     </div>
 
                     {/* Customer Category */}
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Customer Category <span className="text-red-600">*</span>
                       </label>
                       <select
                         name="customerCategory"
                         value={formData.customerCategory}
                         onChange={handleChange}
-                        className="w-full bg-white border border-[#E5E8E3] px-3.5 py-3 text-base sm:text-sm min-h-[44px] text-[#202720] focus:outline-none focus:border-[#15532E]"
+                        className="w-full bg-white border border-[#E5E8E3] px-4 py-3 text-base min-h-[46px] text-[#202720] focus:outline-none focus:border-[#15532E]"
                       >
                         {customerCategories.map((cat) => (
                           <option key={cat} value={cat}>
@@ -383,14 +374,14 @@ export default function ContactPage() {
 
                     {/* Required Service */}
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Required Service <span className="text-red-600">*</span>
                       </label>
                       <select
                         name="requiredService"
                         value={formData.requiredService}
                         onChange={handleChange}
-                        className="w-full bg-white border border-[#E5E8E3] px-3.5 py-3 text-base sm:text-sm min-h-[44px] text-[#202720] focus:outline-none focus:border-[#15532E]"
+                        className="w-full bg-white border border-[#E5E8E3] px-4 py-3 text-base min-h-[46px] text-[#202720] focus:outline-none focus:border-[#15532E]"
                       >
                         {requiredServices.map((srv) => (
                           <option key={srv} value={srv}>
@@ -402,9 +393,9 @@ export default function ContactPage() {
 
                     {/* System Capacity (optional) */}
                     <div className="sm:col-span-2">
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Approximate System Capacity (kWp){" "}
-                        <span className="text-[#374151] text-[10px] lowercase font-normal">
+                        <span className="text-[#374151] text-xs lowercase font-normal">
                           (optional)
                         </span>
                       </label>
@@ -414,13 +405,13 @@ export default function ContactPage() {
                         value={formData.systemCapacity}
                         onChange={handleChange}
                         placeholder="e.g. 10 kWp or Unsure"
-                        className="w-full bg-white border border-[#E5E8E3] px-3.5 py-3 text-base sm:text-sm min-h-[44px] text-[#202720] focus:outline-none focus:border-[#15532E]"
+                        className="w-full bg-white border border-[#E5E8E3] px-4 py-3 text-base min-h-[46px] text-[#202720] focus:outline-none focus:border-[#15532E]"
                       />
                     </div>
 
                     {/* Message */}
                     <div className="sm:col-span-2">
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Project Message / Roof Details <span className="text-red-600">*</span>
                       </label>
                       <textarea
@@ -429,10 +420,10 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Provide any relevant details about your property, average bill, or maintenance issues..."
-                        className="w-full bg-white border border-[#E5E8E3] px-3.5 py-2.5 text-sm text-[#202720] focus:outline-none focus:border-[#15532E]"
+                        className="w-full bg-white border border-[#E5E8E3] px-4 py-3 text-base text-[#202720] focus:outline-none focus:border-[#15532E]"
                       />
                       {errors.message && (
-                        <p className="mt-1 text-xs text-red-600">{errors.message}</p>
+                        <p className="mt-1 text-sm text-red-600">{errors.message}</p>
                       )}
                     </div>
                   </div>

@@ -6,24 +6,14 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Phone, Mail } from "lucide-react";
 import Care4SolarLogo from "@/components/ui/Care4SolarLogo";
-import Button from "@/components/ui/Button";
 import { companyInfo } from "@/data/company";
+import { mainNav } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-const mobileNavLinks = [
-  { title: "Home", href: "/" },
-  { title: "Residential Solar", href: "/residential-solar" },
-  { title: "Commercial & Industrial", href: "/commercial-industrial-solar" },
-  { title: "Maintenance & Care", href: "/operations-maintenance" },
-  { title: "Featured Projects", href: "/projects" },
-  { title: "Insights & Articles", href: "/insights" },
-  { title: "About Us", href: "/about" },
-];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const pathname = usePathname();
@@ -84,8 +74,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {/* Nav list with smooth touch scrolling */}
             <div className="flex-1 overflow-y-auto px-5 py-5 space-y-5" style={{ WebkitOverflowScrolling: "touch" }}>
               <nav className="flex flex-col space-y-1">
-                {mobileNavLinks.map((item) => {
-                  const isCurrent = pathname === item.href;
+                {mainNav.map((item) => {
+                  const isCurrent =
+                    pathname === item.href ||
+                    (item.href === "/solutions" && pathname.startsWith("/solutions")) ||
+                    (item.href === "/operations-maintenance" && pathname === "/maintenance");
                   return (
                     <Link
                       key={item.href}
@@ -123,13 +116,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <span>{companyInfo.email}</span>
                 </a>
               </div>
-            </div>
-
-            {/* Bottom CTA */}
-            <div className="p-5 border-t border-[#E5E8E3] bg-white">
-              <Button href="/contact" variant="primary" size="md" icon="arrow" className="w-full justify-center min-h-[44px]">
-                Contact Our Team
-              </Button>
             </div>
           </motion.div>
         </>

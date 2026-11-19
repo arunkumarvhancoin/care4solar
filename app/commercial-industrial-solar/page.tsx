@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Button from "@/components/ui/Button";
-import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
 import PageHero from "@/components/sections/PageHero";
-import { faqsData } from "@/data/faqs";
 import { CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -16,8 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default function CommercialIndustrialSolarPage() {
-  const commercialFaqs = faqsData.filter((f) => f.category === "Commercial");
-
   const customerSegments = [
     {
       title: "Manufacturing Plants",
@@ -217,25 +212,6 @@ export default function CommercialIndustrialSolarPage() {
               <div className="pt-4 border-t border-[#E5E8E3] text-sm font-mono text-[#374151]">
                 Ideal for businesses wanting immediate monthly savings without capital outlay.
               </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* SECTION 05 — COMMERCIAL SOLAR FAQS */}
-      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
-        <Container>
-          <div className="max-w-3xl mx-auto space-y-8">
-            <SectionHeading
-              title="Commercial solar FAQs."
-              description="Clear answers about tax savings, roof safety, and power company connections."
-              align="center"
-            />
-            <Accordion items={commercialFaqs} />
-            <div className="text-center pt-2">
-              <Button href="/contact" variant="ghost" size="sm" icon="arrow">
-                Speak directly with our commercial team
-              </Button>
             </div>
           </div>
         </Container>

@@ -6,6 +6,11 @@ export interface NavItem {
 
 export const solarServices: NavItem[] = [
   {
+    title: "All Solutions",
+    href: "/solutions",
+    description: "End-to-end solar installations for homes, commercial establishments, and industry.",
+  },
+  {
     title: "Residential Solar",
     href: "/residential-solar",
     description: "Turnkey rooftop systems for independent homes, villas, and housing societies.",
@@ -16,19 +21,19 @@ export const solarServices: NavItem[] = [
     description: "High-capacity solar infrastructure for businesses, factories, and warehouses.",
   },
   {
-    title: "Operations & Maintenance",
+    title: "Maintenance",
     href: "/operations-maintenance",
     description: "Panel cleaning, remote monitoring, thermal inspections, and preventive AMC.",
   },
 ];
 
 export const mainNav: NavItem[] = [
-  { title: "Residential", href: "/residential-solar" },
-  { title: "Commercial", href: "/commercial-industrial-solar" },
+  { title: "Home", href: "/" },
+  { title: "Solutions", href: "/solutions" },
   { title: "Maintenance", href: "/operations-maintenance" },
   { title: "Projects", href: "/projects" },
-  { title: "Insights", href: "/insights" },
   { title: "About", href: "/about" },
+  { title: "Contact", href: "/contact" },
 ];
 
 export const footerCompanyNav: NavItem[] = [

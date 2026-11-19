@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
 import PageHero from "@/components/sections/PageHero";
 import {
@@ -84,33 +83,6 @@ const serviceAreas = [
     region: "Industrial & Commercial Hubs",
     locations: "Peenya Industrial Area, Bommasandra, Hosur Road Corridor, Bidadi, Nelamangala, Whitefield EPIP",
     highlight: "Factories, Warehouses & Campuses",
-  },
-];
-
-const aboutFaqs = [
-  {
-    id: "ab-1",
-    question: "Are Care4Solar installations approved by BESCOM and local electricity boards?",
-    answer:
-      "Yes. Every installation adheres strictly to state DISCOM and electrical safety guidelines. We manage the entire paperwork, technical clearances, and bi-directional net meter commissioning for you.",
-  },
-  {
-    id: "ab-2",
-    question: "What warranties come with a Care4Solar installation?",
-    answer:
-      "Our solar modules come with a 25-year linear performance warranty. Inverters carry 5 to 10-year manufacturer warranties, and our mounting structures and workmanship are covered by comprehensive Care4Solar guarantees.",
-  },
-  {
-    id: "ab-3",
-    question: "Can Care4Solar take over maintenance for systems installed by another company?",
-    answer:
-      "Yes. We regularly adopt orphaned or underperforming solar systems. Our team audits the installation, fixes any loose wiring or safety issues, and sets up scheduled cleaning and performance tracking.",
-  },
-  {
-    id: "ab-4",
-    question: "How do you ensure our roof won't leak after solar is installed?",
-    answer:
-      "On flat concrete roofs, we use precast weighted ballast blocks that sit on top of protective rubber pads without puncturing the roof slab. On metal shed roofs, we use non-piercing seam clamps that grip the standing ribs.",
   },
 ];
 
@@ -357,20 +329,6 @@ export default function AboutPage() {
                 <span className="text-xs text-[#374151]">Regular cleaning and ongoing AMC care</span>
               </div>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* SECTION 06 — ABOUT & COMPANY FAQS */}
-      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
-        <Container>
-          <div className="max-w-3xl mx-auto space-y-8">
-            <SectionHeading
-              title="Frequently asked questions about Care4Solar."
-              description="Learn more about our standards, approvals, warranties, and maintenance commitments."
-              align="center"
-            />
-            <Accordion items={aboutFaqs} />
           </div>
         </Container>
       </section>

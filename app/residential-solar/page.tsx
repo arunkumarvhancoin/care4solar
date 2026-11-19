@@ -3,10 +3,8 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
 import PageHero from "@/components/sections/PageHero";
-import { faqsData } from "@/data/faqs";
 import { Home, Building2, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -16,8 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function ResidentialSolarPage() {
-  const residentialFaqs = faqsData.filter((f) => f.category === "Residential");
-
   const solutions = [
     {
       icon: Home,
@@ -192,25 +188,6 @@ export default function ResidentialSolarPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Specific Residential Solar FAQs */}
-      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
-        <Container>
-          <div className="max-w-3xl mx-auto space-y-8">
-            <SectionHeading
-              title="Residential solar FAQs."
-              description="Clear answers about roof safety, society approvals, power cuts, and savings."
-              align="center"
-            />
-            <Accordion items={residentialFaqs} />
-            <div className="text-center pt-2">
-              <Button href="/contact" variant="ghost" size="sm" icon="arrow">
-                Speak with our residential team
-              </Button>
-            </div>
           </div>
         </Container>
       </section>

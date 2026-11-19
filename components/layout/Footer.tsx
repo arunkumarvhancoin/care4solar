@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 import Care4SolarLogo from "@/components/ui/Care4SolarLogo";
 import { solarServices, footerCompanyNav } from "@/data/navigation";
 import { companyInfo } from "@/data/company";
-import { Phone, Mail, MapPin, Clock, ArrowUpRight, Zap } from "lucide-react";
+import { Phone, Mail, Clock, ArrowUpRight, Zap } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -103,16 +103,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 04: Engineering Office & Hours */}
+          {/* Column 04: Direct Inquiries & Hours */}
           <div className="lg:col-span-3 space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-[#E5A100]">
-              Engineering Office
+              Direct Inquiries
             </h3>
             <div className="space-y-3 text-sm text-[#F7F7F3]/80">
-              <div className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-[#E5A100] shrink-0 mt-0.5" />
-                <span className="text-sm leading-relaxed">{companyInfo.address}</span>
-              </div>
               <div className="flex items-center space-x-2.5">
                 <Phone className="w-4 h-4 text-[#E5A100] shrink-0" />
                 <a

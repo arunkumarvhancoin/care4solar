@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Brand Forest Green Squircle Background -->
+  <rect width="512" height="512" rx="108" fill="#15532E" />
+  
+  <!-- Subtle Inner Border Highlight -->
+  <rect x="2" y="2" width="508" height="508" rx="106" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="3" />
+
+  <!-- Solar Arc Wave 1 -->
+  <path d="M 120 340 A 150 150 0 0 1 270 190" stroke="#E5A100" stroke-width="24" stroke-linecap="round" />
+
+  <!-- Solar Arc Wave 2 -->
+  <path d="M 160 340 A 110 110 0 0 1 270 230" stroke="#E5A100" stroke-width="20" stroke-linecap="round" />
+
+  <!-- Solar Arc Wave 3 -->
+  <path d="M 200 340 A 70 70 0 0 1 270 270" stroke="#E5A100" stroke-width="16" stroke-linecap="round" />
+
+  <!-- Central Solar Beam / 4 Trunk -->
+  <rect x="256" y="140" width="28" height="230" rx="6" fill="#E5A100" />
+
+  <!-- Horizontal Sun / Energy Base Bar -->
+  <rect x="96" y="328" width="320" height="26" rx="6" fill="#E5A100" />
+
+  <!-- Clean Energy Grid Cells (Right Side) -->
+  <rect x="306" y="190" width="34" height="26" rx="4" fill="#2D9F5A" />
+  <rect x="348" y="190" width="34" height="26" rx="4" fill="#2D9F5A" />
+  
+  <rect x="306" y="224" width="34" height="26" rx="4" fill="#2D9F5A" />
+  <rect x="348" y="224" width="34" height="26" rx="4" fill="#2D9F5A" />
+
+  <rect x="306" y="258" width="34" height="26" rx="4" fill="#2D9F5A" />
+  <rect x="348" y="258" width="34" height="26" rx="4" fill="#2D9F5A" />
+
+  <!-- Sun Glow Sparkle (Top-Left Origin) -->
+  <circle cx="270" cy="146" r="14" fill="#E5A100" />
+</svg>

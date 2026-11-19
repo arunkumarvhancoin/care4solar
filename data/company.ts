@@ -6,7 +6,6 @@ export const companyInfo = {
     "Care4Solar is an engineering-driven solar solutions and infrastructure company focused on technical rigor, system longevity, and long-term asset care.",
   phone: "+91 8000 000 000", // Contact placeholder
   email: "contact@care4solar.com", // Contact placeholder
-  address: "Care4Solar Infrastructure, Sector 4, Outer Ring Road, Bangalore, Karnataka 560103", // Location placeholder
   workingHours: "Monday – Saturday: 9:00 AM – 6:30 PM IST",
   socials: [
     { label: "LinkedIn", href: "https://linkedin.com" },

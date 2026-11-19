@@ -20,7 +20,12 @@ export const metadata: Metadata = {
   description:
     "Engineering-driven solar solutions, rooftop installations, operations and maintenance, and system performance care for residential, apartment, and commercial infrastructure.",
   icons: {
-    icon: "/logo.jpeg",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
   openGraph: {
     title: "Care4Solar — Solar Solutions & Asset Performance Care",

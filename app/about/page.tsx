@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Button from "@/components/ui/Button";
 import CTASection from "@/components/sections/CTASection";
 import PageHero from "@/components/sections/PageHero";
 import TiltCard from "@/components/ui/TiltCard";

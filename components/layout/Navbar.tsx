@@ -17,7 +17,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,33 +50,31 @@ export default function Navbar() {
               </Magnetic>
             </div>
 
-            {/* Desktop Navigation — Direct links, no redundant dropdowns */}
-            <nav
-              onMouseLeave={() => setHoveredNav(null)}
-              className="hidden lg:flex items-center space-x-0.5 xl:space-x-1"
-            >
+            {/* Desktop Navigation — Direct links, elegant underline highlight */}
+            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
               {mainNav.map((item) => {
                 const isActive = pathname === item.href;
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
-                    onMouseEnter={() => setHoveredNav(item.href)}
                     className={cn(
-                      "relative px-3 py-2 text-sm font-medium tracking-tight transition-colors z-10",
+                      "relative px-3.5 py-2 text-[15px] xl:text-base tracking-tight transition-colors z-10 flex items-center",
                       isActive
                         ? "text-[#15532E] font-semibold"
-                        : "text-[#202720] hover:text-[#15532E]"
+                        : "text-[#374151] hover:text-[#15532E] font-medium"
                     )}
                   >
-                    {hoveredNav === item.href && (
-                      <motion.div
-                        layoutId="navbar-hover-pill"
-                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                        className="absolute inset-0 bg-[#E5E8E3]/60 -z-10"
+                    <span>{item.title}</span>
+
+                    {/* Active Accent Underline */}
+                    {isActive && (
+                      <motion.span
+                        layoutId="navbar-active-line"
+                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                        className="absolute -bottom-1 inset-x-2.5 h-[2.5px] bg-[#15532E] rounded-full"
                       />
                     )}
-                    <span>{item.title}</span>
                   </Link>
                 );
               })}
@@ -86,7 +83,17 @@ export default function Navbar() {
             {/* Right: Contact CTA & Mobile Menu Toggle */}
             <div className="flex items-center space-x-3">
               <div className="hidden sm:block">
-                <Button href="/contact" variant="primary" size="md" icon="arrow" magnetic={true}>
+                <Button
+                  href="/contact"
+                  variant="primary"
+                  size="md"
+                  icon="arrow"
+                  magnetic={true}
+                  className={cn(
+                    pathname === "/contact" &&
+                      "ring-2 ring-[#15532E] ring-offset-2 ring-offset-[#F7F7F3]"
+                  )}
+                >
                   Contact Us
                 </Button>
               </div>

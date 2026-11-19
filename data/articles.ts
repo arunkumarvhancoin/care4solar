@@ -5,7 +5,6 @@ export interface ArticleItem {
     | "Solar Maintenance"
     | "Solar Technology"
     | "Commercial & Industrial Solar"
-    | "Solar Subsidy"
     | "Solar Performance";
   title: string;
   excerpt: string;
@@ -22,7 +21,6 @@ export const articleCategories = [
   "Solar Maintenance",
   "Solar Technology",
   "Commercial & Industrial Solar",
-  "Solar Subsidy",
   "Solar Performance",
 ] as const;
 
@@ -94,13 +92,13 @@ export const sampleArticles: ArticleItem[] = [
   },
   {
     id: "art-6",
-    category: "Solar Subsidy",
-    title: "Navigating the PM Surya Ghar National Portal: Technical Milestones and Verification",
+    category: "Residential Solar",
+    title: "Net Metering Synchronization: What Happens During Utility Commissioning",
     excerpt:
-      "A step-by-step technical guide for residential consumers seeking to align their installation with current MNRE DCR standards and portal workflows.",
+      "A step-by-step technical guide for residential consumers on bi-directional meter testing, DISCOM safety inspections, and grid energization.",
     readTime: "6 min read",
     date: "June 2024",
-    author: "Regulatory Compliance",
+    author: "Grid Interconnection Team",
     image:
       "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1000&auto=format&fit=crop",
     featured: false,

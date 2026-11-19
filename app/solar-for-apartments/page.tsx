@@ -85,7 +85,7 @@ export default function SolarForApartmentsPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative pt-10 pb-12 sm:py-14 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-5">
@@ -102,8 +102,8 @@ export default function SolarForApartmentsPage() {
                 <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request RWA Presentation
                 </Button>
-                <Button href="/solar-pricing" variant="outline" size="lg" className="w-full sm:w-auto">
-                  Explore Pricing Breakdown
+                <Button href="/projects" variant="outline" size="lg" className="w-full sm:w-auto">
+                  View Society Projects
                 </Button>
               </div>
             </div>
@@ -125,10 +125,9 @@ export default function SolarForApartmentsPage() {
       </section>
 
       {/* SECTION 02 — COMMON-AREA SOLAR APPLICATIONS */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Common-Area Applications"
             title="Powering shared community infrastructure."
             description="Apartment societies consume massive electricity units every month simply powering common-meter infrastructure. Solar directly counters these operational expenditures."
             className="mb-14"
@@ -168,12 +167,11 @@ export default function SolarForApartmentsPage() {
       </section>
 
       {/* SECTION 03 — WHY APARTMENTS CONSIDER SOLAR */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-5 space-y-6">
               <SectionHeading
-                eyebrow="The Business Case"
                 title="Why housing societies invest in rooftop solar."
                 description="Rising utility tariffs continually strain apartment association maintenance funds. Solar delivers long-term financial predictability."
               />
@@ -224,10 +222,9 @@ export default function SolarForApartmentsPage() {
       </section>
 
       {/* SECTION 04 — HOW A PROJECT WORKS */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Implementation Roadmap"
             title="How an apartment solar project works."
             description="We guide management committees step-by-step from preliminary energy audits through association resolution to grid commissioning."
             className="mb-14"
@@ -246,10 +243,9 @@ export default function SolarForApartmentsPage() {
       </section>
 
       {/* SECTION 05 — APARTMENT-SPECIFIC CONSIDERATIONS */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Technical &amp; Structural Diligence"
             title="Apartment-specific considerations."
             description="Multi-story residential buildings have unique structural, safety, and administrative requirements that demand specialized engineering attention."
             className="mb-14"
@@ -295,11 +291,10 @@ export default function SolarForApartmentsPage() {
       </section>
 
       {/* SECTION 06 — APARTMENT FAQS */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <SectionHeading
-              eyebrow="Society FAQs"
               title="Frequently asked questions by housing societies."
               description="Clear answers to help committee members and apartment owners make informed decisions."
               align="center"

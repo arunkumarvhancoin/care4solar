@@ -24,23 +24,13 @@ export default function SectionHeading({
   return (
     <div
       className={cn(
-        "flex flex-col space-y-3",
+        "flex flex-col space-y-2.5",
         align === "center" && "items-center text-center",
         align === "right" && "items-end text-right",
         align === "left" && "items-start text-left",
         className
       )}
     >
-      {eyebrow && (
-        <span
-          className={cn(
-            "text-xs font-semibold tracking-[0.14em] uppercase",
-            isDark ? "text-[#E5A100]" : "text-[#15532E]"
-          )}
-        >
-          {eyebrow}
-        </span>
-      )}
       <h2
         className={cn(
           "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.12]",

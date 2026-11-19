@@ -28,11 +28,11 @@ const slides: HeroSlide[] = [
     category: "Residential Rooftop Solar",
     title: "Rooftop solar for your home.",
     description:
-      "Cut your monthly electricity bills with high-efficiency rooftop panels. We handle roof sizing, PM Surya Ghar subsidy filing, and turnkey installation.",
+      "Cut your monthly electricity bills with high-efficiency rooftop panels. We handle roof sizing, structural engineering, and turnkey net-metered installation.",
     primaryText: "Solar for Homes",
     primaryHref: "/solar-for-homes",
-    secondaryText: "Explore Pricing",
-    secondaryHref: "/solar-pricing",
+    secondaryText: "Request Site Survey",
+    secondaryHref: "/contact",
     image:
       "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1800&auto=format&fit=crop",
     imageAlt: "Solar panels installed on residential rooftop",
@@ -171,10 +171,6 @@ export default function FullHeroCarousel() {
               transition={{ duration: 0.35, ease: "easeOut" }}
               className="space-y-4 sm:space-y-6"
             >
-              <div className="inline-block px-3.5 py-1 bg-white/15 backdrop-blur-md border border-white/20 text-xs font-semibold text-white uppercase tracking-wider">
-                {current.category}
-              </div>
-
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-[1.12]">
                 {current.title}
               </h1>
@@ -205,16 +201,8 @@ export default function FullHeroCarousel() {
           </AnimatePresence>
         </div>
 
-        {/* Discreet Real Project Tag (Bottom-Left) */}
-        <div className="absolute bottom-5 left-4 sm:left-8 z-20 hidden md:block">
-          <div className="bg-black/50 backdrop-blur-md border border-white/15 px-3 py-1.5 text-xs text-white/90">
-            <span className="text-[#E5A100] mr-1.5">●</span>
-            {current.projectTag}
-          </div>
-        </div>
-
         {/* Subtle Indicator Dots (Bottom-Center) */}
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-2">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-2">
           {slides.map((s, i) => (
             <button
               key={s.id}
@@ -232,61 +220,6 @@ export default function FullHeroCarousel() {
             </button>
           ))}
         </div>
-      </section>
-
-      {/* Docked Hero Benchmark Strip */}
-      <section className="bg-white border-b border-[#E5E8E3] py-6 sm:py-7">
-        <Container>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <div className="space-y-1">
-              <div className="text-2xl sm:text-3xl font-bold font-mono text-[#15532E]">
-                ₹78,000
-              </div>
-              <div className="text-xs sm:text-sm font-semibold text-[#202720]">
-                PM Surya Ghar Subsidy
-              </div>
-              <p className="text-xs text-[#374151]">
-                Direct bank transfer subsidy for residential rooftop systems.
-              </p>
-            </div>
-
-            <div className="space-y-1">
-              <div className="text-2xl sm:text-3xl font-bold font-mono text-[#15532E]">
-                Up to 90%
-              </div>
-              <div className="text-xs sm:text-sm font-semibold text-[#202720]">
-                Monthly Bill Reduction
-              </div>
-              <p className="text-xs text-[#374151]">
-                Offset daytime power consumption with synchronized net metering.
-              </p>
-            </div>
-
-            <div className="space-y-1">
-              <div className="text-2xl sm:text-3xl font-bold font-mono text-[#15532E]">
-                Tier-1 DCR
-              </div>
-              <div className="text-xs sm:text-sm font-semibold text-[#202720]">
-                Domestic Certified Hardware
-              </div>
-              <p className="text-xs text-[#374151]">
-                MNRE &amp; ALMM compliant modules with 25-year output warranty.
-              </p>
-            </div>
-
-            <div className="space-y-1">
-              <div className="text-2xl sm:text-3xl font-bold font-mono text-[#15532E]">
-                Lifetime Care
-              </div>
-              <div className="text-xs sm:text-sm font-semibold text-[#202720]">
-                Cleaning &amp; Maintenance
-              </div>
-              <p className="text-xs text-[#374151]">
-                Demineralized water washing and rapid inverter diagnostics.
-              </p>
-            </div>
-          </div>
-        </Container>
       </section>
     </div>
   );

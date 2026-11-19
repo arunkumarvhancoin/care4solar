@@ -47,7 +47,7 @@ export default function ResidentialSolarPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section — Architectural Editorial Layout */}
-      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative pt-10 pb-12 sm:py-14 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-5">
@@ -62,8 +62,8 @@ export default function ResidentialSolarPage() {
                 <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request Site Survey
                 </Button>
-                <Button href="/solar-pricing" variant="outline" size="lg" className="w-full sm:w-auto">
-                  Explore Pricing
+                <Button href="/projects" variant="outline" size="lg" className="w-full sm:w-auto">
+                  View Residential Projects
                 </Button>
               </div>
             </div>
@@ -85,10 +85,9 @@ export default function ResidentialSolarPage() {
       </section>
 
       {/* SECTION 02 — WHY RESIDENTIAL SOLAR (Editorial Numbered List) */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Why Choose Solar"
             title="Why homeowners choose solar."
             description="Investing in rooftop solar offers predictable energy generation, financial protection against rising utility tariffs, and clean power generation."
             className="mb-14"
@@ -151,10 +150,9 @@ export default function ResidentialSolarPage() {
       </section>
 
       {/* SECTION 03 — SYSTEM CONFIGURATIONS */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="System Architectures"
             title="System configurations explained."
             description="Selecting the right architecture depends on grid stability in your locality, battery backup needs, and budget. Not every configuration is suited to every residence."
             className="mb-14"
@@ -192,7 +190,7 @@ export default function ResidentialSolarPage() {
                     </li>
                     <li className="flex items-center space-x-2">
                       <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0" />
-                      <span>Eligible for central PM Surya Ghar subsidy</span>
+                      <span>High-efficiency daytime power generation</span>
                     </li>
                   </ul>
                 </div>
@@ -288,10 +286,9 @@ export default function ResidentialSolarPage() {
       </section>
 
       {/* SECTION 04 — HOW IT WORKS */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Implementation Roadmap"
             title="How residential implementation works."
             description="Our structured six-step execution process ensures safety, proper permitting, and seamless grid synchronization."
             className="mb-14"
@@ -341,10 +338,9 @@ export default function ResidentialSolarPage() {
       </section>
 
       {/* SECTION 05 — COMPONENTS */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Hardware & Engineering"
             title="System components engineered for longevity."
             description="Every rooftop installation relies on tested hardware categories built to withstand intense heat, monsoons, and high winds."
             className="mb-14"
@@ -373,11 +369,10 @@ export default function ResidentialSolarPage() {
       </section>
 
       {/* SECTION 06 — COMMON QUESTIONS PREVIEW */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <SectionHeading
-              eyebrow="Questions & Answers"
               title="Common residential solar questions."
               description="Clear answers regarding rooftop suitability, power cuts, and system sizing."
               align="center"
@@ -398,8 +393,8 @@ export default function ResidentialSolarPage() {
         description="Share your monthly electricity bill details or request a preliminary site inspection with the Care4Solar team."
         primaryCtaText="Speak with an Engineer"
         primaryCtaHref="/contact"
-        secondaryCtaText="Explore Pricing"
-        secondaryCtaHref="/solar-pricing"
+        secondaryCtaText="View Projects"
+        secondaryCtaHref="/projects"
       />
     </div>
   );

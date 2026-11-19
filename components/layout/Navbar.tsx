@@ -4,20 +4,18 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { ChevronDown, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Care4SolarLogo from "@/components/ui/Care4SolarLogo";
 import Button from "@/components/ui/Button";
 import Magnetic from "@/components/ui/Magnetic";
-import SolarDropdown from "@/components/layout/SolarDropdown";
 import MobileMenu from "@/components/layout/MobileMenu";
 import Container from "@/components/ui/Container";
-import { solarServices } from "@/data/navigation";
+import { mainNav } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [solarOpen, setSolarOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
 
@@ -33,8 +31,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const isSolarActive = solarServices.some((service) => pathname === service.href);
 
   return (
     <>
@@ -55,144 +51,39 @@ export default function Navbar() {
               </Magnetic>
             </div>
 
-            {/* Desktop Navigation with Smooth Gliding Hover Highlight */}
+            {/* Desktop Navigation — Direct links, no redundant dropdowns */}
             <nav
               onMouseLeave={() => setHoveredNav(null)}
-              className="hidden lg:flex items-center space-x-1 xl:space-x-1.5"
+              className="hidden lg:flex items-center space-x-0.5 xl:space-x-1"
             >
-              {/* Home */}
-              <Link
-                href="/"
-                onMouseEnter={() => setHoveredNav("home")}
-                className={cn(
-                  "relative px-3.5 py-2 text-sm font-medium tracking-tight transition-colors z-10",
-                  pathname === "/" ? "text-[#15532E] font-semibold" : "text-[#202720] hover:text-[#15532E]"
-                )}
-              >
-                {hoveredNav === "home" && (
-                  <motion.div
-                    layoutId="navbar-hover-pill"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    className="absolute inset-0 bg-[#E5E8E3]/60 -z-10"
-                  />
-                )}
-                <span>Home</span>
-              </Link>
-
-              {/* Solar Dropdown Trigger */}
-              <div
-                className="relative"
-                onMouseEnter={() => {
-                  setHoveredNav("solar");
-                  setSolarOpen(true);
-                }}
-              >
-                <button
-                  type="button"
-                  onClick={() => setSolarOpen(!solarOpen)}
-                  aria-expanded={solarOpen}
-                  className={cn(
-                    "relative flex items-center space-x-1.5 px-3.5 py-2 text-sm font-medium tracking-tight transition-colors z-10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#15532E]",
-                    isSolarActive ? "text-[#15532E] font-semibold" : "text-[#202720] hover:text-[#15532E]"
-                  )}
-                >
-                  {hoveredNav === "solar" && (
-                    <motion.div
-                      layoutId="navbar-hover-pill"
-                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                      className="absolute inset-0 bg-[#E5E8E3]/60 -z-10"
-                    />
-                  )}
-                  <span>Solar</span>
-                  <ChevronDown
+              {mainNav.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onMouseEnter={() => setHoveredNav(item.href)}
                     className={cn(
-                      "w-4 h-4 transition-transform duration-200 text-[#374151]",
-                      solarOpen && "rotate-180 text-[#15532E]"
+                      "relative px-3 py-2 text-sm font-medium tracking-tight transition-colors z-10",
+                      isActive
+                        ? "text-[#15532E] font-semibold"
+                        : "text-[#202720] hover:text-[#15532E]"
                     )}
-                  />
-                </button>
-
-                <SolarDropdown isOpen={solarOpen} onClose={() => setSolarOpen(false)} />
-              </div>
-
-              {/* Projects */}
-              <Link
-                href="/projects"
-                onMouseEnter={() => setHoveredNav("projects")}
-                className={cn(
-                  "relative px-3.5 py-2 text-sm font-medium tracking-tight transition-colors z-10",
-                  pathname === "/projects" ? "text-[#15532E] font-semibold" : "text-[#202720] hover:text-[#15532E]"
-                )}
-              >
-                {hoveredNav === "projects" && (
-                  <motion.div
-                    layoutId="navbar-hover-pill"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    className="absolute inset-0 bg-[#E5E8E3]/60 -z-10"
-                  />
-                )}
-                <span>Projects</span>
-              </Link>
-
-              {/* About */}
-              <Link
-                href="/about"
-                onMouseEnter={() => setHoveredNav("about")}
-                className={cn(
-                  "relative px-3.5 py-2 text-sm font-medium tracking-tight transition-colors z-10",
-                  pathname === "/about" ? "text-[#15532E] font-semibold" : "text-[#202720] hover:text-[#15532E]"
-                )}
-              >
-                {hoveredNav === "about" && (
-                  <motion.div
-                    layoutId="navbar-hover-pill"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    className="absolute inset-0 bg-[#E5E8E3]/60 -z-10"
-                  />
-                )}
-                <span>About</span>
-              </Link>
-
-              {/* Insights */}
-              <Link
-                href="/insights"
-                onMouseEnter={() => setHoveredNav("insights")}
-                className={cn(
-                  "relative px-3.5 py-2 text-sm font-medium tracking-tight transition-colors z-10",
-                  pathname === "/insights" ? "text-[#15532E] font-semibold" : "text-[#202720] hover:text-[#15532E]"
-                )}
-              >
-                {hoveredNav === "insights" && (
-                  <motion.div
-                    layoutId="navbar-hover-pill"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    className="absolute inset-0 bg-[#E5E8E3]/60 -z-10"
-                  />
-                )}
-                <span>Insights</span>
-              </Link>
-
-              {/* FAQs */}
-              <Link
-                href="/faqs"
-                onMouseEnter={() => setHoveredNav("faqs")}
-                className={cn(
-                  "relative px-3.5 py-2 text-sm font-medium tracking-tight transition-colors z-10",
-                  pathname === "/faqs" ? "text-[#15532E] font-semibold" : "text-[#202720] hover:text-[#15532E]"
-                )}
-              >
-                {hoveredNav === "faqs" && (
-                  <motion.div
-                    layoutId="navbar-hover-pill"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    className="absolute inset-0 bg-[#E5E8E3]/60 -z-10"
-                  />
-                )}
-                <span>FAQs</span>
-              </Link>
+                  >
+                    {hoveredNav === item.href && (
+                      <motion.div
+                        layoutId="navbar-hover-pill"
+                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                        className="absolute inset-0 bg-[#E5E8E3]/60 -z-10"
+                      />
+                    )}
+                    <span>{item.title}</span>
+                  </Link>
+                );
+              })}
             </nav>
 
-            {/* Right: Contact CTA with Magnetic Hover & Mobile Menu Toggle */}
+            {/* Right: Contact CTA & Mobile Menu Toggle */}
             <div className="flex items-center space-x-3">
               <div className="hidden sm:block">
                 <Button href="/contact" variant="primary" size="md" icon="arrow" magnetic={true}>
@@ -200,7 +91,7 @@ export default function Navbar() {
                 </Button>
               </div>
 
-              {/* Mobile menu trigger with accessible 44x44px touch target */}
+              {/* Mobile menu trigger */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}

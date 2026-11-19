@@ -70,7 +70,7 @@ export const projectsData: ProjectItem[] = [
     highlights: [
       "All-black aesthetic modules with concealed conduit routing",
       "Lithium battery storage providing silent emergency power during grid blackouts",
-      "DCR-compliant modules approved under PM Surya Ghar national framework",
+      "High-efficiency TopCon mono-crystalline modules with positive power tolerance",
     ],
     featured: true,
   },

@@ -23,7 +23,7 @@ export default function InsightsPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative pt-10 pb-12 sm:py-14 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
           <div className="max-w-3xl space-y-5">
             <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
@@ -38,7 +38,7 @@ export default function InsightsPage() {
       </section>
 
       {/* SECTION 02 — FEATURED ARTICLE (Editorial Layout) */}
-      <section className="py-16 lg:py-20 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="mb-6 flex items-center justify-between">
             <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold">
@@ -95,7 +95,7 @@ export default function InsightsPage() {
       </section>
 
       {/* SECTION 03 & 04 — ARTICLE CATEGORIES & GRID */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <SectionHeading

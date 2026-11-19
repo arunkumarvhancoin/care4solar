@@ -1,13 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronDown, ArrowRight, Phone, Mail } from "lucide-react";
+import { X, Phone, Mail } from "lucide-react";
 import Care4SolarLogo from "@/components/ui/Care4SolarLogo";
 import Button from "@/components/ui/Button";
-import { solarServices } from "@/data/navigation";
 import { companyInfo } from "@/data/company";
 import { cn } from "@/lib/utils";
 
@@ -16,9 +15,20 @@ interface MobileMenuProps {
   onClose: () => void;
 }
 
+const mobileNavLinks = [
+  { title: "Home", href: "/" },
+  { title: "Solar for Homes", href: "/solar-for-homes" },
+  { title: "Solar for Apartments", href: "/solar-for-apartments" },
+  { title: "Commercial & Industrial", href: "/commercial-industrial-solar" },
+  { title: "Maintenance & Care", href: "/operations-maintenance" },
+  { title: "Featured Projects", href: "/projects" },
+  { title: "About Us", href: "/about" },
+  { title: "Knowledge Centre", href: "/insights" },
+  { title: "Solar FAQs", href: "/faqs" },
+];
+
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const pathname = usePathname();
-  const [solarExpanded, setSolarExpanded] = useState(true);
 
   // Prevent background scrolling when open
   useEffect(() => {
@@ -76,111 +86,23 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {/* Nav list with smooth touch scrolling */}
             <div className="flex-1 overflow-y-auto px-5 py-5 space-y-5" style={{ WebkitOverflowScrolling: "touch" }}>
               <nav className="flex flex-col space-y-1">
-                {/* Home */}
-                <Link
-                  href="/"
-                  className={cn(
-                    "flex items-center min-h-[44px] text-base font-medium px-3 py-2 border-b border-[#E5E8E3]/60 transition-colors",
-                    pathname === "/" ? "text-[#15532E] font-semibold bg-white" : "text-[#202720] hover:bg-white"
-                  )}
-                >
-                  Home
-                </Link>
-
-                {/* Solar expandable submenu */}
-                <div className="border-b border-[#E5E8E3]/60 pb-2">
-                  <button
-                    onClick={() => setSolarExpanded(!solarExpanded)}
-                    aria-expanded={solarExpanded}
-                    className="flex w-full items-center justify-between min-h-[44px] px-3 py-2 text-base font-medium text-[#202720] hover:bg-white transition-colors"
-                  >
-                    <span className={cn(solarServices.some((s) => s.href === pathname) && "text-[#15532E] font-semibold")}>
-                      Solar Solutions
-                    </span>
-                    <motion.span
-                      animate={{ rotate: solarExpanded ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="text-[#15532E]"
+                {mobileNavLinks.map((item) => {
+                  const isCurrent = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={cn(
+                        "flex items-center min-h-[44px] text-sm font-medium px-3 py-2 border-b border-[#E5E8E3]/60 transition-colors",
+                        isCurrent
+                          ? "text-[#15532E] font-semibold bg-white"
+                          : "text-[#202720] hover:bg-white"
+                      )}
                     >
-                      <ChevronDown className="w-5 h-5" />
-                    </motion.span>
-                  </button>
-
-                  <AnimatePresence initial={false}>
-                    {solarExpanded && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden pl-3 pr-1 mt-1 space-y-1 border-l-2 border-[#15532E]"
-                      >
-                        {solarServices.map((service) => {
-                          const isCurrent = pathname === service.href;
-                          return (
-                            <Link
-                              key={service.href}
-                              href={service.href}
-                              className={cn(
-                                "flex items-center justify-between min-h-[42px] px-2.5 py-2 text-xs sm:text-sm transition-colors",
-                                isCurrent
-                                  ? "text-[#15532E] font-semibold bg-white"
-                                  : "text-[#374151] hover:text-[#202720] hover:bg-white"
-                              )}
-                            >
-                              <span>{service.title}</span>
-                              <ArrowRight className="w-3.5 h-3.5 text-[#15532E] shrink-0" />
-                            </Link>
-                          );
-                        })}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Projects */}
-                <Link
-                  href="/projects"
-                  className={cn(
-                    "flex items-center min-h-[44px] text-base font-medium px-3 py-2 border-b border-[#E5E8E3]/60 transition-colors",
-                    pathname === "/projects" ? "text-[#15532E] font-semibold bg-white" : "text-[#202720] hover:bg-white"
-                  )}
-                >
-                  Projects
-                </Link>
-
-                {/* About Us */}
-                <Link
-                  href="/about"
-                  className={cn(
-                    "flex items-center min-h-[44px] text-base font-medium px-3 py-2 border-b border-[#E5E8E3]/60 transition-colors",
-                    pathname === "/about" ? "text-[#15532E] font-semibold bg-white" : "text-[#202720] hover:bg-white"
-                  )}
-                >
-                  About Us
-                </Link>
-
-                {/* Knowledge Centre */}
-                <Link
-                  href="/insights"
-                  className={cn(
-                    "flex items-center min-h-[44px] text-base font-medium px-3 py-2 border-b border-[#E5E8E3]/60 transition-colors",
-                    pathname === "/insights" ? "text-[#15532E] font-semibold bg-white" : "text-[#202720] hover:bg-white"
-                  )}
-                >
-                  Knowledge Centre
-                </Link>
-
-                {/* FAQs */}
-                <Link
-                  href="/faqs"
-                  className={cn(
-                    "flex items-center min-h-[44px] text-base font-medium px-3 py-2 border-b border-[#E5E8E3]/60 transition-colors",
-                    pathname === "/faqs" ? "text-[#15532E] font-semibold bg-white" : "text-[#202720] hover:bg-white"
-                  )}
-                >
-                  Solar FAQs
-                </Link>
+                      {item.title}
+                    </Link>
+                  );
+                })}
               </nav>
 
               {/* Direct Tap-to-Call & Tap-to-Email Quick Actions */}

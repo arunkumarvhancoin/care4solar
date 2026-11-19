@@ -119,7 +119,7 @@ export default function OperationsMaintenancePage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative pt-10 pb-12 sm:py-14 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-5">
@@ -134,8 +134,8 @@ export default function OperationsMaintenancePage() {
                 <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request Maintenance Enquiry
                 </Button>
-                <Button href="/solar-pricing" variant="outline" size="lg" className="w-full sm:w-auto">
-                  View Pricing
+                <Button href="/projects" variant="outline" size="lg" className="w-full sm:w-auto">
+                  View Projects
                 </Button>
               </div>
 
@@ -177,12 +177,11 @@ export default function OperationsMaintenancePage() {
       </section>
 
       {/* SECTION 02 — THE SCIENCE OF SOLAR AGING & WHY MAINTENANCE IS CRITICAL */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-6">
               <SectionHeading
-                eyebrow="Performance Preservation"
                 title="The continuous challenge of environmental exposure."
                 description="Rooftop solar systems endure intense ultraviolet radiation, torrential monsoons, severe thermal cycling, and heavy urban dust sedimentation."
               />
@@ -252,10 +251,9 @@ export default function OperationsMaintenancePage() {
       </section>
 
       {/* SECTION 03 — FIVE APPROVED MAINTENANCE SERVICES */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Maintenance Solutions"
             title="Comprehensive maintenance services."
             description="Our structured engineering services protect electrical safety, maximize yield, and preserve asset longevity across the installation's lifecycle."
             className="mb-14"
@@ -317,10 +315,9 @@ export default function OperationsMaintenancePage() {
       </section>
 
       {/* SECTION 04 — MAINTENANCE PROCESS */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Maintenance Protocol"
             title="Our structured maintenance protocol."
             description="Every maintenance engagement follows an established sequence of diagnostics, physical servicing, and verifiable performance benchmarking."
             className="mb-12"
@@ -339,10 +336,9 @@ export default function OperationsMaintenancePage() {
       </section>
 
       {/* SECTION 05 — ANNUAL MAINTENANCE CONTRACT (AMC) TECHNICAL CHECKLIST */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Annual Maintenance Contracts"
             title="Annual Maintenance Contract scope breakdown."
             description="Our AMC agreements provide structured preventive coverage to ensure safety compliance and long-term warranty preservation."
             className="mb-12"
@@ -370,10 +366,9 @@ export default function OperationsMaintenancePage() {
       </section>
 
       {/* SECTION 06 — DOCUMENTARY PHOTOGRAPHY GALLERY */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="Field Inspections"
             title="Documentary engineering photography."
             description="Our field technicians follow rigorous safety standards during cleaning, electrical testing, and drone-assisted thermal audits."
             className="mb-12"

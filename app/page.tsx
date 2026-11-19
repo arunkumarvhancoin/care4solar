@@ -17,7 +17,7 @@ const solutions = [
     title: "Solar for Homes",
     tagline: "Houses & Villas",
     description:
-      "Cut 80–90% of your power bills with rooftop solar sized to your roof. Includes PM Surya Ghar subsidy filing and net metering.",
+      "Cut 80–90% of your power bills with rooftop solar sized to your roof, complete with utility net metering and durable mounting.",
     image:
       "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=800&auto=format&fit=crop",
     href: "/solar-for-homes",
@@ -56,9 +56,9 @@ const solutions = [
 
 const hardwareComponents = [
   {
-    title: "Tier-1 DCR Modules",
+    title: "Tier-1 PV Modules",
     description:
-      "TopCon & Mono PERC panels with 25-year output warranties, fully eligible for PM Surya Ghar subsidies.",
+      "TopCon & Mono PERC panels with 25-year output warranties and positive power tolerance for maximum solar yield.",
     image:
       "https://images.unsplash.com/photo-1719848574124-2f66fa842fd6?q=80&w=800&auto=format&fit=crop",
   },
@@ -96,9 +96,11 @@ const processSteps = [
   },
   {
     number: "2",
-    title: "Design & Subsidy Filing",
+    title: "Design & Engineering",
     description:
-      "You receive a transparent quote, and we file your application on the PM Surya Ghar portal for up to ₹78,000 direct subsidy.",
+      "We prepare a detailed 3D shadow analysis, structural layout, and transparent itemized bill of materials for your property.",
+    image:
+      "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop",
     image:
       "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop",
   },
@@ -134,10 +136,10 @@ const homeFaqs = [
       "A bi-directional meter records power drawn from and exported to the grid. Your monthly bill reflects net consumption. Care4Solar manages the entire DISCOM application and meter installation.",
   },
   {
-    id: "subsidy",
-    question: "How do I receive the PM Surya Ghar subsidy?",
+    id: "lifespan",
+    question: "What is the expected lifespan of a rooftop solar system?",
     answer:
-      "Homeowners receive up to ₹78,000 for systems 3 kWp and above. The subsidy is credited directly to your bank account via DBT after DISCOM commissioning. We submit and track your portal application.",
+      "Tier-1 solar panels are engineered for 25 to 30 years of operational life with linear degradation under 0.5% annually. Inverters carry 5 to 10 year warranties, and mounting structures are hot-dip galvanized to withstand outdoor weather.",
   },
   {
     id: "cleaning",
@@ -157,7 +159,7 @@ const testimonials = [
   {
     id: "1",
     quote:
-      "Our monthly electricity bill in Whitefield dropped from ₹6,400 to under ₹600. Care4Solar handled the Bescom net meter and subsidy paperwork without us visiting any government office.",
+      "Our monthly electricity bill in Whitefield dropped from ₹6,400 to under ₹600. Care4Solar handled the Bescom net metering and turnkey installation without any disruption to our home.",
     author: "Anand R.",
     role: "Homeowner · 5 kWp System",
     location: "Whitefield, Bengaluru",
@@ -195,7 +197,7 @@ export default function HomePage() {
       <FullHeroCarousel />
 
       {/* 2. Core Proposition — Concise & Direct */}
-      <section className="py-14 sm:py-18 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-4">
@@ -233,7 +235,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. Solutions — Concise Cards */}
-      <section className="py-14 sm:py-18 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <div className="max-w-2xl mb-8">
             <SectionHeading
@@ -285,7 +287,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. Hardware Quality — Quick Specs */}
-      <section className="py-14 sm:py-18 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="max-w-2xl mb-8">
             <SectionHeading
@@ -322,7 +324,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. How We Work — 4 Simple Steps */}
-      <section className="py-14 sm:py-18 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <div className="max-w-2xl mb-8">
             <SectionHeading
@@ -364,7 +366,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. Why Care Matters — Short & Impactful */}
-      <section className="py-14 sm:py-18 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-4">
@@ -405,7 +407,7 @@ export default function HomePage() {
       </section>
 
       {/* 7. Featured Projects */}
-      <section className="py-14 sm:py-18 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
             <SectionHeading
@@ -457,7 +459,7 @@ export default function HomePage() {
       </section>
 
       {/* 8. Customer Voices / Testimonials */}
-      <section className="py-14 sm:py-18 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="max-w-2xl mb-8">
             <SectionHeading
@@ -506,7 +508,7 @@ export default function HomePage() {
       </section>
 
       {/* 9. Frequently Asked Questions */}
-      <section className="py-14 sm:py-18 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <div className="max-w-3xl mx-auto space-y-6">
             <SectionHeading

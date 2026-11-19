@@ -33,7 +33,6 @@ const requiredServices = [
   "Monitoring",
   "Inspection",
   "Solar quotation",
-  "Subsidy enquiry",
   "Other",
 ];
 
@@ -135,7 +134,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main Two-Column Layout */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* LEFT COLUMN: Contact Details */}

@@ -12,14 +12,14 @@ interface CTASectionProps {
 
 export default function CTASection({
   heading = "Ready to switch to solar?",
-  description = "Talk to our engineering team about rooftop feasibility, pricing, and how net metering works for your property.",
+  description = "Talk to our engineering team about rooftop feasibility, system sizing, and how net metering works for your property.",
   primaryCtaText = "Get in Touch",
   primaryCtaHref = "/contact",
-  secondaryCtaText = "Explore Pricing",
-  secondaryCtaHref = "/solar-pricing",
+  secondaryCtaText = "View Our Projects",
+  secondaryCtaHref = "/projects",
 }: CTASectionProps) {
   return (
-    <section className="bg-white py-20 lg:py-24 border-t border-[#E5E8E3]">
+    <section className="bg-white py-10 sm:py-14 border-t border-[#E5E8E3]">
       <Container>
         <div className="max-w-2xl mx-auto text-center space-y-4">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-[#202720] leading-tight">

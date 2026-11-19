@@ -73,38 +73,6 @@ export const servicesData: ServiceItem[] = [
       "Annual Maintenance Contracts (AMC) with periodic testing",
     ],
   },
-  {
-    id: "pricing",
-    title: "Solar Pricing",
-    slug: "/solar-pricing",
-    eyebrow: "Financial Planning",
-    shortDesc:
-      "Understand the engineering parameters, equipment tiers, and structural variables that govern solar capital expenditure.",
-    image:
-      "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1200&auto=format&fit=crop",
-    bullets: [
-      "Clear breakdown of hardware vs. engineering costs",
-      "Roof complexity and structural engineering variables",
-      "Balance of System (BOS) electrical protection",
-      "Configurable packages tailored to actual consumption",
-    ],
-  },
-  {
-    id: "subsidy",
-    title: "Solar Subsidy Assistance",
-    slug: "/solar-subsidy",
-    eyebrow: "National Schemes",
-    shortDesc:
-      "Clear, verified navigation through the PM Surya Ghar national portal requirements, technical compliance, and disbursement workflows.",
-    image:
-      "https://images.unsplash.com/photo-1780445392694-c95056ed12e2?q=80&w=1200&auto=format&fit=crop",
-    bullets: [
-      "Consumer eligibility checks under current MNRE rules",
-      "DISCOM feasibility application support",
-      "DCR (Domestic Content Requirement) module compliance",
-      "Inspection and direct subsidy transfer guidance",
-    ],
-  },
 ];
 
 export const omServices = [

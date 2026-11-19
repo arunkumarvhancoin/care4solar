@@ -105,9 +105,9 @@ export default function FullHeroCarousel() {
   const current = slides[index];
 
   return (
-    <div className="flex flex-col w-full bg-[#F7F7F3]">
+    <div className="flex flex-col w-full bg-[#202720]">
       {/* Viewport Hero */}
-      <section className="relative w-full h-[calc(100svh-4rem)] sm:h-[calc(100svh-5rem)] min-h-[580px] max-h-[800px] overflow-hidden bg-[#202720] flex items-center justify-center">
+      <section className="relative w-full h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] min-h-[580px] overflow-hidden bg-[#202720] flex items-center justify-center">
         {/* Background Image Layer with Crossfade */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">

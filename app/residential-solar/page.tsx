@@ -5,6 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
+import PageHero from "@/components/sections/PageHero";
 import { faqsData } from "@/data/faqs";
 import { Home, Building2, CheckCircle2 } from "lucide-react";
 
@@ -79,58 +80,16 @@ export default function ResidentialSolarPage() {
 
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
-      {/* Hero Section */}
-      <section className="relative pt-10 pb-12 sm:py-14 border-b border-[#E5E8E3] bg-[#F7F7F3]">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#202720] leading-[1.12]">
-                Residential solar engineered for homes &amp; societies.
-              </h1>
-              <p className="text-base sm:text-lg text-[#374151] leading-relaxed max-w-2xl">
-                Whether you own an individual villa or manage a multi-family housing society, Care4Solar designs, permits, and builds robust rooftop solar power plants that permanently cut your power bills.
-              </p>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <Button href="/contact" variant="primary" size="md">
-                  Request Free Site Survey
-                </Button>
-                <Button href="/projects" variant="secondary" size="md">
-                  View Completed Projects
-                </Button>
-              </div>
-
-              {/* Quick Trust Highlights */}
-              <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-[#E5E8E3]">
-                <div>
-                  <div className="text-xl font-bold text-[#15532E]">25 Years</div>
-                  <div className="text-xs text-[#374151] mt-0.5">Module performance warranty</div>
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-[#15532E]">Zero Leaks</div>
-                  <div className="text-xs text-[#374151] mt-0.5">Waterproof mounting guarantee</div>
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-[#15532E]">Turnkey</div>
-                  <div className="text-xs text-[#374151] mt-0.5">Full DISCOM net-meter liaison</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E5E8E3] shadow-md">
-                <Image
-                  src="https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1200&auto=format&fit=crop"
-                  alt="High efficiency rooftop solar installation on modern residence"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        title="Residential solar for homes & societies."
+        description="Custom-engineered rooftop solar for independent villas and housing societies. Sized accurately to your actual loads with turnkey DISCOM net metering."
+        image="https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1800&auto=format&fit=crop"
+        imageAlt="Residential rooftop solar installation"
+        primaryCtaText="Request Site Survey"
+        primaryCtaHref="/contact"
+        secondaryCtaText="View Projects"
+        secondaryCtaHref="/projects"
+      />
 
       {/* Solutions Grid: Homes & Apartments */}
       <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">

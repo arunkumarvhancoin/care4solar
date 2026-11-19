@@ -5,6 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
+import PageHero from "@/components/sections/PageHero";
 import { omServices } from "@/data/services";
 import { faqsData } from "@/data/faqs";
 import {
@@ -122,63 +123,16 @@ export default function OperationsMaintenancePage() {
 
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
-      {/* Hero Section */}
-      <section className="relative pt-10 pb-12 sm:py-14 border-b border-[#E5E8E3] bg-[#F7F7F3]">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7 space-y-5">
-              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
-                Solar performance needs consistent care.
-              </h1>
-              <p className="max-w-xl text-base sm:text-lg text-[#374151] leading-relaxed">
-                Structured maintenance and technical attention help solar installations remain
-                reliable, efficient and operational throughout their 25-year lifecycle.
-              </p>
-              <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
-                  Request Maintenance Enquiry
-                </Button>
-                <Button href="/projects" variant="outline" size="lg" className="w-full sm:w-auto">
-                  View Projects
-                </Button>
-              </div>
-
-              {/* Technical Capability Badges */}
-              <div className="pt-6 border-t border-[#E5E8E3] grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-                <div className="p-2.5 bg-white border border-[#E5E8E3]">
-                  <span className="font-mono text-[#15532E] font-semibold block">Wash</span>
-                  <span className="text-[#374151] text-[11px] mt-0.5 block">Demineralized Water</span>
-                </div>
-                <div className="p-2.5 bg-white border border-[#E5E8E3]">
-                  <span className="font-mono text-[#15532E] font-semibold block">Thermal</span>
-                  <span className="text-[#374151] text-[11px] mt-0.5 block">Calibrated IR Scans</span>
-                </div>
-                <div className="p-2.5 bg-white border border-[#E5E8E3]">
-                  <span className="font-mono text-[#15532E] font-semibold block">Telemetry</span>
-                  <span className="text-[#374151] text-[11px] mt-0.5 block">String-Level IoT</span>
-                </div>
-                <div className="p-2.5 bg-white border border-[#E5E8E3]">
-                  <span className="font-mono text-[#15532E] font-semibold block">AMC</span>
-                  <span className="text-[#374151] text-[11px] mt-0.5 block">Scheduled Health Audits</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5">
-              <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden border border-[#E5E8E3] bg-white">
-                <Image
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop"
-                  alt="Solar engineer inspecting a rooftop solar installation"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        title="Solar cleaning & asset maintenance."
+        description="Structured operations and preventive care for rooftop and industrial solar plants. Precision demineralized panel washing, calibrated IR drone thermography, and cloud telemetry."
+        image="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1800&auto=format&fit=crop"
+        imageAlt="Solar panel cleaning and maintenance technician"
+        primaryCtaText="Request Maintenance Audit"
+        primaryCtaHref="/contact"
+        secondaryCtaText="View Projects"
+        secondaryCtaHref="/projects"
+      />
 
       {/* SECTION 02 — THE SCIENCE OF SOLAR AGING & WHY MAINTENANCE IS CRITICAL */}
       <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">

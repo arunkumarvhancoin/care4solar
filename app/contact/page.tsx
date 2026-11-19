@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import PageHero from "@/components/sections/PageHero";
 import { companyInfo } from "@/data/company";
 import { MapPin, Phone, Mail, Clock, MessageSquare, CheckCircle2, RotateCcw } from "lucide-react";
 
@@ -118,20 +119,12 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
-      {/* Hero Section */}
-      <section className="relative py-14 sm:py-18 border-b border-[#E5E8E3] bg-[#F7F7F3]">
-        <Container>
-          <div className="max-w-3xl space-y-4">
-            <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
-              Let&apos;s discuss your solar requirements.
-            </h1>
-            <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
-              Tell us about your rooftop, project details, or maintenance needs. Our engineering team
-              will respond within 24 business hours.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        title="Let's discuss your solar requirements."
+        description="Tell us about your rooftop, project details, or maintenance needs. Our engineering team will respond within 24 business hours."
+        image="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1800&auto=format&fit=crop"
+        imageAlt="Care4Solar engineering office consultation"
+      />
 
       {/* Main Two-Column Layout */}
       <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">

@@ -42,7 +42,7 @@ export default function Button({
     ghost:
       "text-[#15532E] hover:bg-[#15532E]/10 bg-transparent",
     dark:
-      "bg-white text-[#15532E] hover:bg-[#F7F7F3] border border-white/20",
+      "bg-white text-[#202720] hover:bg-[#F7F7F3] active:bg-[#E5E8E3] shadow-sm font-semibold",
   };
 
   const content = (

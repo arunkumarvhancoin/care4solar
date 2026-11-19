@@ -1,6 +1,5 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import Reveal from "@/components/ui/Reveal";
 
 interface CTASectionProps {
   heading?: string;
@@ -12,52 +11,43 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  heading = "Let's make your solar investment work harder.",
-  description = "Speak with the Care4Solar team about your solar requirements, engineering feasibility, or maintenance operations.",
+  heading = "Ready to switch to solar?",
+  description = "Talk to our team about rooftop feasibility, pricing, and how net metering works for your property.",
   primaryCtaText = "Get in Touch",
   primaryCtaHref = "/contact",
-  secondaryCtaText = "Explore Solar Calculator",
+  secondaryCtaText = "Calculate Savings",
   secondaryCtaHref = "/solar-calculator",
 }: CTASectionProps) {
   return (
-    <section className="bg-[#15532E] py-20 lg:py-24 text-white relative overflow-hidden">
-      {/* Subtle ambient warm solar glow */}
-      <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#E5A100]/10 blur-3xl pointer-events-none" />
-
-      {/* Subtle geometric line pattern inspired by Swiss architectural layout */}
-      <div className="absolute inset-0 pointer-events-none opacity-5">
-        <div className="w-full h-full border-t border-b border-white grid grid-cols-6 divide-x divide-white" />
-      </div>
-
-      <Container className="relative z-10">
-        <div className="max-w-3xl">
-          <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E5A100] block mb-3">
-              CARE4SOLAR / CONSULTATION & TECHNICAL ADVISORY
-            </span>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-tight">
-              {heading}
-            </h2>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-4 text-base sm:text-lg text-[#F7F7F3]/80 leading-relaxed max-w-2xl">
-              {description}
-            </p>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-              <Button href={primaryCtaHref} variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
-                {primaryCtaText}
+    <section className="bg-[#15532E] py-16 sm:py-20 text-white">
+      <Container>
+        <div className="max-w-2xl space-y-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white leading-tight">
+            {heading}
+          </h2>
+          <p className="text-base sm:text-lg text-[#F7F7F3]/85 leading-relaxed">
+            {description}
+          </p>
+          <div className="pt-4 flex flex-wrap items-center gap-3">
+            <Button
+              href={primaryCtaHref}
+              variant="primary"
+              size="lg"
+              magnetic={true}
+            >
+              {primaryCtaText}
+            </Button>
+            {secondaryCtaText && secondaryCtaHref && (
+              <Button
+                href={secondaryCtaHref}
+                variant="dark"
+                size="lg"
+                magnetic={true}
+              >
+                {secondaryCtaText}
               </Button>
-              {secondaryCtaText && secondaryCtaHref && (
-                <Button href={secondaryCtaHref} variant="dark" size="lg" magnetic={true} className="w-full sm:w-auto">
-                  {secondaryCtaText}
-                </Button>
-              )}
-            </div>
-          </Reveal>
+            )}
+          </div>
         </div>
       </Container>
     </section>

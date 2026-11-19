@@ -1,16 +1,17 @@
 export interface ArticleItem {
   id: string;
   category:
-  | "Residential Solar"
-  | "Solar Maintenance"
-  | "Solar Technology"
-  | "Commercial & Industrial Solar"
-  | "Solar Subsidy"
-  | "Solar Performance";
+    | "Residential Solar"
+    | "Solar Maintenance"
+    | "Solar Technology"
+    | "Commercial & Industrial Solar"
+    | "Solar Subsidy"
+    | "Solar Performance";
   title: string;
   excerpt: string;
   readTime: string;
   date: string;
+  author: string;
   image: string;
   featured?: boolean;
 }
@@ -33,7 +34,8 @@ export const sampleArticles: ArticleItem[] = [
     excerpt:
       "A technical examination of first-year light-induced degradation (LID) versus long-term linear degradation in next-generation silicon cell architectures.",
     readTime: "6 min read",
-    date: "Sample Educational Preview",
+    date: "November 2024",
+    author: "Technical Advisory Desk",
     image:
       "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1200&auto=format&fit=crop",
     featured: true,
@@ -45,9 +47,10 @@ export const sampleArticles: ArticleItem[] = [
     excerpt:
       "Investigating mineral deposit calcification and mechanical abrasion risks when cleaning photovoltaic arrays without purified, de-ionized water.",
     readTime: "5 min read",
-    date: "Sample Educational Preview",
+    date: "October 2024",
+    author: "Asset Care Operations",
     image:
-      "https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=1000&auto=format&fit=crop",
     featured: false,
   },
   {
@@ -57,7 +60,8 @@ export const sampleArticles: ArticleItem[] = [
     excerpt:
       "An engineering comparison of bidirectional energy billing, grid synchronization requirements, and feed-in tariff accounting mechanisms.",
     readTime: "7 min read",
-    date: "Sample Educational Preview",
+    date: "September 2024",
+    author: "Grid Interconnection Team",
     image:
       "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1000&auto=format&fit=crop",
     featured: false,
@@ -69,7 +73,8 @@ export const sampleArticles: ArticleItem[] = [
     excerpt:
       "How thermal imaging identifies solder joint fatigue, micro-cracks, and localized shunt resistance before catastrophic module failure occurs.",
     readTime: "8 min read",
-    date: "Sample Educational Preview",
+    date: "August 2024",
+    author: "Diagnostics & Telemetry",
     image:
       "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=1000&auto=format&fit=crop",
     featured: false,
@@ -81,7 +86,8 @@ export const sampleArticles: ArticleItem[] = [
     excerpt:
       "Financial analysis comparing on-balance-sheet capital expenditure with third-party Power Purchase Agreements (PPAs) for commercial rooftops.",
     readTime: "9 min read",
-    date: "Sample Educational Preview",
+    date: "July 2024",
+    author: "Commercial Project Advisory",
     image:
       "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=1000&auto=format&fit=crop",
     featured: false,
@@ -93,9 +99,10 @@ export const sampleArticles: ArticleItem[] = [
     excerpt:
       "A step-by-step technical guide for residential consumers seeking to align their installation with current MNRE DCR standards and portal workflows.",
     readTime: "6 min read",
-    date: "Sample Educational Preview",
+    date: "June 2024",
+    author: "Regulatory Compliance",
     image:
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1000&auto=format&fit=crop",
     featured: false,
   },
 ];

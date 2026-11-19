@@ -22,25 +22,25 @@ export default function ResidentialSolarPage() {
       title: "Photovoltaic Solar Modules",
       desc: "High-efficiency Tier-1 Mono PERC or N-Type TopCon panels designed for superior temperature coefficient and diffuse light absorption.",
       image:
-        "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1719848574124-2f66fa842fd6?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Solar Inverters",
       desc: "Grid-tied or hybrid inverters featuring dual MPPT tracking, high conversion efficiency, and built-in Wi-Fi telemetry reporting.",
       image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Mounting Structures",
       desc: "Hot-dip galvanized steel or anodized aluminium structures engineered to withstand local wind-load ratings without compromising terrace waterproofing.",
       image:
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Electrical Protection & BOS",
       desc: "Dedicated AC/DC distribution boxes, Class-II surge protection devices (SPDs), dual chemical earthing, and lightning arrestors.",
       image:
-        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1780445392417-68b9dccc45f2?q=80&w=800&auto=format&fit=crop",
     },
   ];
 
@@ -51,8 +51,8 @@ export default function ResidentialSolarPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <div className="text-xs font-mono tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
-                01 / INDIVIDUAL HOMES &amp; ESTATES
+              <div className="text-xs tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
+                Residential Rooftop Solar
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
                 Bring the power of the sun home.
@@ -62,7 +62,7 @@ export default function ResidentialSolarPage() {
                 available roof space and electricity requirements.
               </p>
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                <Button href="/solar-calculator" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
+                <Button href="/solar-calculator" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Calculate Rooftop Requirement
                 </Button>
                 <Button href="/contact" variant="outline" size="lg" className="w-full sm:w-auto">
@@ -91,7 +91,7 @@ export default function ResidentialSolarPage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="01 / ADVANTAGES"
+            eyebrow="Why Choose Solar"
             title="Why homeowners choose solar."
             description="Investing in rooftop solar offers predictable energy generation, financial protection against rising utility tariffs, and clean power generation."
             className="mb-14"
@@ -100,32 +100,32 @@ export default function ResidentialSolarPage() {
           <div className="divide-y divide-[#E5E8E3] border-y border-[#E5E8E3]">
             {[
               {
-                num: "01",
+                num: "1",
                 title: "Reduced Grid Dependence",
                 desc: "Generate your own clean kilowatt-hours during the daytime, lowering reliance on central utility supply during peak daytime tariff hours.",
               },
               {
-                num: "02",
+                num: "2",
                 title: "Electricity Bill Savings",
                 desc: "Offset recurring electricity expenses through net-metering credits, subject to individual consumption patterns and local DISCOM tariff slabs.",
               },
               {
-                num: "03",
+                num: "3",
                 title: "Long-Term Asset Value",
                 desc: "Solar systems deliver durable, 25-year design-life infrastructure that permanently enhances property valuation and energetic independence.",
               },
               {
-                num: "04",
+                num: "4",
                 title: "Optimized Rooftop Utility",
                 desc: "Transform underutilized terrace space into a clean power plant with elevated structures that retain recreational walking space underneath.",
               },
               {
-                num: "05",
+                num: "5",
                 title: "Measurable Environmental Impact",
                 desc: "Directly reduce thermal coal generation emissions by supplying clean solar kilowatt-hours into the residential distribution grid.",
               },
               {
-                num: "06",
+                num: "6",
                 title: "Real-Time Digital Visibility",
                 desc: "Track generation yields, self-consumption ratios, and system health directly through secure mobile telemetry dashboards with proactive alerts.",
               },
@@ -134,7 +134,7 @@ export default function ResidentialSolarPage() {
                 key={item.num}
                 className="py-6 sm:py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start group hover:bg-[#F7F7F3] transition-colors px-2 sm:px-4"
               >
-                <div className="md:col-span-1 text-lg font-mono font-bold text-[#E5A100]">
+                <div className="md:col-span-1 text-lg font-bold text-[#E5A100]">
                   {item.num}
                 </div>
                 <div className="md:col-span-4">
@@ -157,7 +157,7 @@ export default function ResidentialSolarPage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="02 / ARCHITECTURES"
+            eyebrow="System Architectures"
             title="System configurations explained."
             description="Selecting the right architecture depends on grid stability in your locality, battery backup needs, and budget. Not every configuration is suited to every residence."
             className="mb-14"
@@ -167,8 +167,8 @@ export default function ResidentialSolarPage() {
             {/* On-Grid */}
             <div className="bg-white border border-[#E5E8E3] p-8 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#15532E] block">
-                  Configuration 01 / Standard
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#15532E] block">
+                  Grid-Tied Standard
                 </span>
                 <h3 className="text-xl font-semibold text-[#202720]">On-Grid System</h3>
                 <p className="text-sm text-[#747C75] leading-relaxed">
@@ -189,7 +189,7 @@ export default function ResidentialSolarPage() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs font-mono text-[#747C75]">
+              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#747C75]">
                 Best for areas with stable electrical grid power.
               </div>
             </div>
@@ -197,8 +197,8 @@ export default function ResidentialSolarPage() {
             {/* Hybrid */}
             <div className="bg-white border-2 border-[#15532E] p-8 flex flex-col justify-between space-y-6 relative shadow-xs">
               <div className="space-y-4">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#E5A100] block">
-                  Configuration 02 / Resilient
+                <span className="text-xs font-bold uppercase tracking-wider text-[#E5A100] block">
+                  Battery-Backed Resilience
                 </span>
                 <h3 className="text-xl font-semibold text-[#202720]">Hybrid System</h3>
                 <p className="text-sm text-[#747C75] leading-relaxed">
@@ -219,7 +219,7 @@ export default function ResidentialSolarPage() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs font-mono text-[#747C75]">
+              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#747C75]">
                 Best for areas experiencing recurring power outages.
               </div>
             </div>
@@ -227,8 +227,8 @@ export default function ResidentialSolarPage() {
             {/* Off-Grid */}
             <div className="bg-white border border-[#E5E8E3] p-8 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#747C75] block">
-                  Configuration 03 / Autonomous
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#747C75] block">
+                  Standalone Autonomy
                 </span>
                 <h3 className="text-xl font-semibold text-[#202720]">Off-Grid System</h3>
                 <p className="text-sm text-[#747C75] leading-relaxed">
@@ -249,7 +249,7 @@ export default function ResidentialSolarPage() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs font-mono text-[#747C75]">
+              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#747C75]">
                 Best where grid connectivity is absent or unreliable.
               </div>
             </div>
@@ -261,7 +261,7 @@ export default function ResidentialSolarPage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="03 / PROJECT TIMELINE"
+            eyebrow="Implementation Roadmap"
             title="How residential implementation works."
             description="Our structured six-step execution process ensures safety, proper permitting, and seamless grid synchronization."
             className="mb-14"
@@ -270,38 +270,38 @@ export default function ResidentialSolarPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                step: "01",
+                step: "1",
                 title: "Initial Enquiry & Load Review",
                 desc: "We analyze your recent electricity bills to determine historical consumption patterns and sanctioned electrical load.",
               },
               {
-                step: "02",
+                step: "2",
                 title: "Site & Shadow Assessment",
                 desc: "An engineer conducts a 3D shadow analysis of your rooftop to identify optimal panel azimuth and tilt angles.",
               },
               {
-                step: "03",
+                step: "3",
                 title: "Engineering Sizing & Proposal",
                 desc: "We present a transparent bill of materials, system layout drawings, and estimated generation specifications.",
               },
               {
-                step: "04",
+                step: "4",
                 title: "DISCOM Sanctions & Approvals",
                 desc: "Filing and tracking net-metering applications and technical feasibility with your local electricity board.",
               },
               {
-                step: "05",
+                step: "5",
                 title: "Installation & Commissioning",
                 desc: "Mechanical mounting, electrical cabling, inverter connection, and dual chemical earthing installation.",
               },
               {
-                step: "06",
+                step: "6",
                 title: "Net Meter & Post-Install Care",
                 desc: "DISCOM bi-directional meter installation, cloud telemetry activation, and handover documentation.",
               },
             ].map((item) => (
               <div key={item.step} className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
-                <span className="text-xl font-mono font-bold text-[#E5A100]">{item.step}</span>
+                <span className="text-xl font-bold text-[#E5A100]">{item.step}</span>
                 <h3 className="text-base font-semibold text-[#202720]">{item.title}</h3>
                 <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">{item.desc}</p>
               </div>
@@ -314,7 +314,7 @@ export default function ResidentialSolarPage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="04 / BALANCE OF SYSTEM"
+            eyebrow="Hardware & Engineering"
             title="System components engineered for longevity."
             description="Every rooftop installation relies on tested hardware categories built to withstand intense heat, monsoons, and high winds."
             className="mb-14"
@@ -347,7 +347,7 @@ export default function ResidentialSolarPage() {
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <SectionHeading
-              eyebrow="05 / QUESTIONS"
+              eyebrow="Questions & Answers"
               title="Common residential solar questions."
               description="Clear answers regarding rooftop suitability, power cuts, and system sizing."
               align="center"

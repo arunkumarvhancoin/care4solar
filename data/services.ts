@@ -13,7 +13,7 @@ export const servicesData: ServiceItem[] = [
     id: "residential",
     title: "Residential Solar",
     slug: "/solar-for-homes",
-    eyebrow: "01 / RESIDENTIAL",
+    eyebrow: "Residential",
     shortDesc:
       "Engineered rooftop systems designed around your home's actual load profile, roof architecture, and long-term energy goals.",
     image:
@@ -29,7 +29,7 @@ export const servicesData: ServiceItem[] = [
     id: "apartments",
     title: "Solar for Apartments",
     slug: "/solar-for-apartments",
-    eyebrow: "02 / HOUSING SOCIETIES",
+    eyebrow: "Housing Societies",
     shortDesc:
       "Shared rooftop solar solutions specifically structured for housing societies, apartment associations, and RWA common utilities.",
     image:
@@ -45,7 +45,7 @@ export const servicesData: ServiceItem[] = [
     id: "commercial",
     title: "Commercial & Industrial Solar",
     slug: "/commercial-industrial-solar",
-    eyebrow: "03 / ENTERPRISE",
+    eyebrow: "Commercial & Industrial",
     shortDesc:
       "High-capacity solar installations for manufacturing plants, logistics hubs, institutional campuses, and commercial complexes.",
     image:
@@ -61,7 +61,7 @@ export const servicesData: ServiceItem[] = [
     id: "operations",
     title: "Operations & Maintenance",
     slug: "/operations-maintenance",
-    eyebrow: "04 / ASSET PERFORMANCE",
+    eyebrow: "Asset Performance",
     shortDesc:
       "Comprehensive lifecycle maintenance to safeguard electrical safety, maximize generation yields, and extend equipment life.",
     image:
@@ -77,7 +77,7 @@ export const servicesData: ServiceItem[] = [
     id: "pricing",
     title: "Solar Pricing",
     slug: "/solar-pricing",
-    eyebrow: "05 / FINANCIAL PLANNING",
+    eyebrow: "Financial Planning",
     shortDesc:
       "Understand the engineering parameters, equipment tiers, and structural variables that govern solar capital expenditure.",
     image:
@@ -93,7 +93,7 @@ export const servicesData: ServiceItem[] = [
     id: "subsidy",
     title: "Solar Subsidy Assistance",
     slug: "/solar-subsidy",
-    eyebrow: "06 / NATIONAL INITIATIVES",
+    eyebrow: "National Schemes",
     shortDesc:
       "Clear, verified navigation through the PM Surya Ghar national portal requirements, technical compliance, and disbursement workflows.",
     image:
@@ -110,7 +110,7 @@ export const servicesData: ServiceItem[] = [
 export const omServices = [
   {
     id: "cleaning",
-    number: "01",
+    number: "1",
     title: "Solar Panel Cleaning",
     description:
       "Systematic removal of dust, particulate matter, bird droppings, and industrial emissions using pH-neutral demineralized water and non-abrasive equipment to prevent micro-scratches and preserve anti-reflective coatings.",
@@ -125,7 +125,7 @@ export const omServices = [
   },
   {
     id: "monitoring",
-    number: "02",
+    number: "2",
     title: "Remote Monitoring",
     description:
       "Real-time digital generation tracking, string current observation, and automated anomaly detection to spot inverter tripping, shade anomalies, and unexpected yield drop-offs immediately.",
@@ -140,7 +140,7 @@ export const omServices = [
   },
   {
     id: "thermal",
-    number: "03",
+    number: "3",
     title: "Thermal Inspection",
     description:
       "High-resolution infrared thermography to identify localized cell hot spots, bypass diode failures, loose terminal junctions, and micro-cracking invisible to the naked eye.",
@@ -155,7 +155,7 @@ export const omServices = [
   },
   {
     id: "upgrades",
-    number: "04",
+    number: "4",
     title: "System Upgrades & Retrofits",
     description:
       "Engineering assessment of legacy solar plants requiring string inverter replacements, micro-inverter additions, lightning surge protection overhauls, or capacity expansion.",
@@ -170,7 +170,7 @@ export const omServices = [
   },
   {
     id: "amc",
-    number: "05",
+    number: "5",
     title: "Annual Maintenance Contracts (AMC)",
     description:
       "Structured maintenance agreements tailored to residential, apartment, and industrial plants encompassing scheduled health checks, preventive electrical servicing, and priority technical response.",

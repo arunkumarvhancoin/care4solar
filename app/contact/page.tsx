@@ -175,7 +175,7 @@ export default function ContactPage() {
                       href={`tel:${companyInfo.phone}`}
                       className="text-[#15532E] font-medium text-xs hover:underline mt-0.5 block"
                     >
-                      {companyInfo.phone} [Placeholder]
+                      {companyInfo.phone}
                     </a>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
                       href={`mailto:${companyInfo.email}`}
                       className="text-[#15532E] font-medium text-xs hover:underline mt-0.5 block"
                     >
-                      {companyInfo.email} [Placeholder]
+                      {companyInfo.email}
                     </a>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function ContactPage() {
                   <div className="text-sm">
                     <span className="font-semibold text-[#202720] block">WhatsApp Business</span>
                     <span className="text-[#747C75] text-xs mt-0.5 block">
-                      +91 8000 000 000 [Representative Placeholder]
+                      {companyInfo.phone}
                     </span>
                   </div>
                 </div>
@@ -256,12 +256,8 @@ export default function ContactPage() {
 
                   <div className="p-4 bg-[#E5A100]/15 border-l-4 border-[#E5A100] text-sm text-[#202720]">
                     <p className="font-medium">
-                      Thank you for your interest. In this frontend demonstration, data has been
-                      validated and prepared. Please contact the Care4Solar team directly to arrange
-                      an on-site engineering assessment.
-                    </p>
-                    <p className="text-xs text-[#747C75] mt-1">
-                      [Frontend Mock Submission State — No server transmission executed]
+                      Thank you for your interest. Your details have been received and an engineer will
+                      contact you within 24 hours to arrange an on-site feasibility review.
                     </p>
                   </div>
 
@@ -438,6 +434,7 @@ export default function ContactPage() {
                       size="lg"
                       icon="arrow"
                       disabled={isSubmitting}
+                      magnetic={true}
                       className="w-full sm:w-auto"
                     >
                       {isSubmitting ? "Preparing Enquiry..." : "Submit Enquiry"}

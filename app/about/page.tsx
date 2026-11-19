@@ -4,8 +4,9 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import CTASection from "@/components/sections/CTASection";
+import TiltCard from "@/components/ui/TiltCard";
 import { companyInfo } from "@/data/company";
-import { Shield, Target, Users, Zap, CheckCircle2 } from "lucide-react";
+import { Shield, Target, Users, Zap, CheckCircle2, Award, Compass, Cpu, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -16,25 +17,21 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const values = [
     {
-      num: "01",
       title: "Technical Integrity",
       desc: "We prioritize honest engineering feasibility and conservative generation modeling over unrealistic marketing claims or compromised hardware sizing.",
       icon: Shield,
     },
     {
-      num: "02",
       title: "Operational Reliability",
       desc: "Our systems are built with Tier-1 modules, certified balance-of-system switchgear, and robust chemical earthing to guarantee 25-year structural resilience.",
       icon: Target,
     },
     {
-      num: "03",
       title: "Customer Responsibility",
       desc: "We stand beside our clients through every stage—from complex DISCOM net-metering navigation to long-term lifecycle troubleshooting.",
       icon: Users,
     },
     {
-      num: "04",
       title: "Long-Term Performance",
       desc: "Installation is merely day one. We ensure that consistent preventative maintenance, thermography, and monitoring protect your return on investment.",
       icon: Zap,
@@ -43,27 +40,27 @@ export default function AboutPage() {
 
   const approachSteps = [
     {
-      step: "01",
+      step: "1",
       title: "Understanding Requirements",
       desc: "We begin by analyzing actual electrical consumption patterns, seasonal utility bill history, and daytime load curves.",
     },
     {
-      step: "02",
+      step: "2",
       title: "Technical Assessment",
       desc: "Detailed rooftop shadow modeling, structural weight-load evaluation, and electrical panel room inspection.",
     },
     {
-      step: "03",
+      step: "3",
       title: "Appropriate Solar Solutions",
       desc: "Recommending tailored system configurations—on-grid, hybrid, or elevated superstructures—matched precisely to your site.",
     },
     {
-      step: "04",
+      step: "4",
       title: "Responsible Implementation",
       desc: "Adhering to strict electrical codes, wind-rated structural fasteners, quality conduit runs, and utility liaison.",
     },
     {
-      step: "05",
+      step: "5",
       title: "Ongoing Lifecycle Care",
       desc: "Post-commissioning performance observation, scheduled panel cleaning, and Annual Maintenance Contracts (AMC).",
     },
@@ -88,7 +85,7 @@ export default function AboutPage() {
                 infrastructure.
               </p>
               <div className="pt-2">
-                <Button href="/contact" variant="primary" size="lg" icon="arrow">
+                <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true}>
                   Get in Touch
                 </Button>
               </div>
@@ -97,8 +94,8 @@ export default function AboutPage() {
             <div className="lg:col-span-5">
               <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden border border-[#E5E8E3] bg-white">
                 <Image
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop"
-                  alt="Solar engineering consultation and infrastructure"
+                  src="https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?q=80&w=1200&auto=format&fit=crop"
+                  alt="Solar engineers on rooftop solar array"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 42vw"
@@ -116,7 +113,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-6">
               <SectionHeading
-                eyebrow="01 / COMPANY IDENTITY"
+                eyebrow="Our Mission"
                 title="Engineering discipline in every solar watt."
                 description="Our mission is to make solar reliable, durable, and transparent."
               />
@@ -149,7 +146,7 @@ export default function AboutPage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="02 / METHODOLOGY"
+            eyebrow="Our Methodology"
             title="Our five-phase engineering approach."
             description="From initial energy assessment through to decades of post-installation care, our methodology is built on technical rigor."
             className="mb-12"
@@ -171,7 +168,7 @@ export default function AboutPage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="03 / CORE PRINCIPLES"
+            eyebrow="Core Values"
             title="The values that guide Care4Solar."
             description="Our four foundational pillars ensure that every project adheres to professional standards."
             className="mb-12"
@@ -181,20 +178,19 @@ export default function AboutPage() {
             {values.map((val) => {
               const IconComp = val.icon;
               return (
-                <div key={val.num} className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-4">
-                  <div className="w-10 h-10 bg-white border border-[#E5E8E3] flex items-center justify-center text-[#15532E]">
-                    <IconComp className="w-5 h-5" />
+                <TiltCard key={val.title} maxTilt={3} className="h-full">
+                  <div className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-4 h-full">
+                    <div className="w-10 h-10 bg-white border border-[#E5E8E3] flex items-center justify-center text-[#15532E]">
+                      <IconComp className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-semibold text-[#202720]">{val.title}</h3>
+                      <p className="mt-2 text-xs sm:text-sm text-[#747C75] leading-relaxed">
+                        {val.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-xs font-mono text-[#747C75] block mb-1">
-                      Value {val.num}
-                    </span>
-                    <h3 className="text-base font-semibold text-[#202720]">{val.title}</h3>
-                    <p className="mt-2 text-xs sm:text-sm text-[#747C75] leading-relaxed">
-                      {val.desc}
-                    </p>
-                  </div>
-                </div>
+                </TiltCard>
               );
             })}
           </div>
@@ -207,7 +203,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-6">
               <SectionHeading
-                eyebrow="04 / DOMAIN CAPABILITIES"
+                eyebrow="Core Capabilities"
                 title="Verified company capabilities."
                 description="We focus strictly on solar engineering disciplines where we offer deep competence."
               />
@@ -252,6 +248,52 @@ export default function AboutPage() {
                   <p className="text-xs text-[#747C75] pl-6 leading-relaxed">{exp.detail}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 06 — ENGINEERING RIGOR & QUALITY ASSURANCE */}
+      <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
+        <Container>
+          <SectionHeading
+            eyebrow="Quality Framework"
+            title="Tested engineering benchmarks."
+            description="Every Care4Solar deployment follows verified national and international electrotechnical standards to guarantee 25-year structural longevity."
+            className="mb-14"
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
+              <Award className="w-6 h-6 text-[#15532E]" />
+              <h3 className="text-base font-semibold text-[#202720]">Tier-1 PV Modules</h3>
+              <p className="text-xs text-[#747C75] leading-relaxed">
+                IEC 61215 &amp; IEC 61730 certified, BIS compliant, with positive power tolerance (0 to +5W) and 25-year linear performance warranty.
+              </p>
+            </div>
+
+            <div className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
+              <Compass className="w-6 h-6 text-[#15532E]" />
+              <h3 className="text-base font-semibold text-[#202720]">Wind-Rated Superstructures</h3>
+              <p className="text-xs text-[#747C75] leading-relaxed">
+                Hot-dip galvanized structural steel (IS 4759, min 80μm coating) engineered to withstand wind gusts up to 180 km/h.
+              </p>
+            </div>
+
+            <div className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
+              <ShieldCheck className="w-6 h-6 text-[#15532E]" />
+              <h3 className="text-base font-semibold text-[#202720]">Electrical Protection</h3>
+              <p className="text-xs text-[#747C75] leading-relaxed">
+                Dual chemical earthing pits (IS 3043 code, resistance &lt; 2 Ohms), Class-II surge arrestors, and UV-stabilized halogen-free cabling.
+              </p>
+            </div>
+
+            <div className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
+              <Cpu className="w-6 h-6 text-[#15532E]" />
+              <h3 className="text-base font-semibold text-[#202720]">Industrial Inverters</h3>
+              <p className="text-xs text-[#747C75] leading-relaxed">
+                IP65 outdoor ingress protection, European weighted efficiency &gt; 98.4%, with integrated DC arc-fault circuit interrupters.
+              </p>
             </div>
           </div>
         </Container>

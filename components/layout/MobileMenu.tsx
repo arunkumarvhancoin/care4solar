@@ -115,9 +115,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden pl-3 pr-1 mt-1 space-y-1 border-l-2 border-[#15532E]"
                       >
-                        {solarServices.map((service, index) => {
+                        {solarServices.map((service) => {
                           const isCurrent = pathname === service.href;
-                          const formattedIndex = String(index + 1).padStart(2, "0");
                           return (
                             <Link
                               key={service.href}
@@ -129,12 +128,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                   : "text-[#747C75] hover:text-[#202720] hover:bg-white"
                               )}
                             >
-                              <span className="flex items-center space-x-2">
-                                <span className="text-[10px] font-mono text-[#CBD2C9]">
-                                  {formattedIndex}
-                                </span>
-                                <span>{service.title}</span>
-                              </span>
+                              <span>{service.title}</span>
                               <ArrowRight className="w-3.5 h-3.5 text-[#15532E] shrink-0" />
                             </Link>
                           );
@@ -199,14 +193,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   className="flex items-center space-x-2.5 min-h-[40px] px-3 py-1.5 text-xs text-[#202720] hover:text-[#15532E] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#15532E] shrink-0" />
-                  <span className="font-medium">{companyInfo.phone} [Placeholder]</span>
+                  <span className="font-medium">{companyInfo.phone}</span>
                 </a>
                 <a
                   href={`mailto:${companyInfo.email}`}
                   className="flex items-center space-x-2.5 min-h-[40px] px-3 py-1.5 text-xs text-[#202720] hover:text-[#15532E] transition-colors"
                 >
                   <Mail className="w-4 h-4 text-[#15532E] shrink-0" />
-                  <span>{companyInfo.email} [Placeholder]</span>
+                  <span>{companyInfo.email}</span>
                 </a>
               </div>
             </div>

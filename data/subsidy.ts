@@ -15,22 +15,22 @@ export const subsidyConfig = {
   tiers: [
     {
       capacitySlab: "Up to 1 kWp",
-      indicativeSubsidy: "Up to ₹30,000 [Subject to current MNRE guidelines]",
+      indicativeSubsidy: "Up to ₹30,000",
       notes: "Applies to individual residential domestic grid-tied connections using DCR modules.",
     },
     {
       capacitySlab: "2 kWp System",
-      indicativeSubsidy: "Up to ₹60,000 [Subject to current MNRE guidelines]",
+      indicativeSubsidy: "Up to ₹60,000",
       notes: "Benchmark incentive for standard two-kilowatt rooftop installations.",
     },
     {
-      capacitySlab: "3 kWp and Above (up to cap)",
-      indicativeSubsidy: "Up to ₹78,000 [Subject to current MNRE guidelines]",
+      capacitySlab: "3 kWp and Above",
+      indicativeSubsidy: "Up to ₹78,000",
       notes: "Maximum central financial assistance cap for individual single-residential domestic meters.",
     },
     {
       capacitySlab: "Group Housing Societies / RWA (Common Facilities)",
-      indicativeSubsidy: "Up to ₹18,000 per kW (up to 500 kW ceiling) [Subject to scheme rules]",
+      indicativeSubsidy: "Up to ₹18,000 / kW (up to 500 kW ceiling)",
       notes: "Applicable to common facilities (EV charging, water pumping, common lighting).",
     },
   ],
@@ -66,37 +66,37 @@ export const subsidyEligibilityCriteria = [
 
 export const subsidyProcessSteps = [
   {
-    step: "01",
+    step: "1",
     title: "Portal Registration & DISCOM Feasibility",
     description:
       "Register on the PM Surya Ghar National Portal with your consumer number, mobile number, and local DISCOM division to submit technical feasibility approval.",
   },
   {
-    step: "02",
+    step: "2",
     title: "Technical System Design & Quotation",
     description:
       "Receive rooftop engineering assessment, equipment sizing, and DCR-compliant bill of materials aligned with approved scheme parameters.",
   },
   {
-    step: "03",
+    step: "3",
     title: "System Installation & Safety Verification",
     description:
       "Installation of approved modules, grid-tied inverter, chemical earthing, and lightning protection according to MNRE technical specifications.",
   },
   {
-    step: "04",
+    step: "4",
     title: "DISCOM Inspection & Net Meter Synchronization",
     description:
       "DISCOM field engineers inspect the electrical installation, install the net meter, and synchronize the installation with the utility grid.",
   },
   {
-    step: "05",
+    step: "5",
     title: "Commissioning Certificate Upload",
     description:
       "The net-metering commissioning report is submitted and verified directly on the national portal alongside site photographs.",
   },
   {
-    step: "06",
+    step: "6",
     title: "Direct Benefit Transfer (DBT) Disbursement",
     description:
       "Once approved by the nodal authorities, the subsidy amount is disbursed directly into the applicant's linked bank account via DBT.",

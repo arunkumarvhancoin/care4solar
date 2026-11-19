@@ -21,6 +21,9 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <section className="bg-[#15532E] py-20 lg:py-24 text-white relative overflow-hidden">
+      {/* Subtle ambient warm solar glow */}
+      <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#E5A100]/10 blur-3xl pointer-events-none" />
+
       {/* Subtle geometric line pattern inspired by Swiss architectural layout */}
       <div className="absolute inset-0 pointer-events-none opacity-5">
         <div className="w-full h-full border-t border-b border-white grid grid-cols-6 divide-x divide-white" />
@@ -45,11 +48,11 @@ export default function CTASection({
           </Reveal>
           <Reveal delay={0.3}>
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-              <Button href={primaryCtaHref} variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
+              <Button href={primaryCtaHref} variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                 {primaryCtaText}
               </Button>
               {secondaryCtaText && secondaryCtaHref && (
-                <Button href={secondaryCtaHref} variant="dark" size="lg" className="w-full sm:w-auto">
+                <Button href={secondaryCtaHref} variant="dark" size="lg" magnetic={true} className="w-full sm:w-auto">
                   {secondaryCtaText}
                 </Button>
               )}

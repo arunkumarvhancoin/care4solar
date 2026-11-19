@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import Magnetic from "@/components/ui/Magnetic";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface SimpleSlide {
@@ -131,6 +132,7 @@ export default function FullHeroCarousel() {
                     variant="primary"
                     size="lg"
                     icon="arrow"
+                    magnetic={true}
                     className="w-full sm:w-auto"
                   >
                     {current.primaryText}
@@ -164,7 +166,7 @@ export default function FullHeroCarousel() {
         </Container>
       </div>
 
-      {/* Simple Bottom Bar with Clean Dots & Arrows */}
+      {/* Simple Bottom Bar with Clean Dots & Magnetic Arrows */}
       <div className="h-14 sm:h-16 border-t border-[#E5E8E3] bg-white flex items-center shrink-0">
         <Container className="w-full">
           <div className="flex items-center justify-between">
@@ -174,7 +176,7 @@ export default function FullHeroCarousel() {
                 <button
                   key={s.id}
                   onClick={() => setIndex(i)}
-                  className={`h-2 transition-all min-h-[44px] min-w-[32px] flex items-center justify-center`}
+                  className="h-2 transition-all min-h-[44px] min-w-[32px] flex items-center justify-center"
                   aria-label={`Slide ${i + 1}`}
                 >
                   <span
@@ -186,22 +188,26 @@ export default function FullHeroCarousel() {
               ))}
             </div>
 
-            {/* Simple Arrows */}
+            {/* Magnetic Arrows */}
             <div className="flex items-center space-x-2">
-              <button
-                onClick={prev}
-                aria-label="Previous slide"
-                className="w-10 h-10 border border-[#E5E8E3] hover:border-[#15532E] hover:text-[#15532E] text-[#202720] flex items-center justify-center transition-colors bg-[#F7F7F3]"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                onClick={next}
-                aria-label="Next slide"
-                className="w-10 h-10 border border-[#E5E8E3] hover:border-[#15532E] hover:text-[#15532E] text-[#202720] flex items-center justify-center transition-colors bg-[#F7F7F3]"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
+              <Magnetic strength={0.3}>
+                <button
+                  onClick={prev}
+                  aria-label="Previous slide"
+                  className="w-10 h-10 border border-[#E5E8E3] hover:border-[#15532E] hover:text-[#15532E] text-[#202720] flex items-center justify-center transition-colors bg-[#F7F7F3]"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+              </Magnetic>
+              <Magnetic strength={0.3}>
+                <button
+                  onClick={next}
+                  aria-label="Next slide"
+                  className="w-10 h-10 border border-[#E5E8E3] hover:border-[#15532E] hover:text-[#15532E] text-[#202720] flex items-center justify-center transition-colors bg-[#F7F7F3]"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </Magnetic>
             </div>
           </div>
         </Container>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import Magnetic from "@/components/ui/Magnetic";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
@@ -9,6 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: "arrow" | "up-right" | "none";
   children: React.ReactNode;
   className?: string;
+  magnetic?: boolean;
 }
 
 export default function Button({
@@ -18,10 +20,11 @@ export default function Button({
   icon = "none",
   children,
   className,
+  magnetic = false,
   ...props
 }: ButtonProps) {
   const baseClasses =
-    "group inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#15532E] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-none";
+    "group relative overflow-hidden inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#15532E] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-none";
 
   const sizeClasses = {
     sm: "text-xs px-3.5 py-2 min-h-[38px] space-x-1.5",
@@ -44,28 +47,31 @@ export default function Button({
 
   const content = (
     <>
-      <span>{children}</span>
+      {/* Subtle solar beam reflection sheen on hover */}
+      {(variant === "primary" || variant === "secondary" || variant === "dark") && (
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none"
+        />
+      )}
+      <span className="relative z-10">{children}</span>
       {icon === "arrow" && (
-        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 relative z-10 shrink-0" />
       )}
       {icon === "up-right" && (
-        <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 relative z-10 shrink-0" />
       )}
     </>
   );
 
-  if (href) {
-    return (
-      <Link
-        href={href}
-        className={cn(baseClasses, sizeClasses[size], variantClasses[variant], className)}
-      >
-        {content}
-      </Link>
-    );
-  }
-
-  return (
+  const buttonElement = href ? (
+    <Link
+      href={href}
+      className={cn(baseClasses, sizeClasses[size], variantClasses[variant], className)}
+    >
+      {content}
+    </Link>
+  ) : (
     <button
       className={cn(baseClasses, sizeClasses[size], variantClasses[variant], className)}
       {...props}
@@ -73,4 +79,10 @@ export default function Button({
       {content}
     </button>
   );
+
+  if (magnetic) {
+    return <Magnetic className="inline-block">{buttonElement}</Magnetic>;
+  }
+
+  return buttonElement;
 }

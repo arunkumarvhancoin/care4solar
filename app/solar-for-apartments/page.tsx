@@ -42,37 +42,37 @@ export default function SolarForApartmentsPage() {
 
   const projectWorkflow = [
     {
-      step: "01",
+      step: "1",
       title: "Society Enquiry & RWA Interaction",
       desc: "Initial discussion with the Management Committee or Resident Welfare Association to understand society objectives.",
     },
     {
-      step: "02",
+      step: "2",
       title: "Common-Area Electricity Assessment",
       desc: "Detailed audit of common-meter electricity bills across pumping, lifts, and lighting to model load curves.",
     },
     {
-      step: "03",
+      step: "3",
       title: "Terrace Evaluation & Structural Study",
       desc: "Assessment of parapet heights, fire escape paths, water tank shadows, and non-penetrative mounting feasibility.",
     },
     {
-      step: "04",
+      step: "4",
       title: "Technical Sizing & Detailed Proposal",
       desc: "Preparation of an engineering design document, bill of materials, and financial ROI projections for RWA review.",
     },
     {
-      step: "05",
+      step: "5",
       title: "Association Resolution & Approval",
       desc: "Assisting committee members in presenting the technical and financial proposal to apartment owners for formal AGM/EGM resolution.",
     },
     {
-      step: "06",
+      step: "6",
       title: "Installation, DISCOM Net-Metering & Commissioning",
       desc: "Professional installation adhering to multi-story safety standards, net-meter synchronization, and statutory grid compliance.",
     },
     {
-      step: "07",
+      step: "7",
       title: "Ongoing Maintenance Arrangements",
       desc: "Long-term operation and maintenance protocols including scheduled cleaning and remote monitoring to ensure continuous output.",
     },
@@ -85,8 +85,8 @@ export default function SolarForApartmentsPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <div className="text-xs font-mono tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
-                02 / SHARED RESIDENTIAL COMMUNITIES
+              <div className="text-xs tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
+                Housing Societies &amp; Apartments
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
                 Shared rooftops.
@@ -98,7 +98,7 @@ export default function SolarForApartmentsPage() {
                 that significantly reduces recurring monthly maintenance dues for all residents.
               </p>
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                <Button href="/contact" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
+                <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request RWA Presentation
                 </Button>
                 <Button href="/solar-calculator" variant="outline" size="lg" className="w-full sm:w-auto">
@@ -127,7 +127,7 @@ export default function SolarForApartmentsPage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="01 / APPLICATIONS"
+            eyebrow="Common-Area Applications"
             title="Powering shared community infrastructure."
             description="Apartment societies consume massive electricity units every month simply powering common-meter infrastructure. Solar directly counters these operational expenditures."
             className="mb-14"
@@ -159,7 +159,7 @@ export default function SolarForApartmentsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-5 space-y-6">
               <SectionHeading
-                eyebrow="02 / THE BUSINESS CASE"
+                eyebrow="The Business Case"
                 title="Why housing societies invest in rooftop solar."
                 description="Rising utility tariffs continually strain apartment association maintenance funds. Solar delivers long-term financial predictability."
               />
@@ -197,7 +197,7 @@ export default function SolarForApartmentsPage() {
             <div className="lg:col-span-7">
               <div className="relative aspect-[16/11] overflow-hidden border border-[#E5E8E3] bg-white">
                 <Image
-                  src="https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1200&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1793119985840-10f7beb15e1a?q=80&w=1200&auto=format&fit=crop"
                   alt="Apartment building complex with solar infrastructure"
                   fill
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -213,7 +213,7 @@ export default function SolarForApartmentsPage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="03 / RWA ENGAGEMENT ROADMAP"
+            eyebrow="Implementation Roadmap"
             title="How an apartment solar project works."
             description="We guide management committees step-by-step from preliminary energy audits through association resolution to grid commissioning."
             className="mb-14"
@@ -222,7 +222,7 @@ export default function SolarForApartmentsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projectWorkflow.map((item) => (
               <div key={item.step} className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
-                <span className="text-xl font-mono font-bold text-[#E5A100]">{item.step}</span>
+                <span className="text-xl font-bold text-[#E5A100]">{item.step}</span>
                 <h3 className="text-base font-semibold text-[#202720]">{item.title}</h3>
                 <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">{item.desc}</p>
               </div>
@@ -235,7 +235,7 @@ export default function SolarForApartmentsPage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="04 / TECHNICAL &amp; STRUCTURAL DILIGENCE"
+            eyebrow="Technical &amp; Structural Diligence"
             title="Apartment-specific considerations."
             description="Multi-story residential buildings have unique structural, safety, and administrative requirements that demand specialized engineering attention."
             className="mb-14"
@@ -285,7 +285,7 @@ export default function SolarForApartmentsPage() {
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <SectionHeading
-              eyebrow="05 / RWA QUESTIONS"
+              eyebrow="Society FAQs"
               title="Frequently asked questions by housing societies."
               description="Clear answers to help committee members and apartment owners make informed decisions."
               align="center"

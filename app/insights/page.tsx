@@ -5,8 +5,9 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTASection from "@/components/sections/CTASection";
+import TiltCard from "@/components/ui/TiltCard";
 import { sampleArticles, articleCategories, ArticleItem } from "@/data/articles";
-import { Clock, BookOpen, AlertCircle } from "lucide-react";
+import { Clock, BookOpen, UserCheck, ArrowRight } from "lucide-react";
 
 export default function InsightsPage() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -26,38 +27,28 @@ export default function InsightsPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center space-x-2 text-xs font-semibold tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3">
-              <span>SOLAR ENGINEERING & EDUCATIONAL KNOWLEDGE</span>
+              <span>SOLAR ENGINEERING &amp; TECHNICAL RESEARCH</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
               Knowledge for better solar decisions.
             </h1>
             <p className="text-lg sm:text-xl text-[#747C75] leading-relaxed">
-              Explore technical insights, engineering considerations, and maintenance best practices
-              to maximize the performance of your solar infrastructure.
+              Explore technical insights, photovoltaic physics, engineering standards, and maintenance
+              best practices authored by the Care4Solar technical advisory desk.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Educational Sample Notice */}
-      <div className="bg-white border-b border-[#E5E8E3] py-3">
-        <Container>
-          <div className="flex items-center space-x-2 text-xs text-[#747C75]">
-            <AlertCircle className="w-3.5 h-3.5 text-[#E5A100] shrink-0" />
-            <span>
-              Sample educational previews. Care4Solar provides verified technical engineering
-              consultation upon enquiry.
-            </span>
-          </div>
-        </Container>
-      </div>
-
       {/* SECTION 02 — FEATURED ARTICLE (Editorial Layout) */}
       <section className="py-16 lg:py-20 bg-white border-b border-[#E5E8E3]">
         <Container>
-          <div className="mb-6">
+          <div className="mb-6 flex items-center justify-between">
             <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold">
               Featured Analysis
+            </span>
+            <span className="text-xs font-mono text-[#747C75]">
+              {featuredArticle.date}
             </span>
           </div>
 
@@ -71,7 +62,7 @@ export default function InsightsPage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute top-3 left-3 bg-[#15532E] text-white text-[10px] uppercase font-mono px-2 py-0.5 tracking-wider">
+              <div className="absolute top-3 left-3 bg-[#15532E] text-white text-[10px] uppercase font-mono px-2 py-0.5 tracking-wider font-semibold">
                 {featuredArticle.category}
               </div>
             </div>
@@ -83,7 +74,10 @@ export default function InsightsPage() {
                   <span>{featuredArticle.readTime}</span>
                 </span>
                 <span>•</span>
-                <span>{featuredArticle.date}</span>
+                <span className="flex items-center space-x-1">
+                  <UserCheck className="w-3.5 h-3.5 text-[#15532E]" />
+                  <span>{featuredArticle.author}</span>
+                </span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl font-semibold text-[#202720] leading-tight">
@@ -96,7 +90,7 @@ export default function InsightsPage() {
 
               <div className="pt-2 flex items-center space-x-2 text-xs font-mono text-[#15532E] font-semibold">
                 <BookOpen className="w-4 h-4" />
-                <span>Technical Preview Reference</span>
+                <span>Care4Solar Technical Paper</span>
               </div>
             </div>
           </div>
@@ -108,7 +102,7 @@ export default function InsightsPage() {
         <Container>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <SectionHeading
-              eyebrow="02 / RESEARCH & ADVISORY"
+              eyebrow="Solar Insights & Research"
               title="Browse technical topics."
               description="Articles exploring photovoltaic physics, maintenance chemistry, industrial modeling, and regulatory compliance."
             />
@@ -134,49 +128,50 @@ export default function InsightsPage() {
           {/* Article Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article) => (
-              <div
-                key={article.id}
-                className="bg-white border border-[#E5E8E3] flex flex-col justify-between overflow-hidden transition-all hover:border-[#15532E] shadow-xs group"
-              >
-                <div>
-                  <div className="relative aspect-[16/10] overflow-hidden bg-white">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute top-3 left-3 bg-[#15532E] text-white text-[10px] uppercase font-mono px-2 py-0.5 tracking-wider">
-                      {article.category}
+              <TiltCard key={article.id} maxTilt={2.5} className="h-full">
+                <div className="bg-white border border-[#E5E8E3] flex flex-col justify-between h-full overflow-hidden transition-all hover:border-[#15532E] shadow-xs group">
+                  <div>
+                    <div className="relative aspect-[16/10] overflow-hidden bg-white">
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute top-3 left-3 bg-[#15532E] text-white text-[10px] uppercase font-mono px-2 py-0.5 tracking-wider font-semibold">
+                        {article.category}
+                      </div>
+                    </div>
+
+                    <div className="p-6 space-y-3">
+                      <div className="flex items-center justify-between text-xs text-[#747C75]">
+                        <span className="flex items-center space-x-1">
+                          <Clock className="w-3.5 h-3.5 text-[#15532E]" />
+                          <span>{article.readTime}</span>
+                        </span>
+                        <span>{article.date}</span>
+                      </div>
+
+                      <h3 className="text-lg font-semibold text-[#202720] group-hover:text-[#15532E] transition-colors leading-snug">
+                        {article.title}
+                      </h3>
+
+                      <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">
+                        {article.excerpt}
+                      </p>
                     </div>
                   </div>
 
-                  <div className="p-6 space-y-3">
-                    <div className="flex items-center space-x-3 text-xs text-[#747C75]">
-                      <span className="flex items-center space-x-1">
-                        <Clock className="w-3.5 h-3.5 text-[#15532E]" />
-                        <span>{article.readTime}</span>
-                      </span>
-                      <span>•</span>
-                      <span>{article.date}</span>
-                    </div>
-
-                    <h3 className="text-lg font-semibold text-[#202720] group-hover:text-[#15532E] transition-colors leading-snug">
-                      {article.title}
-                    </h3>
-
-                    <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">
-                      {article.excerpt}
-                    </p>
+                  <div className="p-6 pt-0 border-t border-[#E5E8E3]/60 mt-4 text-[11px] font-mono text-[#747C75] flex items-center justify-between">
+                    <span>{article.author}</span>
+                    <span className="text-[#15532E] font-medium flex items-center space-x-1 group-hover:translate-x-0.5 transition-transform">
+                      <span>Read Paper</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </span>
                   </div>
                 </div>
-
-                <div className="p-6 pt-0 border-t border-[#E5E8E3]/60 mt-4 text-[11px] font-mono text-[#747C75] flex items-center justify-between">
-                  <span>Educational Topic</span>
-                  <span className="text-[#15532E] font-medium">Care4Solar Insights</span>
-                </div>
-              </div>
+              </TiltCard>
             ))}
           </div>
         </Container>

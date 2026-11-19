@@ -36,7 +36,7 @@ export default function SolarSubsidyPage() {
               residential rooftop solar under current central government frameworks.
             </p>
             <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-              <Button href="/contact" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
+              <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                 Speak with Subsidy Specialist
               </Button>
               <Button href="/solar-calculator" variant="outline" size="lg" className="w-full sm:w-auto">
@@ -53,7 +53,7 @@ export default function SolarSubsidyPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-6">
               <SectionHeading
-                eyebrow="01 / CENTRAL PROGRAMME"
+                eyebrow="PM Surya Ghar Scheme"
                 title="PM Surya Ghar: Muft Bijli Yojana."
                 description="The flagship central financial assistance scheme for residential individual households and common-meter housing society amenities across India."
               />
@@ -87,7 +87,7 @@ export default function SolarSubsidyPage() {
                   Indicative Central Subsidy Benchmark
                 </h3>
                 <span className="text-xs font-mono text-[#15532E] font-medium">
-                  Configurable Reference
+                  Central MNRE Slabs
                 </span>
               </div>
 
@@ -122,7 +122,7 @@ export default function SolarSubsidyPage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="02 / COMPLIANCE"
+            eyebrow="Eligibility Criteria"
             title="Subsidy eligibility considerations."
             description="Central financial assistance is governed by strict technical rules regarding consumer meter type, equipment origin, and portal registration."
             className="mb-12"
@@ -132,7 +132,7 @@ export default function SolarSubsidyPage() {
             {subsidyEligibilityCriteria.map((item, index) => (
               <div key={item.title} className="p-6 bg-white border border-[#E5E8E3] space-y-3">
                 <span className="text-xs font-mono uppercase tracking-wider text-[#15532E]">
-                  Criterion 0{index + 1}
+                  Requirement {index + 1}
                 </span>
                 <h3 className="text-base font-semibold text-[#202720]">{item.title}</h3>
                 <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">{item.detail}</p>
@@ -146,7 +146,7 @@ export default function SolarSubsidyPage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="03 / WORKFLOW"
+            eyebrow="Application Process"
             title="Step-by-step subsidy disbursement roadmap."
             description="Our structured support guides homeowners from initial portal filing to official DBT subsidy disbursement."
             className="mb-12"

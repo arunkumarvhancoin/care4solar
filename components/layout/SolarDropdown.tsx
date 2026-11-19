@@ -28,15 +28,14 @@ export default function SolarDropdown({ isOpen, onClose }: SolarDropdownProps) {
         >
           <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#E5E8E3]">
             <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#15532E]">
-              Solar Capabilities & Services
+              Solar Capabilities &amp; Services
             </span>
-            <span className="text-xs text-[#747C75]">07 Approved Solutions</span>
+            <span className="text-xs text-[#747C75]">Solutions Overview</span>
           </div>
 
           <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-            {solarServices.map((service, index) => {
+            {solarServices.map((service) => {
               const isActive = pathname === service.href;
-              const formattedIndex = String(index + 1).padStart(2, "0");
 
               return (
                 <Link
@@ -49,23 +48,18 @@ export default function SolarDropdown({ isOpen, onClose }: SolarDropdownProps) {
                   )}
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-[11px] font-mono text-[#747C75] group-hover:text-[#15532E]">
-                        {formattedIndex}
-                      </span>
-                      <span
-                        className={cn(
-                          "text-sm font-semibold text-[#202720] group-hover:text-[#15532E] transition-colors",
-                          isActive && "text-[#15532E]"
-                        )}
-                      >
-                        {service.title}
-                      </span>
-                    </div>
+                    <span
+                      className={cn(
+                        "text-sm font-semibold text-[#202720] group-hover:text-[#15532E] transition-colors",
+                        isActive && "text-[#15532E]"
+                      )}
+                    >
+                      {service.title}
+                    </span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#747C75] opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#15532E]" />
                   </div>
                   {service.description && (
-                    <p className="mt-1 text-xs text-[#747C75] leading-snug line-clamp-2 pl-6">
+                    <p className="mt-1 text-xs text-[#747C75] leading-snug line-clamp-2">
                       {service.description}
                     </p>
                   )}

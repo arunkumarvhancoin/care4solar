@@ -30,13 +30,13 @@ export default function CommercialIndustrialSolarPage() {
       title: "Commercial Office Campuses",
       desc: "Grid-synchronous installations that lower daytime HVAC chilling energy consumption and demonstrate tangible corporate ESG progress.",
       image:
-        "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1745187794292-ba0014281746?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Educational & Healthcare Facilities",
       desc: "Reliable power generation with synchronized diesel generator controllers (DG-PV synch) for hospital equipment and university campuses.",
       image:
-        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1780445392628-d6f5b9e5609b?q=80&w=800&auto=format&fit=crop",
     },
   ];
 
@@ -48,7 +48,7 @@ export default function CommercialIndustrialSolarPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="text-xs font-mono tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
-                03 / ENTERPRISE ENERGY INFRASTRUCTURE
+                Commercial & Industrial Solar
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
                 Solar infrastructure built around business performance.
@@ -59,7 +59,7 @@ export default function CommercialIndustrialSolarPage() {
                 grid synchronicity, and long-term durability.
               </p>
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                <Button href="/contact" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
+                <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request Technical Feasibility
                 </Button>
                 <Button href="/operations-maintenance" variant="outline" size="lg" className="w-full sm:w-auto">
@@ -84,11 +84,11 @@ export default function CommercialIndustrialSolarPage() {
         </Container>
       </section>
 
-      {/* SECTION 02 — THE BUSINESS CASE (Editorial Numbered Rows) */}
+      {/* SECTION 02 — THE BUSINESS CASE (Editorial Rows) */}
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="01 / ENTERPRISE DRIVERS"
+            eyebrow="The Business Case"
             title="The business case for commercial solar."
             description="Industrial electricity tariffs are significantly higher than base residential rates. On-site solar generation offers immediate operational advantages."
             className="mb-14"
@@ -97,32 +97,32 @@ export default function CommercialIndustrialSolarPage() {
           <div className="divide-y divide-[#E5E8E3] border-y border-[#E5E8E3]">
             {[
               {
-                num: "01",
+                num: "1",
                 title: "Direct OPEX Reduction",
                 desc: "Solar energy generation aligns with peak daytime production shifts, directly offsetting high commercial tariff units and demand charges.",
               },
               {
-                num: "02",
+                num: "2",
                 title: "Accelerated Tax Depreciation",
                 desc: "Eligible commercial entities can claim accelerated tax depreciation on solar capital equipment, significantly improving after-tax payback metrics.",
               },
               {
-                num: "03",
+                num: "3",
                 title: "DG Fuel Displacement",
                 desc: "Using PV-Diesel hybrid controllers, solar integrates with on-site diesel generators during outages, reducing expensive diesel fuel consumption.",
               },
               {
-                num: "04",
+                num: "4",
                 title: "Unused Roof Monetization",
                 desc: "Convert vast factory roofs into productive generation zones without requiring additional land acquisition or site clearances.",
               },
               {
-                num: "05",
+                num: "5",
                 title: "Carbon Footprint & ESG Reporting",
                 desc: "Demonstrate measurable greenhouse gas reductions required by corporate supply chain compliance and institutional sustainability scorecards.",
               },
               {
-                num: "06",
+                num: "6",
                 title: "Long-Term Power Cost Hedging",
                 desc: "Lock in levelized cost of energy (LCOE) across a 25-year timeline, protecting operating margins from municipal utility tariff increases.",
               },
@@ -154,7 +154,7 @@ export default function CommercialIndustrialSolarPage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="02 / INDUSTRY VERTICALS"
+            eyebrow="Industry Sectors"
             title="Sectors we engineer for."
             description="Tailored solar engineering for varied facility types, structural roof profiles, and electrical switchgear requirements."
             className="mb-14"
@@ -186,7 +186,7 @@ export default function CommercialIndustrialSolarPage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="03 / COMMERCIAL STRUCTURES"
+            eyebrow="Commercial Financing Models"
             title="Project commercial models."
             description="Explore the two principal deployment frameworks. Availability and contractual terms depend on project size, credit evaluation, and site feasibility."
             className="mb-14"
@@ -265,7 +265,7 @@ export default function CommercialIndustrialSolarPage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="04 / ENGINEERING RIGOR"
+            eyebrow="Technical Standards"
             title="Technical considerations for commercial installations."
             description="Industrial facilities demand adherence to stringent electrical switchyard safety, structural certifications, and telemetry standards."
             className="mb-14"

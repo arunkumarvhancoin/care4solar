@@ -23,32 +23,32 @@ export const metadata: Metadata = {
 export default function OperationsMaintenancePage() {
   const processSteps = [
     {
-      step: "01",
+      step: "1",
       title: "Initial System Review & Baseline",
       desc: "Audit of historical generation logs, inverter fault histories, single line diagrams (SLD), and previous maintenance records to establish benchmark performance curves.",
     },
     {
-      step: "02",
+      step: "2",
       title: "Comprehensive Physical Inspection",
       desc: "Detailed visual and mechanical check of module glass integrity, aluminum frame earthing, mounting hardware torque tightness, and roof waterproofing penetrations.",
     },
     {
-      step: "03",
+      step: "3",
       title: "Electrical & Safety Testing",
       desc: "String open-circuit voltage (Voc), short-circuit current (Isc), insulation resistance (Riso), DC disconnect switch testing, and chemical earthing pit resistance measurements.",
     },
     {
-      step: "04",
+      step: "4",
       title: "Calibrated Thermal Scan",
       desc: "High-resolution infrared thermography scanning across module strings, combiner boxes, and inverter DC terminals to detect localized heating and hot spots.",
     },
     {
-      step: "05",
+      step: "5",
       title: "Precision Panel Cleaning",
       desc: "Systematic removal of airborne particulates, bird deposits, and environmental grime using low-pressure de-mineralized water and non-abrasive solar brushes.",
     },
     {
-      step: "06",
+      step: "6",
       title: "Detailed Engineering Report",
       desc: "Delivery of an itemized health audit report detailing generation yield comparisons, identified risks, preventive recommendations, and component upgrade roadmaps.",
     },
@@ -97,12 +97,12 @@ export default function OperationsMaintenancePage() {
     {
       title: "De-Mineralized Panel Cleaning",
       caption: "Low-TDS water wash preserving anti-reflective optical coatings",
-      src: "https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=800&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Inverter Electrical Testing",
       caption: "String inverter diagnostics and terminal torque calibration",
-      src: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Thermal IR Diagnostics",
@@ -112,7 +112,7 @@ export default function OperationsMaintenancePage() {
     {
       title: "Real-Time Telemetry Tracking",
       caption: "String-level current logging and automated anomaly detection",
-      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1780445392417-68b9dccc45f2?q=80&w=800&auto=format&fit=crop",
     },
   ];
 
@@ -134,7 +134,7 @@ export default function OperationsMaintenancePage() {
                 reliable, efficient and operational throughout their 25-year lifecycle.
               </p>
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                <Button href="/contact" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
+                <Button href="/contact" variant="primary" size="lg" icon="arrow" magnetic={true} className="w-full sm:w-auto">
                   Request Maintenance Enquiry
                 </Button>
                 <Button href="/solar-calculator" variant="outline" size="lg" className="w-full sm:w-auto">
@@ -145,19 +145,19 @@ export default function OperationsMaintenancePage() {
               {/* Technical Capability Badges */}
               <div className="pt-6 border-t border-[#E5E8E3] grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
                 <div className="p-2.5 bg-white border border-[#E5E8E3]">
-                  <span className="font-mono text-[#15532E] font-semibold block">01. Wash</span>
+                  <span className="font-mono text-[#15532E] font-semibold block">Wash</span>
                   <span className="text-[#747C75] text-[11px] mt-0.5 block">Demineralized Water</span>
                 </div>
                 <div className="p-2.5 bg-white border border-[#E5E8E3]">
-                  <span className="font-mono text-[#15532E] font-semibold block">02. Thermal</span>
+                  <span className="font-mono text-[#15532E] font-semibold block">Thermal</span>
                   <span className="text-[#747C75] text-[11px] mt-0.5 block">Calibrated IR Scans</span>
                 </div>
                 <div className="p-2.5 bg-white border border-[#E5E8E3]">
-                  <span className="font-mono text-[#15532E] font-semibold block">03. Telemetry</span>
+                  <span className="font-mono text-[#15532E] font-semibold block">Telemetry</span>
                   <span className="text-[#747C75] text-[11px] mt-0.5 block">String-Level IoT</span>
                 </div>
                 <div className="p-2.5 bg-white border border-[#E5E8E3]">
-                  <span className="font-mono text-[#15532E] font-semibold block">04. AMC</span>
+                  <span className="font-mono text-[#15532E] font-semibold block">AMC</span>
                   <span className="text-[#747C75] text-[11px] mt-0.5 block">Scheduled Health Audits</span>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export default function OperationsMaintenancePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-6">
               <SectionHeading
-                eyebrow="01 / ASSET DEGRADATION RISKS"
+                eyebrow="Performance Preservation"
                 title="The continuous challenge of environmental exposure."
                 description="Rooftop solar systems endure intense ultraviolet radiation, torrential monsoons, severe thermal cycling, and heavy urban dust sedimentation."
               />
@@ -258,7 +258,7 @@ export default function OperationsMaintenancePage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="02 / SCOPE OF SERVICES"
+            eyebrow="Maintenance Solutions"
             title="Comprehensive maintenance services."
             description="Our structured engineering services protect electrical safety, maximize yield, and preserve asset longevity across the installation's lifecycle."
             className="mb-14"
@@ -278,9 +278,6 @@ export default function OperationsMaintenancePage() {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-[#15532E] text-white text-xs font-mono font-bold px-2.5 py-1">
-                    SERVICE {service.number}
-                  </div>
                 </div>
 
                 <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-6">
@@ -311,7 +308,7 @@ export default function OperationsMaintenancePage() {
                     <span className="text-xs text-[#747C75]">
                       Available for Residential, Apartment &amp; Commercial installations
                     </span>
-                    <Button href="/contact" variant="outline" size="sm" icon="arrow">
+                    <Button href="/contact" variant="outline" size="sm" icon="arrow" magnetic={true}>
                       Enquire Now
                     </Button>
                   </div>
@@ -326,7 +323,7 @@ export default function OperationsMaintenancePage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="03 / METHODOLOGY"
+            eyebrow="Maintenance Protocol"
             title="Our structured maintenance protocol."
             description="Every maintenance engagement follows an established sequence of diagnostics, physical servicing, and verifiable performance benchmarking."
             className="mb-12"
@@ -348,7 +345,7 @@ export default function OperationsMaintenancePage() {
       <section className="py-16 lg:py-24 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="04 / PREVENTIVE AMC AUDIT"
+            eyebrow="Annual Maintenance Contracts"
             title="Annual Maintenance Contract scope breakdown."
             description="Our AMC agreements provide structured preventive coverage to ensure safety compliance and long-term warranty preservation."
             className="mb-12"
@@ -379,7 +376,7 @@ export default function OperationsMaintenancePage() {
       <section className="py-16 lg:py-24 bg-white border-b border-[#E5E8E3]">
         <Container>
           <SectionHeading
-            eyebrow="05 / IN THE FIELD"
+            eyebrow="Field Inspections"
             title="Documentary engineering photography."
             description="Our field technicians follow rigorous safety standards during cleaning, electrical testing, and drone-assisted thermal audits."
             className="mb-12"

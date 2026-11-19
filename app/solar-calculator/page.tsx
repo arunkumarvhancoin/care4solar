@@ -235,7 +235,7 @@ export default function SolarCalculatorPage() {
                 <div className="p-6 sm:p-8 bg-[#F7F7F3] border border-[#E5E8E3] space-y-6">
                   <div className="border-b border-[#E5E8E3] pb-3">
                     <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold block">
-                      Part 01
+                      Energy Profile
                     </span>
                     <h3 className="text-lg font-semibold text-[#202720]">
                       Energy Consumption & Location
@@ -325,7 +325,7 @@ export default function SolarCalculatorPage() {
                 <div className="p-6 sm:p-8 bg-[#F7F7F3] border border-[#E5E8E3] space-y-6">
                   <div className="border-b border-[#E5E8E3] pb-3">
                     <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold block">
-                      Part 02
+                      Rooftop Specifications
                     </span>
                     <h3 className="text-lg font-semibold text-[#202720]">
                       Rooftop & System Parameters
@@ -422,7 +422,7 @@ export default function SolarCalculatorPage() {
                 <div className="p-6 sm:p-8 bg-[#F7F7F3] border border-[#E5E8E3] space-y-6">
                   <div className="border-b border-[#E5E8E3] pb-3">
                     <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold block">
-                      Part 03
+                      Contact Information
                     </span>
                     <h3 className="text-lg font-semibold text-[#202720]">Contact Information</h3>
                   </div>
@@ -489,7 +489,7 @@ export default function SolarCalculatorPage() {
                     <span>Reset All Fields</span>
                   </button>
 
-                  <Button type="submit" variant="primary" size="lg" icon="arrow">
+                  <Button type="submit" variant="primary" size="lg" icon="arrow" magnetic={true}>
                     Generate Requirement Summary
                   </Button>
                 </div>

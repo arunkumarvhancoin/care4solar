@@ -43,19 +43,16 @@ export default function CommercialIndustrialSolarPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="text-xs font-mono tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
-                Commercial & Industrial Solar
-              </div>
-              <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
+            <div className="lg:col-span-7 space-y-5">
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
                 Solar infrastructure built around business performance.
               </h1>
-              <p className="max-w-xl text-base sm:text-xl text-[#747C75] leading-relaxed">
+              <p className="max-w-xl text-base sm:text-lg text-[#374151] leading-relaxed">
                 Commercial and industrial energy costs represent a major share of operational
-                expenditure. We engineer high-capacity solar systems engineered for high uptime, HT
+                expenditure. We engineer high-capacity solar systems built for high uptime, HT
                 grid synchronicity, and long-term durability.
               </p>
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
@@ -140,7 +137,7 @@ export default function CommercialIndustrialSolarPage() {
                   </h3>
                 </div>
                 <div className="md:col-span-7">
-                  <p className="text-sm text-[#747C75] leading-relaxed">
+                  <p className="text-sm text-[#374151] leading-relaxed">
                     {driver.desc}
                   </p>
                 </div>
@@ -174,7 +171,7 @@ export default function CommercialIndustrialSolarPage() {
                 </div>
                 <div className="p-5 space-y-2">
                   <h3 className="text-base font-semibold text-[#202720]">{seg.title}</h3>
-                  <p className="text-xs text-[#747C75] leading-relaxed">{seg.desc}</p>
+                  <p className="text-xs text-[#374151] leading-relaxed">{seg.desc}</p>
                 </div>
               </div>
             ))}
@@ -201,7 +198,7 @@ export default function CommercialIndustrialSolarPage() {
                   Self-Financed
                 </span>
               </div>
-              <p className="text-sm text-[#747C75] leading-relaxed">
+              <p className="text-sm text-[#374151] leading-relaxed">
                 The enterprise funds the system installation directly as a capital asset. The
                 business owns 100% of the hardware, claims accelerated depreciation benefits, and
                 retains the full financial value of all generated electricity.
@@ -220,7 +217,7 @@ export default function CommercialIndustrialSolarPage() {
                   <span>Complete asset ownership and control</span>
                 </li>
               </ul>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs font-mono text-[#747C75]">
+              <div className="pt-4 border-t border-[#E5E8E3] text-xs font-mono text-[#374151]">
                 Ideal for companies with available capital budget seeking maximum ROI.
               </div>
             </div>
@@ -233,7 +230,7 @@ export default function CommercialIndustrialSolarPage() {
                   PPA / Third-Party Financed
                 </span>
               </div>
-              <p className="text-sm text-[#747C75] leading-relaxed">
+              <p className="text-sm text-[#374151] leading-relaxed">
                 A third-party energy investor finances, installs, and maintains the solar system on
                 your facility&apos;s rooftop. The facility enters into a long-term Power Purchase
                 Agreement (PPA) to buy generated solar power at a predetermined tariff lower than
@@ -253,7 +250,7 @@ export default function CommercialIndustrialSolarPage() {
                   <span>Guaranteed unit tariff below standard DISCOM rates</span>
                 </li>
               </ul>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs font-mono text-[#747C75]">
+              <div className="pt-4 border-t border-[#E5E8E3] text-xs font-mono text-[#374151]">
                 Subject to minimum system capacity, credit rating, and site feasibility.
               </div>
             </div>
@@ -300,7 +297,7 @@ export default function CommercialIndustrialSolarPage() {
             ].map((item) => (
               <div key={item.title} className="p-6 bg-white border border-[#E5E8E3] space-y-2.5">
                 <h3 className="text-sm font-semibold text-[#202720]">{item.title}</h3>
-                <p className="text-xs text-[#747C75] leading-relaxed">{item.desc}</p>
+                <p className="text-xs text-[#374151] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

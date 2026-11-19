@@ -30,7 +30,7 @@ export default function SolarDropdown({ isOpen, onClose }: SolarDropdownProps) {
             <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#15532E]">
               Solar Capabilities &amp; Services
             </span>
-            <span className="text-xs text-[#747C75]">Solutions Overview</span>
+            <span className="text-xs text-[#374151]">Solutions Overview</span>
           </div>
 
           <div className="grid grid-cols-2 gap-x-6 gap-y-3">
@@ -56,10 +56,10 @@ export default function SolarDropdown({ isOpen, onClose }: SolarDropdownProps) {
                     >
                       {service.title}
                     </span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#747C75] opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#15532E]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#374151] opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#15532E]" />
                   </div>
                   {service.description && (
-                    <p className="mt-1 text-xs text-[#747C75] leading-snug line-clamp-2">
+                    <p className="mt-1 text-xs text-[#374151] leading-snug line-clamp-2">
                       {service.description}
                     </p>
                   )}
@@ -68,7 +68,7 @@ export default function SolarDropdown({ isOpen, onClose }: SolarDropdownProps) {
             })}
           </div>
 
-          <div className="mt-4 pt-3.5 border-t border-[#E5E8E3] flex items-center justify-between text-xs text-[#747C75]">
+          <div className="mt-4 pt-3.5 border-t border-[#E5E8E3] flex items-center justify-between text-xs text-[#374151]">
             <span>Need a custom engineering appraisal?</span>
             <Link
               href="/contact"

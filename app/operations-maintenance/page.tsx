@@ -119,17 +119,14 @@ export default function OperationsMaintenancePage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center space-x-2 text-xs font-semibold tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3">
-                <span>LIFECYCLE ASSET PERFORMANCE &amp; CARE</span>
-              </div>
-              <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
+            <div className="lg:col-span-7 space-y-5">
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
                 Solar performance needs consistent care.
               </h1>
-              <p className="max-w-xl text-base sm:text-xl text-[#747C75] leading-relaxed">
+              <p className="max-w-xl text-base sm:text-lg text-[#374151] leading-relaxed">
                 Structured maintenance and technical attention help solar installations remain
                 reliable, efficient and operational throughout their 25-year lifecycle.
               </p>
@@ -146,19 +143,19 @@ export default function OperationsMaintenancePage() {
               <div className="pt-6 border-t border-[#E5E8E3] grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
                 <div className="p-2.5 bg-white border border-[#E5E8E3]">
                   <span className="font-mono text-[#15532E] font-semibold block">Wash</span>
-                  <span className="text-[#747C75] text-[11px] mt-0.5 block">Demineralized Water</span>
+                  <span className="text-[#374151] text-[11px] mt-0.5 block">Demineralized Water</span>
                 </div>
                 <div className="p-2.5 bg-white border border-[#E5E8E3]">
                   <span className="font-mono text-[#15532E] font-semibold block">Thermal</span>
-                  <span className="text-[#747C75] text-[11px] mt-0.5 block">Calibrated IR Scans</span>
+                  <span className="text-[#374151] text-[11px] mt-0.5 block">Calibrated IR Scans</span>
                 </div>
                 <div className="p-2.5 bg-white border border-[#E5E8E3]">
                   <span className="font-mono text-[#15532E] font-semibold block">Telemetry</span>
-                  <span className="text-[#747C75] text-[11px] mt-0.5 block">String-Level IoT</span>
+                  <span className="text-[#374151] text-[11px] mt-0.5 block">String-Level IoT</span>
                 </div>
                 <div className="p-2.5 bg-white border border-[#E5E8E3]">
                   <span className="font-mono text-[#15532E] font-semibold block">AMC</span>
-                  <span className="text-[#747C75] text-[11px] mt-0.5 block">Scheduled Health Audits</span>
+                  <span className="text-[#374151] text-[11px] mt-0.5 block">Scheduled Health Audits</span>
                 </div>
               </div>
             </div>
@@ -189,7 +186,7 @@ export default function OperationsMaintenancePage() {
                 title="The continuous challenge of environmental exposure."
                 description="Rooftop solar systems endure intense ultraviolet radiation, torrential monsoons, severe thermal cycling, and heavy urban dust sedimentation."
               />
-              <p className="text-sm text-[#747C75] leading-relaxed">
+              <p className="text-sm text-[#374151] leading-relaxed">
                 Solar panels operate outdoors in unforgiving conditions. Without systematic technical
                 supervision, minor anomalies—such as a single cracked bypass diode or loose MC4
                 crimp—can escalate into major generation losses or catastrophic electrical fire
@@ -197,7 +194,7 @@ export default function OperationsMaintenancePage() {
               </p>
               <div className="p-4 bg-[#F7F7F3] border-l-4 border-[#15532E] text-xs text-[#202720] space-y-1">
                 <span className="font-semibold block">Engineering Fact:</span>
-                <p className="text-[#747C75]">
+                <p className="text-[#374151]">
                   Soiling and airborne dust deposits can degrade energy output by 15% to 25% within
                   weeks if not cleaned with appropriate low-mineral water and non-abrasive tools.
                 </p>
@@ -210,7 +207,7 @@ export default function OperationsMaintenancePage() {
                   <AlertTriangle className="w-4 h-4 text-[#E5A100]" />
                   <h4 className="text-sm font-semibold text-[#202720]">Soiling &amp; Hotspots</h4>
                 </div>
-                <p className="text-xs text-[#747C75] leading-relaxed">
+                <p className="text-xs text-[#374151] leading-relaxed">
                   Persistent bird droppings or accumulated dust cause covered cells to act as electrical
                   resistors. They heat up excessively, creating permanent hot spots that can burn through
                   the backsheet.
@@ -222,7 +219,7 @@ export default function OperationsMaintenancePage() {
                   <Flame className="w-4 h-4 text-[#F07F09]" />
                   <h4 className="text-sm font-semibold text-[#202720]">DC Terminal Loosening</h4>
                 </div>
-                <p className="text-xs text-[#747C75] leading-relaxed">
+                <p className="text-xs text-[#374151] leading-relaxed">
                   Daily thermal expansion and contraction can loosen electrical connections in combiner
                   boxes and DC isolators, creating micro-arcing and substantial fire vulnerability.
                 </p>
@@ -233,7 +230,7 @@ export default function OperationsMaintenancePage() {
                   <Gauge className="w-4 h-4 text-[#15532E]" />
                   <h4 className="text-sm font-semibold text-[#202720]">Inverter Thermal Stress</h4>
                 </div>
-                <p className="text-xs text-[#747C75] leading-relaxed">
+                <p className="text-xs text-[#374151] leading-relaxed">
                   Cooling fans clogged with dust force power inverters to derate their generation capacity
                   on hot afternoons to prevent internal component damage, sacrificing peak yield.
                 </p>
@@ -244,7 +241,7 @@ export default function OperationsMaintenancePage() {
                   <Activity className="w-4 h-4 text-[#2D9F5A]" />
                   <h4 className="text-sm font-semibold text-[#202720]">Earthing Pit Degradation</h4>
                 </div>
-                <p className="text-xs text-[#747C75] leading-relaxed">
+                <p className="text-xs text-[#374151] leading-relaxed">
                   Chemical earth pits dry out or corrode over time, elevating ground resistance above safe
                   thresholds and rendering surge arrestors and lightning protection ineffective.
                 </p>
@@ -285,12 +282,12 @@ export default function OperationsMaintenancePage() {
                     <h3 className="text-xl sm:text-2xl font-semibold text-[#202720]">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-[#747C75] leading-relaxed">
+                    <p className="text-sm text-[#374151] leading-relaxed">
                       {service.description}
                     </p>
 
                     <div className="pt-3 border-t border-[#E5E8E3]">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#747C75] block mb-2">
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#374151] block mb-2">
                         Key Service Highlights:
                       </span>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#202720]">
@@ -305,7 +302,7 @@ export default function OperationsMaintenancePage() {
                   </div>
 
                   <div className="pt-4 border-t border-[#E5E8E3] flex items-center justify-between">
-                    <span className="text-xs text-[#747C75]">
+                    <span className="text-xs text-[#374151]">
                       Available for Residential, Apartment &amp; Commercial installations
                     </span>
                     <Button href="/contact" variant="outline" size="sm" icon="arrow" magnetic={true}>
@@ -334,7 +331,7 @@ export default function OperationsMaintenancePage() {
               <div key={step.step} className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
                 <span className="text-xl font-mono font-bold text-[#E5A100]">{step.step}</span>
                 <h3 className="text-base font-semibold text-[#202720]">{step.title}</h3>
-                <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">{step.desc}</p>
+                <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -396,7 +393,7 @@ export default function OperationsMaintenancePage() {
                 </div>
                 <div className="p-4 space-y-1">
                   <h4 className="text-sm font-semibold text-[#202720]">{img.title}</h4>
-                  <p className="text-xs text-[#747C75] leading-snug">{img.caption}</p>
+                  <p className="text-xs text-[#374151] leading-snug">{img.caption}</p>
                 </div>
               </div>
             ))}

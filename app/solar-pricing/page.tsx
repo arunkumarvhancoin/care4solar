@@ -21,19 +21,16 @@ export default function SolarPricingPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
-          <div className="max-w-3xl space-y-6">
-            <div className="text-xs tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
-              Transparent Sizing &amp; Scope
-            </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
+          <div className="max-w-3xl space-y-5">
+            <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
               Understand the investment behind solar.
             </h1>
-            <p className="text-base sm:text-xl text-[#747C75] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
               Solar system costs depend on capacity, equipment selection, rooftop conditions and
               installation requirements. We believe in transparent engineering clarity without
-              fabricated price tags or hidden omissions.
+              hidden charges.
             </p>
             <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
               <Button href="/contact" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
@@ -64,7 +61,7 @@ export default function SolarPricingPage() {
                 className="p-7 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3"
               >
                 <h3 className="text-lg font-semibold text-[#202720]">{factor.title}</h3>
-                <p className="text-sm text-[#747C75] leading-relaxed">{factor.description}</p>
+                <p className="text-sm text-[#374151] leading-relaxed">{factor.description}</p>
               </div>
             ))}
           </div>
@@ -80,7 +77,7 @@ export default function SolarPricingPage() {
               title="Configurable system tiers."
               description="These representative configurations illustrate how hardware options scale from standard grid-tied setups to resilient hybrid systems. Final quotations are custom-engineered for your specific site."
             />
-            <div className="text-xs font-mono text-[#747C75] bg-white px-3 py-1.5 border border-[#E5E8E3] shrink-0">
+            <div className="text-xs font-mono text-[#374151] bg-white px-3 py-1.5 border border-[#E5E8E3] shrink-0">
               Representative Scope Specifications
             </div>
           </div>
@@ -98,7 +95,7 @@ export default function SolarPricingPage() {
                     </div>
 
                     <div className="py-2.5 px-3 bg-[#F7F7F3] border border-[#E5E8E3] flex items-center justify-between">
-                      <span className="text-xs text-[#747C75]">Indicative Benchmark:</span>
+                      <span className="text-xs text-[#374151]">Indicative Benchmark:</span>
                       <span className="text-xs sm:text-sm font-mono font-bold text-[#15532E]">
                         {tier.indicativeRange}
                       </span>
@@ -107,10 +104,10 @@ export default function SolarPricingPage() {
                     <p className="text-xs font-mono text-[#15532E] font-semibold uppercase tracking-wider">
                       {tier.tagline}
                     </p>
-                    <p className="text-sm text-[#747C75] leading-relaxed">{tier.description}</p>
+                    <p className="text-sm text-[#374151] leading-relaxed">{tier.description}</p>
 
                     <div className="pt-2">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#747C75] block mb-1">
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#374151] block mb-1">
                         Ideal For:
                       </span>
                       <p className="text-xs text-[#202720] bg-[#F7F7F3] p-3 border border-[#E5E8E3]">
@@ -119,7 +116,7 @@ export default function SolarPricingPage() {
                     </div>
 
                     <div className="space-y-2.5 pt-3 border-t border-[#E5E8E3]">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#747C75] block">
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#374151] block">
                         Scope Specifications:
                       </span>
                       {tier.features.map((feature) => (
@@ -153,11 +150,11 @@ export default function SolarPricingPage() {
                 title="What is included in an installation proposal."
                 description="Our standard project delivery covers the entire lifecycle from preliminary shadow surveys to final DISCOM net-metering synchronization."
               />
-              <p className="text-sm text-[#747C75] leading-relaxed">
+              <p className="text-sm text-[#374151] leading-relaxed">
                 Every project proposal includes an itemized Bill of Materials (BOM) specifying
                 module wattage, inverter specifications, structure thickness, and cable ratings.
               </p>
-              <div className="p-4 bg-[#F7F7F3] border-l-2 border-[#15532E] text-xs text-[#747C75] space-y-1">
+              <div className="p-4 bg-[#F7F7F3] border-l-2 border-[#15532E] text-xs text-[#374151] space-y-1">
                 <span className="font-semibold text-[#202720] block">Engineering Notice:</span>
                 <span>
                   Items are verified and tailored during your preliminary technical survey. All
@@ -180,7 +177,7 @@ export default function SolarPricingPage() {
                       <CheckCircle2 className="w-4 h-4 text-[#15532E] shrink-0" />
                       <span className="text-[#202720] font-medium">{item.title}</span>
                     </div>
-                    <span className="text-[11px] font-mono text-[#747C75] sm:text-right shrink-0">
+                    <span className="text-[11px] font-mono text-[#374151] sm:text-right shrink-0">
                       {item.status}
                     </span>
                   </div>

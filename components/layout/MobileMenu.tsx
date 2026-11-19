@@ -125,7 +125,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                 "flex items-center justify-between min-h-[42px] px-2.5 py-2 text-xs sm:text-sm transition-colors",
                                 isCurrent
                                   ? "text-[#15532E] font-semibold bg-white"
-                                  : "text-[#747C75] hover:text-[#202720] hover:bg-white"
+                                  : "text-[#374151] hover:text-[#202720] hover:bg-white"
                               )}
                             >
                               <span>{service.title}</span>
@@ -185,7 +185,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
               {/* Direct Tap-to-Call & Tap-to-Email Quick Actions */}
               <div className="pt-2 pb-1 space-y-2 border-t border-[#E5E8E3]">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-[#747C75] block px-3">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#374151] block px-3">
                   Direct Engineering Support
                 </span>
                 <a

@@ -54,7 +54,7 @@ export default function SectionHeading({
         <p
           className={cn(
             "max-w-2xl text-base sm:text-lg leading-relaxed font-normal",
-            isDark ? "text-[#F7F7F3]/80" : "text-[#747C75]"
+            isDark ? "text-[#F7F7F3]/90" : "text-[#374151]"
           )}
         >
           {description}

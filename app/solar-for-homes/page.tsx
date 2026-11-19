@@ -47,17 +47,14 @@ export default function ResidentialSolarPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section — Architectural Editorial Layout */}
-      <section className="relative pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="text-xs tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
-                Residential Rooftop Solar
-              </div>
-              <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
+            <div className="lg:col-span-7 space-y-5">
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
                 Bring the power of the sun home.
               </h1>
-              <p className="max-w-xl text-base sm:text-xl text-[#747C75] leading-relaxed">
+              <p className="max-w-xl text-base sm:text-lg text-[#374151] leading-relaxed">
                 Explore rooftop solar solutions designed around your home&apos;s energy consumption,
                 available roof space and electricity requirements.
               </p>
@@ -143,7 +140,7 @@ export default function ResidentialSolarPage() {
                   </h3>
                 </div>
                 <div className="md:col-span-7">
-                  <p className="text-sm text-[#747C75] leading-relaxed">
+                  <p className="text-sm text-[#374151] leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -171,7 +168,7 @@ export default function ResidentialSolarPage() {
                   Grid-Tied Standard
                 </span>
                 <h3 className="text-xl font-semibold text-[#202720]">On-Grid System</h3>
-                <p className="text-sm text-[#747C75] leading-relaxed">
+                <p className="text-sm text-[#374151] leading-relaxed">
                   Directly synchronized with the utility grid. Excess generation is exported via a bi-directional net meter. Shuts down during power outages to protect utility line workers.
                 </p>
                 <ul className="space-y-2 text-xs text-[#202720] pt-2">
@@ -189,7 +186,7 @@ export default function ResidentialSolarPage() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#747C75]">
+              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
                 Best for areas with stable electrical grid power.
               </div>
             </div>
@@ -201,7 +198,7 @@ export default function ResidentialSolarPage() {
                   Battery-Backed Resilience
                 </span>
                 <h3 className="text-xl font-semibold text-[#202720]">Hybrid System</h3>
-                <p className="text-sm text-[#747C75] leading-relaxed">
+                <p className="text-sm text-[#374151] leading-relaxed">
                   Combines the financial benefits of net-metering with battery storage. When the grid fails, intelligent transfer switches power your critical household appliances seamlessly.
                 </p>
                 <ul className="space-y-2 text-xs text-[#202720] pt-2">
@@ -219,7 +216,7 @@ export default function ResidentialSolarPage() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#747C75]">
+              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
                 Best for areas experiencing recurring power outages.
               </div>
             </div>
@@ -227,11 +224,11 @@ export default function ResidentialSolarPage() {
             {/* Off-Grid */}
             <div className="bg-white border border-[#E5E8E3] p-8 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#747C75] block">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#374151] block">
                   Standalone Autonomy
                 </span>
                 <h3 className="text-xl font-semibold text-[#202720]">Off-Grid System</h3>
-                <p className="text-sm text-[#747C75] leading-relaxed">
+                <p className="text-sm text-[#374151] leading-relaxed">
                   Operates entirely independent of the electrical grid. Requires extensive battery banks sized for multiple days of autonomy and solar irradiance fluctuations.
                 </p>
                 <ul className="space-y-2 text-xs text-[#202720] pt-2">
@@ -249,7 +246,7 @@ export default function ResidentialSolarPage() {
                   </li>
                 </ul>
               </div>
-              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#747C75]">
+              <div className="pt-4 border-t border-[#E5E8E3] text-xs text-[#374151]">
                 Best where grid connectivity is absent or unreliable.
               </div>
             </div>
@@ -303,7 +300,7 @@ export default function ResidentialSolarPage() {
               <div key={item.step} className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
                 <span className="text-xl font-bold text-[#E5A100]">{item.step}</span>
                 <h3 className="text-base font-semibold text-[#202720]">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">{item.desc}</p>
+                <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -334,7 +331,7 @@ export default function ResidentialSolarPage() {
                 </div>
                 <div className="p-5 space-y-2">
                   <h3 className="text-base font-semibold text-[#202720]">{comp.title}</h3>
-                  <p className="text-xs text-[#747C75] leading-relaxed">{comp.desc}</p>
+                  <p className="text-xs text-[#374151] leading-relaxed">{comp.desc}</p>
                 </div>
               </div>
             ))}

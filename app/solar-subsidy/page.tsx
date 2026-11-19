@@ -22,16 +22,13 @@ export default function SolarSubsidyPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 text-xs font-semibold tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3">
-              <span>GOVERNMENT INCENTIVES & ASSISTANCE</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
+          <div className="max-w-3xl space-y-5">
+            <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
               Understand the support available for rooftop solar.
             </h1>
-            <p className="text-base sm:text-xl text-[#747C75] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
               Explore the subsidy process, eligibility considerations and documentation involved in
               residential rooftop solar under current central government frameworks.
             </p>
@@ -57,7 +54,7 @@ export default function SolarSubsidyPage() {
                 title="PM Surya Ghar: Muft Bijli Yojana."
                 description="The flagship central financial assistance scheme for residential individual households and common-meter housing society amenities across India."
               />
-              <p className="text-sm text-[#747C75] leading-relaxed">
+              <p className="text-sm text-[#374151] leading-relaxed">
                 Administered by the Ministry of New and Renewable Energy (MNRE), the initiative
                 delivers direct financial incentives transferred directly into the consumer&apos;s bank
                 account following successful inspection and net-meter commissioning.
@@ -69,12 +66,12 @@ export default function SolarSubsidyPage() {
                   <AlertCircle className="w-4 h-4 text-[#E5A100]" />
                   <span>Regulatory Notice:</span>
                 </div>
-                <p className="text-[#747C75] leading-relaxed">
+                <p className="text-[#374151] leading-relaxed">
                   {subsidyConfig.disclaimer}
                 </p>
               </div>
 
-              <div className="text-xs font-mono text-[#747C75] space-y-1">
+              <div className="text-xs font-mono text-[#374151] space-y-1">
                 <div>Governing Body: {subsidyConfig.governingBody}</div>
                 <div>Last Verified: {subsidyConfig.lastVerificationDate}</div>
               </div>
@@ -105,12 +102,12 @@ export default function SolarSubsidyPage() {
                         {tier.indicativeSubsidy}
                       </span>
                     </div>
-                    <p className="text-xs text-[#747C75]">{tier.notes}</p>
+                    <p className="text-xs text-[#374151]">{tier.notes}</p>
                   </div>
                 ))}
               </div>
 
-              <p className="text-xs text-[#747C75] italic">
+              <p className="text-xs text-[#374151] italic">
                 *Subsidy eligibility and amounts are subject to current government guidelines.
               </p>
             </div>
@@ -135,7 +132,7 @@ export default function SolarSubsidyPage() {
                   Requirement {index + 1}
                 </span>
                 <h3 className="text-base font-semibold text-[#202720]">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">{item.detail}</p>
+                <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">{item.detail}</p>
               </div>
             ))}
           </div>
@@ -157,14 +154,14 @@ export default function SolarSubsidyPage() {
               <div key={step.step} className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
                 <span className="text-xl font-mono font-bold text-[#E5A100]">{step.step}</span>
                 <h3 className="text-base font-semibold text-[#202720]">{step.title}</h3>
-                <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
                   {step.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 p-4 bg-[#F7F7F3] border border-[#E5E8E3] text-center text-xs text-[#747C75]">
+          <div className="mt-8 p-4 bg-[#F7F7F3] border border-[#E5E8E3] text-center text-xs text-[#374151]">
             Important: Care4Solar provides full documentation liaison and engineering compliance,
             but does not guarantee government approval or timeline durations.
           </div>
@@ -183,7 +180,7 @@ export default function SolarSubsidyPage() {
                   Required Application Documents
                 </h3>
               </div>
-              <p className="text-sm text-[#747C75]">
+              <p className="text-sm text-[#374151]">
                 General documentation checklist for the PM Surya Ghar National Portal. Exact
                 documentation requirements depend on active state DISCOM policies.
               </p>
@@ -206,7 +203,7 @@ export default function SolarSubsidyPage() {
                   Verified Government Portals
                 </h3>
               </div>
-              <p className="text-sm text-[#747C75]">
+              <p className="text-sm text-[#374151]">
                 Direct links to verified government portals for official notifications, circulars,
                 and national portal tracking.
               </p>
@@ -224,9 +221,9 @@ export default function SolarSubsidyPage() {
                       <span className="text-sm font-semibold text-[#202720] group-hover:text-[#15532E]">
                         {res.name}
                       </span>
-                      <ExternalLink className="w-4 h-4 text-[#747C75] group-hover:text-[#15532E] transition-colors" />
+                      <ExternalLink className="w-4 h-4 text-[#374151] group-hover:text-[#15532E] transition-colors" />
                     </div>
-                    <p className="mt-1.5 text-xs text-[#747C75] leading-relaxed">
+                    <p className="mt-1.5 text-xs text-[#374151] leading-relaxed">
                       {res.description}
                     </p>
                     <span className="mt-2 text-[11px] font-mono text-[#15532E] block">

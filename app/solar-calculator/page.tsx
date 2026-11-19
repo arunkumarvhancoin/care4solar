@@ -113,7 +113,7 @@ export default function SolarCalculatorPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
               Explore your solar potential.
             </h1>
-            <p className="text-lg sm:text-xl text-[#747C75] leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#374151] leading-relaxed">
               Enter your energy requirements to understand what information is needed for a suitable
               solar system proposal.
             </p>
@@ -128,7 +128,7 @@ export default function SolarCalculatorPage() {
             {/* Engineering Transparency Notice */}
             <div className="mb-10 p-5 bg-[#F7F7F3] border-l-4 border-[#15532E] flex items-start space-x-3.5">
               <Info className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
-              <div className="text-xs sm:text-sm text-[#747C75] space-y-1">
+              <div className="text-xs sm:text-sm text-[#374151] space-y-1">
                 <span className="font-semibold text-[#202720] block">
                   Care4Solar Engineering Commitment:
                 </span>
@@ -153,7 +153,7 @@ export default function SolarCalculatorPage() {
 
                 <div className="p-6 bg-white border border-[#E5E8E3] space-y-4">
                   <div className="flex items-center justify-between pb-3 border-b border-[#E5E8E3]">
-                    <span className="text-xs font-mono uppercase tracking-wider text-[#747C75]">
+                    <span className="text-xs font-mono uppercase tracking-wider text-[#374151]">
                       Preliminary Enquiry Summary
                     </span>
                     <span className="text-xs font-mono text-[#15532E] font-semibold">
@@ -163,39 +163,39 @@ export default function SolarCalculatorPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                     <div>
-                      <span className="text-xs text-[#747C75] block">Location:</span>
+                      <span className="text-xs text-[#374151] block">Location:</span>
                       <span className="font-medium text-[#202720]">{formData.location}</span>
                     </div>
                     <div>
-                      <span className="text-xs text-[#747C75] block">Monthly Bill:</span>
+                      <span className="text-xs text-[#374151] block">Monthly Bill:</span>
                       <span className="font-medium text-[#202720]">₹ {formData.monthlyBill}</span>
                     </div>
                     <div>
-                      <span className="text-xs text-[#747C75] block">Roof Architecture:</span>
+                      <span className="text-xs text-[#374151] block">Roof Architecture:</span>
                       <span className="font-medium text-[#202720]">{formData.roofType}</span>
                     </div>
                     <div>
-                      <span className="text-xs text-[#747C75] block">Desired Configuration:</span>
+                      <span className="text-xs text-[#374151] block">Desired Configuration:</span>
                       <span className="font-medium text-[#202720]">{formData.systemType}</span>
                     </div>
                     <div>
-                      <span className="text-xs text-[#747C75] block">Target Offset:</span>
+                      <span className="text-xs text-[#374151] block">Target Offset:</span>
                       <span className="font-medium text-[#202720]">{formData.billOffset}% of Bill</span>
                     </div>
                     {formData.rooftopSpace && (
                       <div>
-                        <span className="text-xs text-[#747C75] block">Available Terrace Space:</span>
+                        <span className="text-xs text-[#374151] block">Available Terrace Space:</span>
                         <span className="font-medium text-[#202720]">{formData.rooftopSpace} sq.ft.</span>
                       </div>
                     )}
                     {formData.sanctionedLoad && (
                       <div>
-                        <span className="text-xs text-[#747C75] block">Sanctioned Load:</span>
+                        <span className="text-xs text-[#374151] block">Sanctioned Load:</span>
                         <span className="font-medium text-[#202720]">{formData.sanctionedLoad} kW</span>
                       </div>
                     )}
                     <div>
-                      <span className="text-xs text-[#747C75] block">Contact Person:</span>
+                      <span className="text-xs text-[#374151] block">Contact Person:</span>
                       <span className="font-medium text-[#202720]">
                         {formData.name} ({formData.phone})
                       </span>
@@ -218,7 +218,7 @@ export default function SolarCalculatorPage() {
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="inline-flex items-center space-x-2 text-sm font-medium text-[#747C75] hover:text-[#202720] px-4 py-2 border border-[#E5E8E3] bg-white transition-colors"
+                    className="inline-flex items-center space-x-2 text-sm font-medium text-[#374151] hover:text-[#202720] px-4 py-2 border border-[#E5E8E3] bg-white transition-colors"
                   >
                     <RotateCcw className="w-4 h-4" />
                     <span>Reset Calculator</span>
@@ -279,7 +279,7 @@ export default function SolarCalculatorPage() {
                     {/* 3. Electricity tariff, optional */}
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-2">
-                        Electricity Tariff Rate (₹/kWh) <span className="text-[#747C75] text-[10px] lowercase font-normal">(optional)</span>
+                        Electricity Tariff Rate (₹/kWh) <span className="text-[#374151] text-[10px] lowercase font-normal">(optional)</span>
                       </label>
                       <input
                         type="number"
@@ -290,7 +290,7 @@ export default function SolarCalculatorPage() {
                         placeholder="e.g. 7.50"
                         className="w-full bg-white border border-[#E5E8E3] px-3.5 py-3 text-base sm:text-sm min-h-[44px] text-[#202720] focus:outline-none focus:border-[#15532E]"
                       />
-                      <span className="text-[11px] text-[#747C75] mt-1 block">Leave blank if unknown</span>
+                      <span className="text-[11px] text-[#374151] mt-1 block">Leave blank if unknown</span>
                     </div>
 
                     {/* 4. Desired bill offset percentage */}
@@ -333,7 +333,7 @@ export default function SolarCalculatorPage() {
                     {/* 5. Available rooftop space, optional */}
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-2">
-                        Available Rooftop Area (Sq. Ft.) <span className="text-[#747C75] text-[10px] lowercase font-normal">(optional)</span>
+                        Available Rooftop Area (Sq. Ft.) <span className="text-[#374151] text-[10px] lowercase font-normal">(optional)</span>
                       </label>
                       <input
                         type="number"
@@ -348,7 +348,7 @@ export default function SolarCalculatorPage() {
                     {/* 6. Sanctioned electrical load, optional */}
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-2">
-                        Sanctioned Load (kW) <span className="text-[#747C75] text-[10px] lowercase font-normal">(optional)</span>
+                        Sanctioned Load (kW) <span className="text-[#374151] text-[10px] lowercase font-normal">(optional)</span>
                       </label>
                       <input
                         type="number"
@@ -363,7 +363,7 @@ export default function SolarCalculatorPage() {
                     {/* 7. Required system capacity, optional */}
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-2">
-                        Desired System Capacity (kWp) <span className="text-[#747C75] text-[10px] lowercase font-normal">(optional)</span>
+                        Desired System Capacity (kWp) <span className="text-[#374151] text-[10px] lowercase font-normal">(optional)</span>
                       </label>
                       <input
                         type="number"
@@ -480,7 +480,7 @@ export default function SolarCalculatorPage() {
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="inline-flex items-center space-x-2 text-sm font-medium text-[#747C75] hover:text-[#202720] transition-colors"
+                    className="inline-flex items-center space-x-2 text-sm font-medium text-[#374151] hover:text-[#202720] transition-colors"
                   >
                     <RotateCcw className="w-4 h-4" />
                     <span>Reset All Fields</span>

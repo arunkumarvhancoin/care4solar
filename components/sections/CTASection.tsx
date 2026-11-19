@@ -25,7 +25,7 @@ export default function CTASection({
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-[#202720] leading-tight">
             {heading}
           </h2>
-          <p className="text-base sm:text-lg text-[#747C75] leading-relaxed max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-[#374151] leading-relaxed max-w-xl mx-auto">
             {description}
           </p>
           <div className="pt-3 flex flex-wrap items-center justify-center gap-3">

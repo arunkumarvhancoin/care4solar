@@ -119,17 +119,15 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative pt-12 pb-16 lg:pt-16 lg:pb-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-18 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 text-xs font-semibold tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3">
-              <span>GET IN TOUCH WITH OUR TEAM</span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
+          <div className="max-w-3xl space-y-4">
+            <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
               Let&apos;s discuss your solar requirements.
             </h1>
-            <p className="text-lg sm:text-xl text-[#747C75] leading-relaxed">
-              Tell us a little about your project or maintenance requirements.
+            <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
+              Tell us about your rooftop, project details, or maintenance needs. Our engineering team
+              will respond within 24 business hours.
             </p>
           </div>
         </Container>
@@ -148,7 +146,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-semibold text-[#202720]">
                   Care4Solar Engineering Office
                 </h2>
-                <p className="mt-2 text-sm text-[#747C75] leading-relaxed">
+                <p className="mt-2 text-sm text-[#374151] leading-relaxed">
                   Our engineers are available for technical assessments, rooftop shadow studies,
                   and Annual Maintenance Contract evaluations.
                 </p>
@@ -160,7 +158,7 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
                   <div className="text-sm">
                     <span className="font-semibold text-[#202720] block">Office Address</span>
-                    <span className="text-[#747C75] text-xs leading-relaxed mt-0.5 block">
+                    <span className="text-[#374151] text-xs leading-relaxed mt-0.5 block">
                       {companyInfo.address}
                     </span>
                   </div>
@@ -199,7 +197,7 @@ export default function ContactPage() {
                   <MessageSquare className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
                   <div className="text-sm">
                     <span className="font-semibold text-[#202720] block">WhatsApp Business</span>
-                    <span className="text-[#747C75] text-xs mt-0.5 block">
+                    <span className="text-[#374151] text-xs mt-0.5 block">
                       {companyInfo.phone}
                     </span>
                   </div>
@@ -210,7 +208,7 @@ export default function ContactPage() {
                   <Clock className="w-5 h-5 text-[#15532E] shrink-0 mt-0.5" />
                   <div className="text-sm">
                     <span className="font-semibold text-[#202720] block">Working Hours</span>
-                    <span className="text-[#747C75] text-xs mt-0.5 block">
+                    <span className="text-[#374151] text-xs mt-0.5 block">
                       {companyInfo.workingHours}
                     </span>
                   </div>
@@ -231,24 +229,24 @@ export default function ContactPage() {
                   </div>
 
                   <div className="p-5 bg-white border border-[#E5E8E3] space-y-3 text-sm">
-                    <p className="text-xs font-mono uppercase tracking-wider text-[#747C75]">
+                    <p className="text-xs font-mono uppercase tracking-wider text-[#374151]">
                       Mock Submission Record
                     </p>
                     <div className="grid grid-cols-2 gap-3 text-xs">
                       <div>
-                        <span className="text-[#747C75] block">Name:</span>
+                        <span className="text-[#374151] block">Name:</span>
                         <span className="font-medium text-[#202720]">{formData.fullName}</span>
                       </div>
                       <div>
-                        <span className="text-[#747C75] block">Phone:</span>
+                        <span className="text-[#374151] block">Phone:</span>
                         <span className="font-medium text-[#202720]">{formData.phone}</span>
                       </div>
                       <div>
-                        <span className="text-[#747C75] block">Service:</span>
+                        <span className="text-[#374151] block">Service:</span>
                         <span className="font-medium text-[#202720]">{formData.requiredService}</span>
                       </div>
                       <div>
-                        <span className="text-[#747C75] block">Category:</span>
+                        <span className="text-[#374151] block">Category:</span>
                         <span className="font-medium text-[#202720]">{formData.customerCategory}</span>
                       </div>
                     </div>
@@ -274,7 +272,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <h3 className="text-xl font-semibold text-[#202720]">Project Enquiry Form</h3>
-                    <p className="text-xs text-[#747C75] mt-1">
+                    <p className="text-xs text-[#374151] mt-1">
                       Fields marked with <span className="text-red-600">*</span> are mandatory.
                     </p>
                   </div>
@@ -394,7 +392,7 @@ export default function ContactPage() {
                     <div className="sm:col-span-2">
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#202720] mb-1.5">
                         Approximate System Capacity (kWp){" "}
-                        <span className="text-[#747C75] text-[10px] lowercase font-normal">
+                        <span className="text-[#374151] text-[10px] lowercase font-normal">
                           (optional)
                         </span>
                       </label>

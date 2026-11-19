@@ -32,7 +32,7 @@ export default function InsightsPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
               Knowledge for better solar decisions.
             </h1>
-            <p className="text-lg sm:text-xl text-[#747C75] leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#374151] leading-relaxed">
               Explore technical insights, photovoltaic physics, engineering standards, and maintenance
               best practices authored by the Care4Solar technical advisory desk.
             </p>
@@ -47,7 +47,7 @@ export default function InsightsPage() {
             <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold">
               Featured Analysis
             </span>
-            <span className="text-xs font-mono text-[#747C75]">
+            <span className="text-xs font-mono text-[#374151]">
               {featuredArticle.date}
             </span>
           </div>
@@ -68,7 +68,7 @@ export default function InsightsPage() {
             </div>
 
             <div className="lg:col-span-6 space-y-4">
-              <div className="flex items-center space-x-4 text-xs text-[#747C75]">
+              <div className="flex items-center space-x-4 text-xs text-[#374151]">
                 <span className="flex items-center space-x-1">
                   <Clock className="w-3.5 h-3.5 text-[#15532E]" />
                   <span>{featuredArticle.readTime}</span>
@@ -84,7 +84,7 @@ export default function InsightsPage() {
                 {featuredArticle.title}
               </h2>
 
-              <p className="text-sm sm:text-base text-[#747C75] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#374151] leading-relaxed">
                 {featuredArticle.excerpt}
               </p>
 
@@ -145,7 +145,7 @@ export default function InsightsPage() {
                     </div>
 
                     <div className="p-6 space-y-3">
-                      <div className="flex items-center justify-between text-xs text-[#747C75]">
+                      <div className="flex items-center justify-between text-xs text-[#374151]">
                         <span className="flex items-center space-x-1">
                           <Clock className="w-3.5 h-3.5 text-[#15532E]" />
                           <span>{article.readTime}</span>
@@ -157,13 +157,13 @@ export default function InsightsPage() {
                         {article.title}
                       </h3>
 
-                      <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">
+                      <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">
                         {article.excerpt}
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-6 pt-0 border-t border-[#E5E8E3]/60 mt-4 text-[11px] font-mono text-[#747C75] flex items-center justify-between">
+                  <div className="p-6 pt-0 border-t border-[#E5E8E3]/60 mt-4 text-[11px] font-mono text-[#374151] flex items-center justify-between">
                     <span>{article.author}</span>
                     <span className="text-[#15532E] font-medium flex items-center space-x-1 group-hover:translate-x-0.5 transition-transform">
                       <span>Read Paper</span>

@@ -36,7 +36,7 @@ export default function ProjectsPage() {
                 <br />
                 <span className="text-[#202720]">Engineered in the real world.</span>
               </h1>
-              <p className="max-w-xl text-lg sm:text-xl text-[#747C75] leading-relaxed">
+              <p className="max-w-xl text-lg sm:text-xl text-[#374151] leading-relaxed">
                 Detailed project case studies illustrating rooftop structural designs, electrical
                 switchgear integrations, and verified generation performance across residential,
                 apartment, commercial, and industrial facilities.
@@ -142,7 +142,7 @@ export default function ProjectsPage() {
                       >
                         <div className="space-y-4">
                           <div className="flex items-center justify-between pb-2 border-b border-[#E5E8E3]">
-                            <span className="text-xs font-mono uppercase tracking-wider text-[#747C75]">
+                            <span className="text-xs font-mono uppercase tracking-wider text-[#374151]">
                               Case Study Ref: {project.id.toUpperCase()}
                             </span>
                             <span className="text-xs font-mono font-bold text-[#15532E]">
@@ -154,14 +154,14 @@ export default function ProjectsPage() {
                             {project.title}
                           </h2>
 
-                          <p className="text-sm sm:text-base text-[#747C75] leading-relaxed">
+                          <p className="text-sm sm:text-base text-[#374151] leading-relaxed">
                             {project.description}
                           </p>
 
                           {/* 4-Stat Technical Specifications Grid */}
                           <div className="pt-2 grid grid-cols-2 gap-3">
                             <div className="p-3 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
-                              <div className="flex items-center space-x-1.5 text-xs text-[#747C75]">
+                              <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
                                 <Zap className="w-3.5 h-3.5 text-[#E5A100]" />
                                 <span className="font-mono uppercase text-[10px]">Capacity</span>
                               </div>
@@ -171,7 +171,7 @@ export default function ProjectsPage() {
                             </div>
 
                             <div className="p-3 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
-                              <div className="flex items-center space-x-1.5 text-xs text-[#747C75]">
+                              <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
                                 <Gauge className="w-3.5 h-3.5 text-[#15532E]" />
                                 <span className="font-mono uppercase text-[10px]">Est. Yield</span>
                               </div>
@@ -181,7 +181,7 @@ export default function ProjectsPage() {
                             </div>
 
                             <div className="p-3 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
-                              <div className="flex items-center space-x-1.5 text-xs text-[#747C75]">
+                              <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
                                 <Compass className="w-3.5 h-3.5 text-[#2D9F5A]" />
                                 <span className="font-mono uppercase text-[10px]">Structure</span>
                               </div>
@@ -191,7 +191,7 @@ export default function ProjectsPage() {
                             </div>
 
                             <div className="p-3 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
-                              <div className="flex items-center space-x-1.5 text-xs text-[#747C75]">
+                              <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
                                 <Cpu className="w-3.5 h-3.5 text-[#15532E]" />
                                 <span className="font-mono uppercase text-[10px]">Inverters</span>
                               </div>
@@ -203,7 +203,7 @@ export default function ProjectsPage() {
 
                           {/* Engineering Highlights */}
                           <div className="pt-3 border-t border-[#E5E8E3] space-y-2">
-                            <span className="text-[11px] font-mono uppercase tracking-wider text-[#747C75] block">
+                            <span className="text-[11px] font-mono uppercase tracking-wider text-[#374151] block">
                               Engineering Deliverables:
                             </span>
                             <div className="space-y-1.5">
@@ -219,7 +219,7 @@ export default function ProjectsPage() {
 
                         {/* CTA in card */}
                         <div className="pt-4 border-t border-[#E5E8E3] flex items-center justify-between">
-                          <span className="text-xs text-[#747C75]">
+                          <span className="text-xs text-[#374151]">
                             Custom engineered for site conditions
                           </span>
                           <Button href="/contact" variant="primary" size="sm" icon="arrow" magnetic={true}>

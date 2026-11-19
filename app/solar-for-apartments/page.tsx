@@ -81,19 +81,16 @@ export default function SolarForApartmentsPage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* Hero Section */}
-      <section className="relative pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-[#E5E8E3] bg-[#F7F7F3]">
+      <section className="relative py-14 sm:py-20 border-b border-[#E5E8E3] bg-[#F7F7F3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="text-xs tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
-                Housing Societies &amp; Apartments
-              </div>
-              <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-semibold tracking-tight text-[#15532E] leading-tight">
+            <div className="lg:col-span-7 space-y-5">
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-[#15532E] leading-tight">
                 Shared rooftops.
                 <br />
                 <span className="text-[#202720]">Collective energy benefits.</span>
               </h1>
-              <p className="max-w-xl text-base sm:text-xl text-[#747C75] leading-relaxed">
+              <p className="max-w-xl text-base sm:text-lg text-[#374151] leading-relaxed">
                 Transform shared apartment terrace space into a high-yielding clean energy asset
                 that significantly reduces recurring monthly maintenance dues for all residents.
               </p>
@@ -145,7 +142,7 @@ export default function SolarForApartmentsPage() {
                     <IconComponent className="w-5 h-5" />
                   </div>
                   <h3 className="text-base font-semibold text-[#202720]">{app.title}</h3>
-                  <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">{app.desc}</p>
+                  <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">{app.desc}</p>
                 </div>
               );
             })}
@@ -168,7 +165,7 @@ export default function SolarForApartmentsPage() {
                   <h4 className="text-sm font-semibold text-[#202720]">
                     Maintenance Fund Protection
                   </h4>
-                  <p className="text-xs text-[#747C75]">
+                  <p className="text-xs text-[#374151]">
                     Lowering common electricity bills frees up association reserves for facility
                     upgrades, landscaping, and community amenities.
                   </p>
@@ -177,7 +174,7 @@ export default function SolarForApartmentsPage() {
                   <h4 className="text-sm font-semibold text-[#202720]">
                     Effective Terrace Asset Utilization
                   </h4>
-                  <p className="text-xs text-[#747C75]">
+                  <p className="text-xs text-[#374151]">
                     Elevated super-structures allow residents to retain full walking and
                     recreational rooftop utility underneath the elevated solar canopies.
                   </p>
@@ -186,7 +183,7 @@ export default function SolarForApartmentsPage() {
                   <h4 className="text-sm font-semibold text-[#202720]">
                     Green Community Sustainability
                   </h4>
-                  <p className="text-xs text-[#747C75]">
+                  <p className="text-xs text-[#374151]">
                     Significantly lowers the carbon footprint of multi-story living while raising
                     the market valuation and desirability of individual apartments.
                   </p>
@@ -224,7 +221,7 @@ export default function SolarForApartmentsPage() {
               <div key={item.step} className="p-6 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3">
                 <span className="text-xl font-bold text-[#E5A100]">{item.step}</span>
                 <h3 className="text-base font-semibold text-[#202720]">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-[#747C75] leading-relaxed">{item.desc}</p>
+                <p className="text-xs sm:text-sm text-[#374151] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -273,7 +270,7 @@ export default function SolarForApartmentsPage() {
                   <ShieldCheck className="w-4 h-4 text-[#15532E]" />
                   <h3 className="text-sm font-semibold text-[#202720]">{item.title}</h3>
                 </div>
-                <p className="text-xs text-[#747C75] leading-relaxed">{item.desc}</p>
+                <p className="text-xs text-[#374151] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

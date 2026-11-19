@@ -245,7 +245,7 @@ export default function FullHeroCarousel() {
               <div className="text-xs sm:text-sm font-semibold text-[#202720]">
                 PM Surya Ghar Subsidy
               </div>
-              <p className="text-xs text-[#747C75]">
+              <p className="text-xs text-[#374151]">
                 Direct bank transfer subsidy for residential rooftop systems.
               </p>
             </div>
@@ -257,7 +257,7 @@ export default function FullHeroCarousel() {
               <div className="text-xs sm:text-sm font-semibold text-[#202720]">
                 Monthly Bill Reduction
               </div>
-              <p className="text-xs text-[#747C75]">
+              <p className="text-xs text-[#374151]">
                 Offset daytime power consumption with synchronized net metering.
               </p>
             </div>
@@ -269,7 +269,7 @@ export default function FullHeroCarousel() {
               <div className="text-xs sm:text-sm font-semibold text-[#202720]">
                 Domestic Certified Hardware
               </div>
-              <p className="text-xs text-[#747C75]">
+              <p className="text-xs text-[#374151]">
                 MNRE &amp; ALMM compliant modules with 25-year output warranty.
               </p>
             </div>
@@ -281,7 +281,7 @@ export default function FullHeroCarousel() {
               <div className="text-xs sm:text-sm font-semibold text-[#202720]">
                 Cleaning &amp; Maintenance
               </div>
-              <p className="text-xs text-[#747C75]">
+              <p className="text-xs text-[#374151]">
                 Demineralized water washing and rapid inverter diagnostics.
               </p>
             </div>

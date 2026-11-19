@@ -106,7 +106,7 @@ export default function Navbar() {
                   <span>Solar</span>
                   <ChevronDown
                     className={cn(
-                      "w-4 h-4 transition-transform duration-200 text-[#747C75]",
+                      "w-4 h-4 transition-transform duration-200 text-[#374151]",
                       solarOpen && "rotate-180 text-[#15532E]"
                     )}
                   />

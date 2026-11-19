@@ -65,7 +65,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc:
       "Comprehensive lifecycle maintenance to safeguard electrical safety, maximize generation yields, and extend equipment life.",
     image:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=1200&auto=format&fit=crop",
     bullets: [
       "Precision panel cleaning & de-soiling",
       "Continuous string-level remote monitoring",
@@ -97,7 +97,7 @@ export const servicesData: ServiceItem[] = [
     shortDesc:
       "Clear, verified navigation through the PM Surya Ghar national portal requirements, technical compliance, and disbursement workflows.",
     image:
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392694-c95056ed12e2?q=80&w=1200&auto=format&fit=crop",
     bullets: [
       "Consumer eligibility checks under current MNRE rules",
       "DISCOM feasibility application support",
@@ -115,7 +115,7 @@ export const omServices = [
     description:
       "Systematic removal of dust, particulate matter, bird droppings, and industrial emissions using pH-neutral demineralized water and non-abrasive equipment to prevent micro-scratches and preserve anti-reflective coatings.",
     image:
-      "https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=1000&auto=format&fit=crop",
     keyPoints: [
       "pH-balanced wash avoiding thermal shock",
       "Non-abrasive microfiber brushes",
@@ -130,7 +130,7 @@ export const omServices = [
     description:
       "Real-time digital generation tracking, string current observation, and automated anomaly detection to spot inverter tripping, shade anomalies, and unexpected yield drop-offs immediately.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392417-68b9dccc45f2?q=80&w=1000&auto=format&fit=crop",
     keyPoints: [
       "Cloud-connected telemetry & logging",
       "Automated alerting on underperformance",
@@ -160,7 +160,7 @@ export const omServices = [
     description:
       "Engineering assessment of legacy solar plants requiring string inverter replacements, micro-inverter additions, lightning surge protection overhauls, or capacity expansion.",
     image:
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?q=80&w=1000&auto=format&fit=crop",
     keyPoints: [
       "Modern hybrid inverter conversions",
       "DC cabling and disconnect upgrades",
@@ -175,7 +175,7 @@ export const omServices = [
     description:
       "Structured maintenance agreements tailored to residential, apartment, and industrial plants encompassing scheduled health checks, preventive electrical servicing, and priority technical response.",
     image:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?q=80&w=1000&auto=format&fit=crop",
     keyPoints: [
       "Scheduled preventive maintenance intervals",
       "Comprehensive electrical safety audits",

@@ -65,7 +65,7 @@ export const projectsData: ProjectItem[] = [
     location: "Whitefield Suburb [Representative Placeholder]",
     capacity: "15 kWp [Representative Placeholder]",
     image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392694-c95056ed12e2?q=80&w=1200&auto=format&fit=crop",
     description:
       "Custom tilt mounting to eliminate shading from terrace pergolas, integrated with remote telemetry monitoring for real-time homeowner tracking.",
     featured: false,
@@ -77,7 +77,7 @@ export const projectsData: ProjectItem[] = [
     location: "Electronic City [Representative Placeholder]",
     capacity: "180 kWp [Representative Placeholder]",
     image:
-      "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1780445392628-d6f5b9e5609b?q=80&w=1200&auto=format&fit=crop",
     description:
       "Grid-interactive solar power system integrated into multi-tenant building electrical distribution infrastructure.",
     featured: false,

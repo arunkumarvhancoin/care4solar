@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import ImageReveal from "@/components/ui/ImageReveal";
 import CTASection from "@/components/sections/CTASection";
-import HeroCarousel from "@/components/sections/HeroCarousel";
+import FullHeroCarousel from "@/components/sections/FullHeroCarousel";
 import { servicesData } from "@/data/services";
 import { projectsData } from "@/data/projects";
 import { ArrowRight } from "lucide-react";
@@ -17,85 +17,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       {/* ==================================================
-          SECTION 01 — HERO (Asymmetric Swiss Composition)
+          SECTION 01 — FULL HERO CAROUSEL (Multi-Slide Swiss)
           ================================================== */}
-      <section className="relative pt-6 pb-16 lg:pt-12 lg:pb-24 border-b border-[#E5E8E3]">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
-              <Reveal>
-                <div className="text-xs font-mono tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3 font-semibold">
-                  SOLAR ENERGY / ENGINEERING / PERFORMANCE
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.1}>
-                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[68px] font-semibold tracking-tight text-[#15532E] leading-[1.08] sm:leading-[1.05]">
-                  Powering solar.
-                  <br />
-                  <span className="text-[#202720]">Protecting performance.</span>
-                </h1>
-              </Reveal>
-
-              <Reveal delay={0.2}>
-                <p className="max-w-xl text-base sm:text-xl text-[#747C75] leading-relaxed font-normal">
-                  Solar solutions, technical expertise and ongoing care to help your solar
-                  infrastructure perform reliably.
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.3}>
-                <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                  <Button href="/solar-for-homes" variant="primary" size="lg" icon="arrow" className="w-full sm:w-auto">
-                    Explore Solar Solutions
-                  </Button>
-                  <Button href="/contact" variant="outline" size="lg" className="w-full sm:w-auto">
-                    Talk to Our Team
-                  </Button>
-                </div>
-              </Reveal>
-
-              {/* Minimalist architectural stats bar */}
-              <Reveal delay={0.4}>
-                <div className="pt-8 border-t border-[#E5E8E3] grid grid-cols-3 gap-4">
-                  <div>
-                    <span className="block text-xs font-mono uppercase tracking-wider text-[#747C75]">
-                      Engineering
-                    </span>
-                    <span className="text-sm font-semibold text-[#202720] mt-0.5 block">
-                      Tier-1 Hardware
-                    </span>
-                  </div>
-                  <div>
-                    <span className="block text-xs font-mono uppercase tracking-wider text-[#747C75]">
-                      Maintenance
-                    </span>
-                    <span className="text-sm font-semibold text-[#202720] mt-0.5 block">
-                      Structured AMC
-                    </span>
-                  </div>
-                  <div>
-                    <span className="block text-xs font-mono uppercase tracking-wider text-[#747C75]">
-                      Compliance
-                    </span>
-                    <span className="text-sm font-semibold text-[#202720] mt-0.5 block">
-                      Grid Net-Metering
-                    </span>
-                  </div>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* Right Large Hero Visual Carousel */}
-            <div className="lg:col-span-5">
-              <Reveal delay={0.2} className="relative">
-                <HeroCarousel />
-              </Reveal>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <FullHeroCarousel />
 
       {/* ==================================================
           SECTION 02 — COMPANY INTRODUCTION

@@ -2,285 +2,161 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export interface HeroSlideData {
+interface SimpleSlide {
   id: string;
-  number: string;
-  eyebrow: string;
-  tabLabel: string;
-  titleLight: string;
-  titleBold: string;
+  title: string;
+  subtitle: string;
   description: string;
-  primaryCtaText: string;
-  primaryCtaHref: string;
-  secondaryCtaText: string;
-  secondaryCtaHref: string;
+  primaryText: string;
+  primaryHref: string;
+  secondaryText: string;
+  secondaryHref: string;
   image: string;
   imageAlt: string;
-  photoCaption: string;
-  specs: { label: string; value: string }[];
 }
 
-const heroSlides: HeroSlideData[] = [
+const slides: SimpleSlide[] = [
   {
     id: "residential",
-    number: "01",
-    eyebrow: "01 / RESIDENTIAL SOLAR SOLUTIONS",
-    tabLabel: "RESIDENTIAL",
-    titleLight: "Powering homes with precision.",
-    titleBold: "Protecting 25-year performance.",
+    title: "Powering solar homes.",
+    subtitle: "Protecting performance.",
     description:
-      "Custom-engineered rooftop photovoltaic systems designed around your household's actual electrical consumption, seasonal tariff curves, and roof orientation. Fully synchronized with state DISCOM net-metering.",
-    primaryCtaText: "Explore Residential Solar",
-    primaryCtaHref: "/solar-for-homes",
-    secondaryCtaText: "Estimate Solar Sizing",
-    secondaryCtaHref: "/solar-calculator",
+      "Engineered residential rooftop solar with Tier-1 modules, accurate sizing, and long-term operations care.",
+    primaryText: "Explore Solar for Homes",
+    primaryHref: "/solar-for-homes",
+    secondaryText: "Solar Calculator",
+    secondaryHref: "/solar-calculator",
     image:
-      "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Solar panels installed on a residential tiled roof",
-    photoCaption: "High-efficiency residential rooftop array with calibrated tilt and net-metering sync.",
-    specs: [
-      { label: "Typical Capacity", value: "3 kW – 15 kW" },
-      { label: "Hardware Tier", value: "Tier-1 Mono PERC" },
-      { label: "Grid Sync", value: "Bi-directional Net Meter" },
-    ],
+      "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1400&auto=format&fit=crop",
+    imageAlt: "Solar panels installed on residential rooftop",
   },
   {
     id: "commercial",
-    number: "02",
-    eyebrow: "02 / COMMERCIAL & INDUSTRIAL INFRASTRUCTURE",
-    tabLabel: "COMMERCIAL & INDUSTRIAL",
-    titleLight: "Industrial rooftop solar.",
-    titleBold: "Lowering peak daytime tariffs.",
+    title: "Commercial & industrial solar.",
+    subtitle: "Lowering daytime tariffs.",
     description:
-      "High-capacity multi-kilowatt and megawatt rooftop deployments for manufacturing plants, warehouses, and corporate facilities. Engineered for high-voltage HT/LT transformer integration under CAPEX and RESCO models.",
-    primaryCtaText: "Explore C&I Solutions",
-    primaryCtaHref: "/commercial-industrial-solar",
-    secondaryCtaText: "Consult Our Engineers",
-    secondaryCtaHref: "/contact",
+      "High-output rooftop installations engineered for factories, logistics parks, and enterprise facilities.",
+    primaryText: "Commercial Solar",
+    primaryHref: "/commercial-industrial-solar",
+    secondaryText: "Get in Touch",
+    secondaryHref: "/contact",
     image:
-      "https://images.unsplash.com/photo-1745187794292-ba0014281746?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Solar panels covering a factory industrial rooftop",
-    photoCaption: "Standing-seam industrial metal roof array with centralized string inverters.",
-    specs: [
-      { label: "Scale Range", value: "50 kW – 2+ MW" },
-      { label: "Transformer Sync", value: "HT / LT Integration" },
-      { label: "Investment Models", value: "CAPEX & RESCO" },
-    ],
+      "https://images.unsplash.com/photo-1745187794292-ba0014281746?q=80&w=1400&auto=format&fit=crop",
+    imageAlt: "Solar panels installed on industrial factory roof",
   },
   {
     id: "apartments",
-    number: "03",
-    eyebrow: "03 / MULTI-STORY HOUSING & RWAs",
-    tabLabel: "APARTMENTS",
-    titleLight: "Solar for apartments.",
-    titleBold: "Powering common utilities reliably.",
+    title: "Solar for apartments.",
+    subtitle: "Common utilities powered cleanly.",
     description:
-      "Structured shared rooftop solar solutions for housing societies and RWAs. Offsetting high-tariff electricity for common lifts, basement ventilation, water treatment pumps, and community EV charging hubs.",
-    primaryCtaText: "Solar for Apartments",
-    primaryCtaHref: "/solar-for-apartments",
-    secondaryCtaText: "Request Society Audit",
-    secondaryCtaHref: "/contact",
+      "Reliable rooftop solar for housing societies and RWAs to offset elevator, pump, and community loads.",
+    primaryText: "Solar for Apartments",
+    primaryHref: "/solar-for-apartments",
+    secondaryText: "Request Consultation",
+    secondaryHref: "/contact",
     image:
-      "https://images.unsplash.com/photo-1793119985840-10f7beb15e1a?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Modern building with extensive rooftop solar array",
-    photoCaption: "Elevated superstructure terrace array preserving common recreation space.",
-    specs: [
-      { label: "Utility Target", value: "Lifts, Pumps & EV Hubs" },
-      { label: "Structural Mount", value: "Wind-Rated Gazebo" },
-      { label: "Accounting", value: "Association Energy Audit" },
-    ],
+      "https://images.unsplash.com/photo-1793119985840-10f7beb15e1a?q=80&w=1400&auto=format&fit=crop",
+    imageAlt: "Rooftop solar installation on residential apartment building",
   },
   {
     id: "om",
-    number: "04",
-    eyebrow: "04 / LIFECYCLE SOLAR ASSET CARE",
-    tabLabel: "OPERATIONS & MAINTENANCE",
-    titleLight: "Care beyond installation.",
-    titleBold: "Protecting maximum energy yield.",
+    title: "Operations & maintenance.",
+    subtitle: "Care beyond installation.",
     description:
-      "Engineering-grade solar operations, diagnostic inspections, and scheduled preventative maintenance. Certified infrared thermography to identify microcracks, de-ionized water washing, and active string telemetry.",
-    primaryCtaText: "Explore O&M Services",
-    primaryCtaHref: "/operations-maintenance",
-    secondaryCtaText: "Book System Health Check",
-    secondaryCtaHref: "/contact",
+      "Specialized de-ionized water washing, thermal imaging diagnostics, and preventative AMC support.",
+    primaryText: "Explore O&M Services",
+    primaryHref: "/operations-maintenance",
+    secondaryText: "Book Inspection",
+    secondaryHref: "/contact",
     image:
-      "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Technician washing photovoltaic solar panels with specialized water brush",
-    photoCaption: "Demineralized de-ionized water panel washing preserving anti-reflective coating.",
-    specs: [
-      { label: "Diagnostics", value: "Calibrated Thermal IR" },
-      { label: "Washing Standard", value: "Zero Mineral Calcification" },
-      { label: "Service Mode", value: "Scheduled Preventative AMC" },
-    ],
+      "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=1400&auto=format&fit=crop",
+    imageAlt: "Technician cleaning solar panels with water brush",
   },
 ];
 
-const AUTOPLAY_INTERVAL = 7000;
+const AUTOPLAY_INTERVAL = 6000;
 
 export default function FullHeroCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [index, setIndex] = useState(0);
 
-  const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % heroSlides.length);
+  const next = useCallback(() => {
+    setIndex((prev) => (prev + 1) % slides.length);
   }, []);
 
-  const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  const prev = useCallback(() => {
+    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
   }, []);
 
   useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(() => {
-      nextSlide();
-    }, AUTOPLAY_INTERVAL);
-
+    const timer = setInterval(next, AUTOPLAY_INTERVAL);
     return () => clearInterval(timer);
-  }, [isPaused, nextSlide]);
+  }, [next]);
 
-  const current = heroSlides[currentIndex];
+  const current = slides[index];
 
   return (
-    <section
-      className="relative bg-[#F7F7F3] border-b border-[#E5E8E3] overflow-hidden"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      aria-roledescription="carousel"
-      aria-label="Care4Solar Solutions Carousel"
-    >
-      {/* Top Slide Selector Navigation Tabs */}
-      <div className="bg-white border-b border-[#E5E8E3]">
-        <Container>
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {heroSlides.map((slide, idx) => {
-              const isActive = idx === currentIndex;
-              return (
-                <button
-                  key={slide.id}
-                  onClick={() => setCurrentIndex(idx)}
-                  className={`py-3.5 px-3 sm:px-4 text-left transition-all border-r border-[#E5E8E3] last:border-r-0 relative min-h-[48px] flex flex-col justify-center ${
-                    isActive
-                      ? "bg-[#F7F7F3] text-[#15532E]"
-                      : "text-[#747C75] hover:text-[#202720] hover:bg-[#F7F7F3]/60"
-                  }`}
-                  aria-label={`Jump to slide ${idx + 1}: ${slide.tabLabel}`}
-                  aria-current={isActive ? "true" : undefined}
-                >
-                  <div className="flex items-center space-x-2">
-                    <span className="font-mono text-xs font-bold text-[#E5A100]">
-                      {slide.number}
-                    </span>
-                    <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase truncate">
-                      {slide.tabLabel}
-                    </span>
-                  </div>
-
-                  {/* Active Indicator Top/Bottom Line */}
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeSlideIndicator"
-                      className="absolute bottom-0 inset-x-0 h-[2px] bg-[#15532E]"
-                    />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        </Container>
-      </div>
-
-      {/* Main Slide Body */}
-      <div className="py-8 sm:py-12 lg:py-16">
-        <Container>
+    <section className="relative h-[calc(100svh-4rem)] sm:h-[calc(100svh-5rem)] min-h-[520px] max-h-[820px] bg-[#F7F7F3] border-b border-[#E5E8E3] overflow-hidden flex flex-col justify-between">
+      {/* Slide Content Area */}
+      <div className="flex-1 flex items-center py-6 sm:py-10">
+        <Container className="w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.45, ease: "easeInOut" }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
             >
-              {/* Left Column: Architectural Typography & CTAs */}
-              <div className="lg:col-span-7 space-y-6">
-                <div className="inline-flex items-center space-x-2 text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#15532E] border-l-2 border-[#15532E] pl-3">
-                  <span>{current.eyebrow}</span>
-                </div>
-
-                <h1 className="text-3xl sm:text-5xl lg:text-[58px] font-semibold tracking-tight text-[#15532E] leading-[1.08]">
-                  {current.titleLight}
+              {/* Text Side */}
+              <div className="lg:col-span-7 space-y-4 sm:space-y-6">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#15532E] leading-[1.1]">
+                  {current.title}
                   <br />
-                  <span className="text-[#202720]">{current.titleBold}</span>
+                  <span className="text-[#202720]">{current.subtitle}</span>
                 </h1>
 
                 <p className="max-w-xl text-base sm:text-lg text-[#747C75] leading-relaxed">
                   {current.description}
                 </p>
 
-                {/* Primary & Secondary Action Buttons */}
-                <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+                <div className="pt-2 flex flex-col sm:flex-row gap-3">
                   <Button
-                    href={current.primaryCtaHref}
+                    href={current.primaryHref}
                     variant="primary"
                     size="lg"
                     icon="arrow"
                     className="w-full sm:w-auto"
                   >
-                    {current.primaryCtaText}
+                    {current.primaryText}
                   </Button>
                   <Button
-                    href={current.secondaryCtaHref}
+                    href={current.secondaryHref}
                     variant="outline"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
-                    {current.secondaryCtaText}
+                    {current.secondaryText}
                   </Button>
-                </div>
-
-                {/* Technical Specifications Bar */}
-                <div className="pt-6 sm:pt-8 border-t border-[#E5E8E3] grid grid-cols-3 gap-3 sm:gap-6">
-                  {current.specs.map((sp) => (
-                    <div key={sp.label}>
-                      <span className="block text-[11px] font-mono uppercase tracking-wider text-[#747C75]">
-                        {sp.label}
-                      </span>
-                      <span className="text-xs sm:text-sm font-semibold text-[#202720] mt-1 block">
-                        {sp.value}
-                      </span>
-                    </div>
-                  ))}
                 </div>
               </div>
 
-              {/* Right Column: High-Res Real Solar Photo Composition */}
+              {/* Real Solar Photo Side */}
               <div className="lg:col-span-5">
-                <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/5] overflow-hidden bg-white border border-[#E5E8E3] shadow-xs group">
+                <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] max-h-[420px] overflow-hidden bg-white border border-[#E5E8E3]">
                   <Image
                     src={current.image}
                     alt={current.imageAlt}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 42vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-102"
+                    className="object-cover"
                   />
-
-                  {/* High-legibility technical metadata overlay */}
-                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#15532E]/95 via-[#15532E]/50 to-transparent p-5 sm:p-6 text-white space-y-1.5">
-                    <div className="flex items-center justify-between text-[10px] font-mono text-[#E5A100] uppercase tracking-wider">
-                      <span>Care4Solar Field Verified</span>
-                      <span>{current.number} / 04</span>
-                    </div>
-                    <p className="text-xs sm:text-sm text-white/95 font-medium leading-snug">
-                      {current.photoCaption}
-                    </p>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -288,48 +164,41 @@ export default function FullHeroCarousel() {
         </Container>
       </div>
 
-      {/* Bottom Architectural Progress Track & Navigation Arrows */}
-      <div className="border-t border-[#E5E8E3] bg-white py-2.5">
-        <Container>
-          <div className="flex items-center justify-between gap-4">
-            {/* Slide Index Counter & Hint */}
-            <div className="flex items-center space-x-3 text-xs font-mono text-[#747C75]">
-              <span className="font-bold text-[#15532E]">{current.number}</span>
-              <span>/</span>
-              <span>04</span>
-              <span className="hidden sm:inline text-[#747C75]/60">•</span>
-              <span className="hidden sm:inline text-[11px] text-[#747C75]">
-                {isPaused ? "Paused (hovered)" : "Auto-advancing"}
-              </span>
+      {/* Simple Bottom Bar with Clean Dots & Arrows */}
+      <div className="h-14 sm:h-16 border-t border-[#E5E8E3] bg-white flex items-center shrink-0">
+        <Container className="w-full">
+          <div className="flex items-center justify-between">
+            {/* Simple Dots */}
+            <div className="flex items-center space-x-2">
+              {slides.map((s, i) => (
+                <button
+                  key={s.id}
+                  onClick={() => setIndex(i)}
+                  className={`h-2 transition-all min-h-[44px] min-w-[32px] flex items-center justify-center`}
+                  aria-label={`Slide ${i + 1}`}
+                >
+                  <span
+                    className={`block h-1.5 transition-all ${
+                      i === index ? "w-8 bg-[#15532E]" : "w-3 bg-[#E5E8E3] hover:bg-[#747C75]"
+                    }`}
+                  />
+                </button>
+              ))}
             </div>
 
-            {/* Linear Progress Bar */}
-            <div className="flex-1 max-w-xs sm:max-w-md h-1 bg-[#E5E8E3] overflow-hidden">
-              <motion.div
-                key={currentIndex + (isPaused ? "-paused" : "-active")}
-                initial={{ width: "0%" }}
-                animate={{ width: isPaused ? undefined : "100%" }}
-                transition={{
-                  duration: isPaused ? 0 : AUTOPLAY_INTERVAL / 1000,
-                  ease: "linear",
-                }}
-                className="h-full bg-[#15532E]"
-              />
-            </div>
-
-            {/* Prev / Next Controls */}
-            <div className="flex items-center space-x-1 shrink-0">
+            {/* Simple Arrows */}
+            <div className="flex items-center space-x-2">
               <button
-                onClick={prevSlide}
-                aria-label="Previous Hero Slide"
-                className="w-9 h-9 sm:w-10 sm:h-10 bg-[#F7F7F3] hover:bg-[#15532E] hover:text-white text-[#202720] flex items-center justify-center transition-colors border border-[#E5E8E3]"
+                onClick={prev}
+                aria-label="Previous slide"
+                className="w-10 h-10 border border-[#E5E8E3] hover:border-[#15532E] hover:text-[#15532E] text-[#202720] flex items-center justify-center transition-colors bg-[#F7F7F3]"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
-                onClick={nextSlide}
-                aria-label="Next Hero Slide"
-                className="w-9 h-9 sm:w-10 sm:h-10 bg-[#F7F7F3] hover:bg-[#15532E] hover:text-white text-[#202720] flex items-center justify-center transition-colors border border-[#E5E8E3]"
+                onClick={next}
+                aria-label="Next slide"
+                className="w-10 h-10 border border-[#E5E8E3] hover:border-[#15532E] hover:text-[#15532E] text-[#202720] flex items-center justify-center transition-colors bg-[#F7F7F3]"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>

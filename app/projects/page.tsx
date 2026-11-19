@@ -66,7 +66,6 @@ export default function ProjectsPage() {
         <Container>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <SectionHeading
-              eyebrow="Portfolio Case Studies"
               title="Featured solar installations."
               description="Detailed engineering reviews for each facility. Filter by sector to inspect specific structural mounting and electrical configurations."
             />

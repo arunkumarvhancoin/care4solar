@@ -17,14 +17,12 @@ interface MobileMenuProps {
 
 const mobileNavLinks = [
   { title: "Home", href: "/" },
-  { title: "Solar for Homes", href: "/solar-for-homes" },
-  { title: "Solar for Apartments", href: "/solar-for-apartments" },
+  { title: "Residential Solar", href: "/residential-solar" },
   { title: "Commercial & Industrial", href: "/commercial-industrial-solar" },
   { title: "Maintenance & Care", href: "/operations-maintenance" },
   { title: "Featured Projects", href: "/projects" },
+  { title: "Insights & Articles", href: "/insights" },
   { title: "About Us", href: "/about" },
-  { title: "Knowledge Centre", href: "/insights" },
-  { title: "Solar FAQs", href: "/faqs" },
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {

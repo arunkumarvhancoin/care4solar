@@ -3,8 +3,10 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
 import { omServices } from "@/data/services";
+import { faqsData } from "@/data/faqs";
 import {
   CheckCircle2,
   ShieldCheck,
@@ -21,6 +23,8 @@ export const metadata: Metadata = {
 };
 
 export default function OperationsMaintenancePage() {
+  const maintenanceFaqs = faqsData.filter((f) => f.category === "Maintenance");
+
   const processSteps = [
     {
       step: "1",
@@ -396,7 +400,26 @@ export default function OperationsMaintenancePage() {
         </Container>
       </section>
 
-      {/* SECTION 07 — CTA */}
+      {/* SECTION 07 — MAINTENANCE FAQS */}
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+        <Container>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <SectionHeading
+              title="Solar maintenance questions answered."
+              description="Direct answers on cleaning schedules, soiling power loss, infrared thermal scans, and AMC coverage."
+              align="center"
+            />
+            <Accordion items={maintenanceFaqs} />
+            <div className="text-center pt-2">
+              <Button href="/contact" variant="ghost" size="sm" icon="arrow">
+                Book a maintenance audit or panel cleaning
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 08 — CTA */}
       <CTASection
         heading="Give your solar installation the attention it deserves."
         description="Whether you require one-time precision panel cleaning, a comprehensive infrared thermal audit, or an Annual Maintenance Contract (AMC), our engineering team is here."

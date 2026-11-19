@@ -3,7 +3,9 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
+import { faqsData } from "@/data/faqs";
 import { CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 };
 
 export default function CommercialIndustrialSolarPage() {
+  const commercialFaqs = faqsData.filter((f) => f.category === "Commercial");
+
   const customerSegments = [
     {
       title: "Manufacturing Plants",
@@ -300,7 +304,26 @@ export default function CommercialIndustrialSolarPage() {
         </Container>
       </section>
 
-      {/* SECTION 06 — CTA */}
+      {/* SECTION 06 — COMMERCIAL SOLAR FAQS */}
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+        <Container>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <SectionHeading
+              title="Commercial solar questions answered."
+              description="Engineering and financial clarifications on accelerated depreciation, roof structural safety, and HT interconnections."
+              align="center"
+            />
+            <Accordion items={commercialFaqs} />
+            <div className="text-center pt-2">
+              <Button href="/contact" variant="ghost" size="sm" icon="arrow">
+                Speak directly with a commercial project engineer
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 07 — CTA */}
       <CTASection
         heading="Let's assess your facility's solar potential."
         description="Connect with our commercial engineering team to schedule a detailed site feasibility and preliminary load analysis."

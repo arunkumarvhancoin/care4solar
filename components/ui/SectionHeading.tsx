@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
-  eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center" | "right";
@@ -11,7 +10,6 @@ interface SectionHeadingProps {
 }
 
 export default function SectionHeading({
-  eyebrow,
   title,
   description,
   align = "left",

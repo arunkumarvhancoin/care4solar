@@ -12,7 +12,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: "residential",
     title: "Residential Solar",
-    slug: "/solar-for-homes",
+    slug: "/residential-solar",
     eyebrow: "Residential",
     shortDesc:
       "Engineered rooftop systems designed around your home's actual load profile, roof architecture, and long-term energy goals.",
@@ -23,22 +23,6 @@ export const servicesData: ServiceItem[] = [
       "Structural assessment and shadow analysis",
       "Tier-1 mono PERC and TopCon panel options",
       "Direct app-based generation monitoring",
-    ],
-  },
-  {
-    id: "apartments",
-    title: "Solar for Apartments",
-    slug: "/solar-for-apartments",
-    eyebrow: "Housing Societies",
-    shortDesc:
-      "Shared rooftop solar solutions specifically structured for housing societies, apartment associations, and RWA common utilities.",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
-    bullets: [
-      "Common lighting, pumps, and elevator offset",
-      "Association resolution and RWA planning support",
-      "DISCOM net metering coordination",
-      "Non-penetrating ballasted mounting structures",
     ],
   },
   {

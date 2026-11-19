@@ -99,7 +99,6 @@ export default function InsightsPage() {
         <Container>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <SectionHeading
-              eyebrow="Solar Insights & Research"
               title="Browse technical topics."
               description="Articles exploring photovoltaic physics, maintenance chemistry, industrial modeling, and regulatory compliance."
             />

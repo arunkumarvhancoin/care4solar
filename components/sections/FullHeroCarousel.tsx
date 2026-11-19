@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Magnetic from "@/components/ui/Magnetic";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -29,8 +28,8 @@ const slides: HeroSlide[] = [
     title: "Rooftop solar for your home.",
     description:
       "Cut your monthly electricity bills with high-efficiency rooftop panels. We handle roof sizing, structural engineering, and turnkey net-metered installation.",
-    primaryText: "Solar for Homes",
-    primaryHref: "/solar-for-homes",
+    primaryText: "Residential Solar",
+    primaryHref: "/residential-solar",
     secondaryText: "Request Site Survey",
     secondaryHref: "/contact",
     image:
@@ -44,8 +43,8 @@ const slides: HeroSlide[] = [
     title: "Solar power for apartments.",
     description:
       "Power shared amenities—lifts, water pumps, and common campus lighting—with shared terrace solar to permanently lower society maintenance fees.",
-    primaryText: "Solar for Apartments",
-    primaryHref: "/solar-for-apartments",
+    primaryText: "Residential Solar",
+    primaryHref: "/residential-solar",
     secondaryText: "Request Consultation",
     secondaryHref: "/contact",
     image:

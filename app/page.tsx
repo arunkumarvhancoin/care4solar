@@ -14,28 +14,18 @@ import { ArrowRight, Star } from "lucide-react";
 const solutions = [
   {
     id: "residential",
-    title: "Solar for Homes",
-    tagline: "Houses & Villas",
+    title: "Residential Solar",
+    tagline: "Homes & Housing Societies",
     description:
-      "Cut 80–90% of your power bills with rooftop solar sized to your roof, complete with utility net metering and durable mounting.",
+      "Cut 80–90% of electricity bills with rooftop solar for villas and apartment societies, with seamless net metering and durable mounting.",
     image:
       "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=800&auto=format&fit=crop",
-    href: "/solar-for-homes",
-  },
-  {
-    id: "apartments",
-    title: "Solar for Apartments",
-    tagline: "Societies & RWAs",
-    description:
-      "Power common elevators, water pumps, and campus lighting to permanently reduce monthly maintenance fees.",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop",
-    href: "/solar-for-apartments",
+    href: "/residential-solar",
   },
   {
     id: "commercial",
     title: "Commercial & Industrial",
-    tagline: "Factories & Offices",
+    tagline: "Factories & Warehouses",
     description:
       "Lower high daytime commercial tariffs with durable rooftop arrays, backed by 40% accelerated depreciation tax benefits.",
     image:
@@ -45,7 +35,7 @@ const solutions = [
   {
     id: "maintenance",
     title: "Cleaning & Maintenance",
-    tagline: "Asset Protection",
+    tagline: "Asset Protection & AMC",
     description:
       "Dust and bird droppings cause up to 30% power loss. We provide reverse-osmosis panel washing and rapid electrical repairs.",
     image:
@@ -99,8 +89,6 @@ const processSteps = [
     title: "Design & Engineering",
     description:
       "We prepare a detailed 3D shadow analysis, structural layout, and transparent itemized bill of materials for your property.",
-    image:
-      "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop",
     image:
       "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop",
   },
@@ -244,7 +232,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {solutions.map((solution) => (
               <TiltCard key={solution.id} maxTilt={3} className="h-full">
                 <Link
@@ -256,7 +244,7 @@ export default function HomePage() {
                       src={solution.image}
                       alt={solution.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
@@ -521,10 +509,10 @@ export default function HomePage() {
 
             <div className="text-center pt-2">
               <Link
-                href="/faqs"
+                href="/contact"
                 className="inline-flex items-center space-x-1.5 text-sm font-semibold text-[#15532E] hover:text-[#E5A100] transition-colors"
               >
-                <span>Browse all frequently asked questions</span>
+                <span>Have specific roof or electrical questions? Speak directly with an engineer</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

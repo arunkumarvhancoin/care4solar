@@ -7,13 +7,8 @@ export interface NavItem {
 export const solarServices: NavItem[] = [
   {
     title: "Residential Solar",
-    href: "/solar-for-homes",
-    description: "Rooftop solar systems engineered for modern individual homes and villas.",
-  },
-  {
-    title: "Solar for Apartments",
-    href: "/solar-for-apartments",
-    description: "Shared rooftop solutions for housing societies, RWAs, and common areas.",
+    href: "/residential-solar",
+    description: "Turnkey rooftop systems for independent homes, villas, and housing societies.",
   },
   {
     title: "Commercial & Industrial",
@@ -23,23 +18,22 @@ export const solarServices: NavItem[] = [
   {
     title: "Operations & Maintenance",
     href: "/operations-maintenance",
-    description: "Panel cleaning, remote monitoring, thermal inspections, and maintenance care.",
+    description: "Panel cleaning, remote monitoring, thermal inspections, and preventive AMC.",
   },
 ];
 
 export const mainNav: NavItem[] = [
-  { title: "Homes", href: "/solar-for-homes" },
-  { title: "Apartments", href: "/solar-for-apartments" },
+  { title: "Residential", href: "/residential-solar" },
   { title: "Commercial", href: "/commercial-industrial-solar" },
   { title: "Maintenance", href: "/operations-maintenance" },
   { title: "Projects", href: "/projects" },
+  { title: "Insights", href: "/insights" },
   { title: "About", href: "/about" },
 ];
 
 export const footerCompanyNav: NavItem[] = [
-  { title: "About Us", href: "/about" },
+  { title: "About Care4Solar", href: "/about" },
   { title: "Featured Projects", href: "/projects" },
-  { title: "Knowledge Centre", href: "/insights" },
-  { title: "Solar FAQs", href: "/faqs" },
-  { title: "Contact Us", href: "/contact" },
+  { title: "Insights & Articles", href: "/insights" },
+  { title: "Get in Touch", href: "/contact" },
 ];

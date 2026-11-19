@@ -5,15 +5,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     "",
-    "/solar-for-homes",
-    "/solar-for-apartments",
+    "/residential-solar",
     "/commercial-industrial-solar",
     "/operations-maintenance",
     "/projects",
+    "/insights",
     "/about",
     "/contact",
-    "/insights",
-    "/faqs",
   ];
 
   return routes.map((route) => ({

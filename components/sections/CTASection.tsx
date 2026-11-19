@@ -12,23 +12,23 @@ interface CTASectionProps {
 
 export default function CTASection({
   heading = "Ready to switch to solar?",
-  description = "Talk to our team about rooftop feasibility, pricing, and how net metering works for your property.",
+  description = "Talk to our engineering team about rooftop feasibility, pricing, and how net metering works for your property.",
   primaryCtaText = "Get in Touch",
   primaryCtaHref = "/contact",
   secondaryCtaText = "Calculate Savings",
   secondaryCtaHref = "/solar-calculator",
 }: CTASectionProps) {
   return (
-    <section className="bg-[#15532E] py-16 sm:py-20 text-white">
+    <section className="bg-white py-20 lg:py-24 border-t border-[#E5E8E3]">
       <Container>
-        <div className="max-w-2xl space-y-4">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white leading-tight">
+        <div className="max-w-2xl mx-auto text-center space-y-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-[#202720] leading-tight">
             {heading}
           </h2>
-          <p className="text-base sm:text-lg text-[#F7F7F3]/85 leading-relaxed">
+          <p className="text-base sm:text-lg text-[#747C75] leading-relaxed max-w-xl mx-auto">
             {description}
           </p>
-          <div className="pt-4 flex flex-wrap items-center gap-3">
+          <div className="pt-3 flex flex-wrap items-center justify-center gap-3">
             <Button
               href={primaryCtaHref}
               variant="primary"
@@ -40,7 +40,7 @@ export default function CTASection({
             {secondaryCtaText && secondaryCtaHref && (
               <Button
                 href={secondaryCtaHref}
-                variant="dark"
+                variant="outline"
                 size="lg"
                 magnetic={true}
               >

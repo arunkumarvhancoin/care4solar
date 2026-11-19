@@ -10,7 +10,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface HeroSlide {
   id: string;
-  tabLabel: string;
   category: string;
   title: string;
   description: string;
@@ -20,12 +19,12 @@ interface HeroSlide {
   secondaryHref: string;
   image: string;
   imageAlt: string;
+  projectTag: string;
 }
 
 const slides: HeroSlide[] = [
   {
     id: "residential",
-    tabLabel: "Homes",
     category: "Residential Rooftop Solar",
     title: "Rooftop solar for your home.",
     description:
@@ -37,10 +36,10 @@ const slides: HeroSlide[] = [
     image:
       "https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1800&auto=format&fit=crop",
     imageAlt: "Solar panels installed on residential rooftop",
+    projectTag: "Residential Installation · 10 kWp · Bengaluru",
   },
   {
     id: "apartments",
-    tabLabel: "Apartments",
     category: "Housing Societies & Apartments",
     title: "Solar power for apartments.",
     description:
@@ -52,10 +51,10 @@ const slides: HeroSlide[] = [
     image:
       "https://images.unsplash.com/photo-1793119985840-10f7beb15e1a?q=80&w=1800&auto=format&fit=crop",
     imageAlt: "Rooftop solar installation on apartment terrace",
+    projectTag: "Housing Society Common Load · 25 kWp · Sarjapur",
   },
   {
     id: "commercial",
-    tabLabel: "Commercial",
     category: "Commercial & Industrial Solar",
     title: "Commercial & industrial solar.",
     description:
@@ -67,10 +66,10 @@ const slides: HeroSlide[] = [
     image:
       "https://images.unsplash.com/photo-1745187794292-ba0014281746?q=80&w=1800&auto=format&fit=crop",
     imageAlt: "Solar panels installed on industrial building roof",
+    projectTag: "Industrial Rooftop · 50 kWp · Peenya Industrial Area",
   },
   {
     id: "maintenance",
-    tabLabel: "Maintenance",
     category: "Operations & Maintenance",
     title: "Solar cleaning and maintenance.",
     description:
@@ -82,6 +81,7 @@ const slides: HeroSlide[] = [
     image:
       "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=1800&auto=format&fit=crop",
     imageAlt: "Technician cleaning solar panels with specialized equipment",
+    projectTag: "Care4Solar O&M Team · Demineralized Reverse-Osmosis Wash",
   },
 ];
 
@@ -106,129 +106,188 @@ export default function FullHeroCarousel() {
   const current = slides[index];
 
   return (
-    <section className="relative w-full h-[calc(100svh-4rem)] sm:h-[calc(100svh-4.5rem)] min-h-[580px] max-h-[820px] overflow-hidden bg-[#202720] flex flex-col justify-between">
-      {/* Background Image Layer with Crossfade */}
-      <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current.id}
-            initial={{ opacity: 0, scale: 1.04 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative w-full h-full"
-          >
-            <Image
-              src={current.image}
-              alt={current.imageAlt}
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover"
-            />
-            {/* Cinematic Scrim: subtle dark gradient for crystal-clear readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/40" />
-          </motion.div>
-        </AnimatePresence>
-      </div>
+    <div className="flex flex-col w-full bg-[#F7F7F3]">
+      {/* Viewport Hero */}
+      <section className="relative w-full h-[calc(100svh-4rem)] sm:h-[calc(100svh-5rem)] min-h-[580px] max-h-[800px] overflow-hidden bg-[#202720] flex items-center justify-center">
+        {/* Background Image Layer with Crossfade */}
+        <div className="absolute inset-0 z-0">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current.id}
+              initial={{ opacity: 0, scale: 1.04 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="relative w-full h-full"
+            >
+              <Image
+                src={current.image}
+                alt={current.imageAlt}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
+              {/* Cinematic Scrim: dark overlay for crystal-clear readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/45" />
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-      {/* Top spacer */}
-      <div className="h-6 sm:h-10 z-10" />
+        {/* Side Arrow: Left */}
+        <div className="absolute left-3 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 z-20">
+          <Magnetic strength={0.35}>
+            <button
+              onClick={prev}
+              aria-label="Previous slide"
+              className="w-11 h-11 sm:w-12 sm:h-12 bg-black/40 hover:bg-white text-white hover:text-[#202720] backdrop-blur-md border border-white/25 flex items-center justify-center transition-all duration-200 cursor-pointer shadow-lg"
+            >
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+            </button>
+          </Magnetic>
+        </div>
 
-      {/* Center Content: Centered Headline, Description & Buttons */}
-      <div className="relative z-10 my-auto py-8">
-        <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={current.id}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                className="space-y-4 sm:space-y-6"
-              >
-                <div className="inline-block px-3.5 py-1 bg-white/15 backdrop-blur-md border border-white/20 text-xs font-semibold text-white uppercase tracking-wider">
-                  {current.category}
-                </div>
+        {/* Side Arrow: Right */}
+        <div className="absolute right-3 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 z-20">
+          <Magnetic strength={0.35}>
+            <button
+              onClick={next}
+              aria-label="Next slide"
+              className="w-11 h-11 sm:w-12 sm:h-12 bg-black/40 hover:bg-white text-white hover:text-[#202720] backdrop-blur-md border border-white/25 flex items-center justify-center transition-all duration-200 cursor-pointer shadow-lg"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+            </button>
+          </Magnetic>
+        </div>
 
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-[1.12]">
-                  {current.title}
-                </h1>
+        {/* Center Content: Centered Headline, Description & Buttons */}
+        <div className="relative z-10 px-4 sm:px-12 max-w-4xl mx-auto text-center">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current.id}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="space-y-4 sm:space-y-6"
+            >
+              <div className="inline-block px-3.5 py-1 bg-white/15 backdrop-blur-md border border-white/20 text-xs font-semibold text-white uppercase tracking-wider">
+                {current.category}
+              </div>
 
-                <p className="max-w-xl mx-auto text-base sm:text-lg text-[#F7F7F3]/90 leading-relaxed">
-                  {current.description}
-                </p>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-[1.12]">
+                {current.title}
+              </h1>
 
-                <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
-                  <Button
-                    href={current.primaryHref}
-                    variant="primary"
-                    size="lg"
-                    magnetic={true}
-                  >
-                    {current.primaryText}
-                  </Button>
-                  <Button
-                    href={current.secondaryHref}
-                    variant="dark"
-                    size="lg"
-                    magnetic={true}
-                    className="border-white/30 text-white hover:bg-white hover:text-[#202720]"
-                  >
-                    {current.secondaryText}
-                  </Button>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </Container>
-      </div>
+              <p className="max-w-xl mx-auto text-base sm:text-lg text-[#F7F7F3]/90 leading-relaxed">
+                {current.description}
+              </p>
 
-      {/* Bottom Bar: Clean Domain Switcher and Arrows */}
-      <div className="relative z-10 border-t border-white/15 bg-black/30 backdrop-blur-md py-3 sm:py-4">
-        <Container>
-          <div className="flex items-center justify-between">
-            {/* Tabs */}
-            <div className="flex items-center space-x-1 sm:space-x-2 overflow-x-auto no-scrollbar">
-              {slides.map((s, i) => (
-                <button
-                  key={s.id}
-                  onClick={() => setIndex(i)}
-                  className={`px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium transition-colors cursor-pointer whitespace-nowrap ${i === index
-                      ? "bg-white text-[#202720] shadow-sm"
-                      : "text-white/70 hover:text-white hover:bg-white/10"
-                    }`}
+              <div className="pt-2 flex flex-wrap items-center justify-center gap-3.5">
+                <Button
+                  href={current.primaryHref}
+                  variant="primary"
+                  size="lg"
+                  magnetic={true}
                 >
-                  {s.tabLabel}
-                </button>
-              ))}
+                  {current.primaryText}
+                </Button>
+                <Button
+                  href={current.secondaryHref}
+                  variant="dark"
+                  size="lg"
+                  magnetic={true}
+                >
+                  {current.secondaryText}
+                </Button>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Discreet Real Project Tag (Bottom-Left) */}
+        <div className="absolute bottom-5 left-4 sm:left-8 z-20 hidden md:block">
+          <div className="bg-black/50 backdrop-blur-md border border-white/15 px-3 py-1.5 text-xs text-white/90">
+            <span className="text-[#E5A100] mr-1.5">●</span>
+            {current.projectTag}
+          </div>
+        </div>
+
+        {/* Subtle Indicator Dots (Bottom-Center) */}
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-2">
+          {slides.map((s, i) => (
+            <button
+              key={s.id}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className="p-1 cursor-pointer"
+            >
+              <span
+                className={`block rounded-full transition-all duration-300 ${
+                  i === index
+                    ? "w-7 h-1.5 bg-white"
+                    : "w-1.5 h-1.5 bg-white/40 hover:bg-white/70"
+                }`}
+              />
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Docked Hero Benchmark Strip */}
+      <section className="bg-white border-b border-[#E5E8E3] py-6 sm:py-7">
+        <Container>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="space-y-1">
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-[#15532E]">
+                ₹78,000
+              </div>
+              <div className="text-xs sm:text-sm font-semibold text-[#202720]">
+                PM Surya Ghar Subsidy
+              </div>
+              <p className="text-xs text-[#747C75]">
+                Direct bank transfer subsidy for residential rooftop systems.
+              </p>
             </div>
 
-            {/* Prev / Next Arrows */}
-            <div className="flex items-center space-x-2 shrink-0 ml-4">
-              <Magnetic strength={0.3}>
-                <button
-                  onClick={prev}
-                  aria-label="Previous slide"
-                  className="w-9 h-9 border border-white/20 hover:border-white text-white flex items-center justify-center transition-colors bg-white/10 hover:bg-white/20 cursor-pointer"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-              </Magnetic>
-              <Magnetic strength={0.3}>
-                <button
-                  onClick={next}
-                  aria-label="Next slide"
-                  className="w-9 h-9 border border-white/20 hover:border-white text-white flex items-center justify-center transition-colors bg-white/10 hover:bg-white/20 cursor-pointer"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </Magnetic>
+            <div className="space-y-1">
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-[#15532E]">
+                Up to 90%
+              </div>
+              <div className="text-xs sm:text-sm font-semibold text-[#202720]">
+                Monthly Bill Reduction
+              </div>
+              <p className="text-xs text-[#747C75]">
+                Offset daytime power consumption with synchronized net metering.
+              </p>
+            </div>
+
+            <div className="space-y-1">
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-[#15532E]">
+                Tier-1 DCR
+              </div>
+              <div className="text-xs sm:text-sm font-semibold text-[#202720]">
+                Domestic Certified Hardware
+              </div>
+              <p className="text-xs text-[#747C75]">
+                MNRE &amp; ALMM compliant modules with 25-year output warranty.
+              </p>
+            </div>
+
+            <div className="space-y-1">
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-[#15532E]">
+                Lifetime Care
+              </div>
+              <div className="text-xs sm:text-sm font-semibold text-[#202720]">
+                Cleaning &amp; Maintenance
+              </div>
+              <p className="text-xs text-[#747C75]">
+                Demineralized water washing and rapid inverter diagnostics.
+              </p>
             </div>
           </div>
         </Container>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

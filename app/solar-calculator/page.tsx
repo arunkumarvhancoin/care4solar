@@ -207,10 +207,7 @@ export default function SolarCalculatorPage() {
                 <div className="p-4 bg-[#E5A100]/15 border-l-4 border-[#E5A100] text-sm text-[#202720]">
                   <p className="font-medium">
                     Your requirements have been prepared. Please contact the Care4Solar team to
-                    discuss a detailed assessment.
-                  </p>
-                  <p className="text-xs text-[#747C75] mt-1">
-                    [Frontend-only summary state. No external data has been transmitted or saved.]
+                    discuss a detailed rooftop assessment and quotation.
                   </p>
                 </div>
 

@@ -58,14 +58,11 @@ export default function SolarPricingPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {costFactors.map((factor, index) => (
+            {costFactors.map((factor) => (
               <div
                 key={factor.title}
                 className="p-7 bg-[#F7F7F3] border border-[#E5E8E3] space-y-3"
               >
-                <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold">
-                  Factor {index + 1}
-                </span>
                 <h3 className="text-lg font-semibold text-[#202720]">{factor.title}</h3>
                 <p className="text-sm text-[#747C75] leading-relaxed">{factor.description}</p>
               </div>

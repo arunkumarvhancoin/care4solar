@@ -12,52 +12,52 @@ import { CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Operations & Maintenance (O&M)",
   description:
-    "Structured operations and maintenance for rooftop and industrial solar installations. Precision de-ionized panel cleaning, thermal infrared inspection, string telemetry monitoring, and Annual Maintenance Contracts (AMC).",
+    "Professional solar panel cleaning, thermal safety inspections, and annual maintenance contracts (AMC) for homes, societies, and businesses.",
 };
 
 const maintenanceServices = [
   {
-    title: "De-Mineralized Panel Cleaning",
-    desc: "Low-TDS reverse-osmosis washing with soft, non-abrasive brushes to remove stubborn dust and soot without thermal shock or mineral scaling.",
+    title: "Purified Panel Cleaning",
+    desc: "Washing with purified water and soft brushes removes baked-on dust and grime without scratching panels or leaving mineral stains.",
     image:
       "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=800&auto=format&fit=crop",
     points: [
-      "pH-neutral spot-free water wash",
-      "Protects anti-reflective glass coating",
-      "Recovers 15% to 30% lost generation",
+      "Leaves zero mineral stains",
+      "Protects anti-reflective glass",
+      "Restores up to 25% lost power",
     ],
   },
   {
-    title: "Thermal IR Diagnostics",
-    desc: "Calibrated drone and handheld thermography scans to pinpoint cell-level micro-cracks, diode failures, and resistive hotspots before damage spreads.",
+    title: "Thermal Safety Scans",
+    desc: "Infrared camera checks spot hidden micro-cracks, overheating cells, and loose wiring before they cause damage or safety hazards.",
     image:
       "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop",
     points: [
-      "High-resolution infrared detection",
-      "Identifies invisible micro-faults early",
-      "Mitigates hotspot and electrical risks",
+      "Spots invisible defects early",
+      "Protects panels from hotspot damage",
+      "Full electrical safety check",
     ],
   },
   {
-    title: "Inverter Health & Telemetry",
-    desc: "String-level current logging, terminal torque calibration, and firmware diagnostics to ensure continuous peak MPPT tracking.",
+    title: "Inverter & App Monitoring",
+    desc: "We check inverter health, wiring connections, and tracking apps to make sure you get automated alerts if power drops.",
     image:
       "https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?q=80&w=800&auto=format&fit=crop",
     points: [
-      "Real-time string current observation",
-      "AC/DC terminal torque inspection",
-      "Automated underperformance alerts",
+      "Live generation tracking",
+      "Safety wiring inspection",
+      "Instant alerts on unexpected trips",
     ],
   },
   {
-    title: "Annual Maintenance Contracts",
-    desc: "Scheduled preventive maintenance agreements for residential, society, and industrial plants with priority technical response.",
+    title: "Annual Maintenance (AMC)",
+    desc: "Scheduled maintenance plans for homes, apartments, and businesses, including regular cleanings and priority technician visits.",
     image:
       "https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?q=80&w=800&auto=format&fit=crop",
     points: [
-      "Scheduled quarterly health checks",
-      "Complete electrical safety audits",
-      "Priority on-site emergency dispatch",
+      "Scheduled periodic visits",
+      "Complete safety inspections",
+      "Priority response for repairs",
     ],
   },
 ];
@@ -68,11 +68,11 @@ export default function OperationsMaintenancePage() {
   return (
     <div className="flex flex-col bg-[#F7F7F3]">
       <PageHero
-        title="Solar cleaning & asset maintenance."
-        description="Structured operations and preventive care for rooftop and industrial solar plants. Precision demineralized panel washing, calibrated IR drone thermography, and cloud telemetry."
+        title="Solar cleaning & regular maintenance."
+        description="Keep your rooftop panels generating peak power. Purified water cleaning, infrared safety scans, and hassle-free annual maintenance contracts."
         image="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1800&auto=format&fit=crop"
         imageAlt="Solar panel cleaning and maintenance technician"
-        primaryCtaText="Request Maintenance Audit"
+        primaryCtaText="Book a Maintenance Visit"
         primaryCtaHref="/contact"
         secondaryCtaText="View Projects"
         secondaryCtaHref="/projects"
@@ -94,26 +94,26 @@ export default function OperationsMaintenancePage() {
 
             <div className="lg:col-span-7 space-y-4">
               <SectionHeading
-                title="Why solar maintenance matters."
-                description="Dust, urban soot, and temperature fluctuations quietly cut solar generation by 15% to 30% if left unattended."
+                title="Why regular maintenance matters."
+                description="Dust, bird droppings, and loose connections can cut power generation by 15% to 25% if left unattended."
               />
 
               <p className="text-sm sm:text-base text-[#374151] leading-relaxed">
-                Solar panels endure harsh outdoor weather year-round. Over time, surface dust blocks sunlight, cooling fans accumulate grime, and electrical terminals experience natural thermal loosening.
+                Solar panels endure outdoor weather all year round. Over time, dust blocks sunlight, and electrical connections can loosen under seasonal temperature changes.
               </p>
 
               <div className="pt-2 space-y-3">
                 <div className="p-4 sm:p-5 bg-[#F7F7F3] border border-[#E5E8E3] rounded-xs space-y-1.5">
-                  <h4 className="text-base font-semibold text-[#202720]">Spot-Free Demineralized Washing</h4>
+                  <h4 className="text-base font-semibold text-[#202720]">Spot-Free Purified Washing</h4>
                   <p className="text-sm sm:text-base text-[#374151] leading-relaxed">
-                    Tap water contains dissolved minerals that leave white scaling on panel glass. We use reverse-osmosis demineralized water and soft non-abrasive brushes to safely recover lost yield.
+                    Ordinary tap water contains minerals that dry into white stains on panel glass. We use purified water and soft brushes to safely clean panels and restore peak output.
                   </p>
                 </div>
 
                 <div className="p-4 sm:p-5 bg-[#F7F7F3] border border-[#E5E8E3] rounded-xs space-y-1.5">
-                  <h4 className="text-base font-semibold text-[#202720]">Thermal Hotspot &amp; Inverter Health</h4>
+                  <h4 className="text-base font-semibold text-[#202720]">Catching Issues Early</h4>
                   <p className="text-sm sm:text-base text-[#374151] leading-relaxed">
-                    Persistent bird droppings cause shaded cells to heat up and degrade. Calibrated infrared thermography scans identify micro-faults before they cause inverter trips.
+                    Persistent bird droppings or hidden cell cracks cause hot spots that damage panels. Our infrared thermal scans catch and fix small issues before they become expensive problems.
                   </p>
                 </div>
               </div>
@@ -127,8 +127,8 @@ export default function OperationsMaintenancePage() {
         <Container>
           <div className="max-w-2xl mb-8">
             <SectionHeading
-              title="Comprehensive maintenance services."
-              description="Our structured engineering services protect electrical safety, maximize yield, and preserve asset longevity across the installation's lifecycle."
+              title="Our maintenance services."
+              description="Everything you need to keep your solar plant running safely and efficiently year after year."
             />
           </div>
 
@@ -169,7 +169,7 @@ export default function OperationsMaintenancePage() {
 
                 <div className="p-5 pt-0">
                   <Button href="/contact" variant="outline" size="sm" className="w-full">
-                    Enquire Service
+                    Enquire Now
                   </Button>
                 </div>
               </div>
@@ -183,14 +183,14 @@ export default function OperationsMaintenancePage() {
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <SectionHeading
-              title="Solar maintenance questions answered."
-              description="Direct answers on cleaning schedules, soiling power loss, infrared thermal scans, and AMC coverage."
+              title="Solar maintenance FAQs."
+              description="Answers to common questions about panel cleaning, inspection schedules, and AMC plans."
               align="center"
             />
             <Accordion items={maintenanceFaqs} />
             <div className="text-center pt-2">
               <Button href="/contact" variant="ghost" size="sm" icon="arrow">
-                Book a maintenance audit or panel cleaning
+                Book a cleaning or system health check
               </Button>
             </div>
           </div>
@@ -199,9 +199,9 @@ export default function OperationsMaintenancePage() {
 
       {/* SECTION 05 — CTA */}
       <CTASection
-        heading="Give your solar installation the attention it deserves."
-        description="Whether you require one-time precision panel cleaning, a comprehensive infrared thermal audit, or an Annual Maintenance Contract (AMC), our engineering team is here."
-        primaryCtaText="Request Maintenance Enquiry"
+        heading="Keep your solar generating at its best."
+        description="Whether you need a one-time panel cleaning, an electrical safety check, or an ongoing AMC plan, our team is ready to help."
+        primaryCtaText="Book Maintenance Visit"
         primaryCtaHref="/contact"
       />
     </div>

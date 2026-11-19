@@ -12,7 +12,7 @@ import { Home, Building2, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Residential Solar — Homes & Housing Societies",
   description:
-    "Turnkey rooftop solar solutions engineered for individual homes, villas, and apartment communities. Custom designed for maximum savings, zero roof damage, and seamless net metering.",
+    "Rooftop solar for independent homes, villas, and apartment communities. Custom designed for maximum savings, zero roof damage, and seamless net metering.",
 };
 
 export default function ResidentialSolarPage() {
@@ -22,57 +22,57 @@ export default function ResidentialSolarPage() {
     {
       icon: Home,
       type: "For Independent Homes & Villas",
-      headline: "Eliminate high domestic electricity slabs.",
+      headline: "Eliminate high home electricity bills.",
       description:
-        "Custom-engineered for single-family residences. Sized accurately to your monthly consumption, air conditioning loads, and home EV charging without over-spending on unneeded hardware.",
+        "Designed for your home's actual monthly power use, air conditioning, and EV charging without overselling panels you don't need.",
       image:
         "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?q=80&w=1200&auto=format&fit=crop",
       highlights: [
-        "Typically sizes from 3 kWp to 15 kWp based on past 12-month power bills",
-        "Direct DISCOM net metering rolling back peak grid charges",
-        "Hybrid battery-ready architecture for uninterrupted backup during outages",
-        "Elevated or ballasted structures preserving terrace recreational usability",
+        "Custom sized based on your past electricity bills",
+        "Net metering rolls back your power meter to cut nighttime bills",
+        "Option to add battery backup for power cuts",
+        "Structures designed to keep your terrace open for daily use",
       ],
     },
     {
       icon: Building2,
       type: "For Apartments & Housing Societies (RWAs)",
-      headline: "Permanently slash common-area maintenance bills.",
+      headline: "Permanently lower society maintenance bills.",
       description:
-        "Shared terrace solar systems engineered specifically for residential societies. Directly offsets the heavy recurring costs of elevators, basement lighting, water filtration, and clubhouse loads.",
+        "Shared rooftop solar designed for residential apartments, powering lifts, water pumps, common lighting, and clubhouses.",
       image:
         "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
       highlights: [
-        "Powers common amenities: lifts, STPs, water pumps, and campus security lights",
-        "Smart DG synchronization prevents reverse feed-in during diesel generator running",
-        "Non-penetrative ballasted engineering protects terrace waterproofing warranties",
-        "Turnkey RWA presentation support and documentation for society general meetings",
+        "Powers common amenities: lifts, water pumps, and campus lighting",
+        "Synchronizes safely with backup generators to save diesel fuel",
+        "Weighted mounting protects terrace waterproofing with zero drilling",
+        "Clear proposal presentation for society committee and AGM meetings",
       ],
     },
   ];
 
   const components = [
     {
-      title: "Tier-1 Mono PERC & TopCon Modules",
-      desc: "High-efficiency bifacial/monofacial panels engineered for low-light performance and 25-year linear generation warranties.",
+      title: "High-Efficiency Solar Panels",
+      desc: "Quality panels with 25-year performance warranties that generate power even on overcast days.",
       image:
         "https://images.unsplash.com/photo-1719848574124-2f66fa842fd6?q=80&w=800&auto=format&fit=crop",
     },
     {
-      title: "Smart Dual-MPPT Inverters",
-      desc: "High-efficiency grid-tied or hybrid inverters with built-in Wi-Fi cloud telemetry and real-time generation smartphone tracking.",
+      title: "Smart Inverters",
+      desc: "Converts solar power for home use and connects to a phone app for easy daily tracking.",
       image:
         "https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?q=80&w=800&auto=format&fit=crop",
     },
     {
-      title: "Architectural Mounting Structures",
-      desc: "Hot-dip galvanized steel or anodized aluminium structures designed to withstand certified wind-load ratings without roof leaks.",
+      title: "Rust-Proof Mounting Structures",
+      desc: "Strong aluminum or galvanized steel structures built to withstand high winds without damaging your roof.",
       image:
         "https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?q=80&w=800&auto=format&fit=crop",
     },
     {
-      title: "Complete BOS & Surge Protection",
-      desc: "Dedicated AC/DC distribution boxes, Class-II surge protection devices (SPDs), dual chemical earthing, and lightning arrestors.",
+      title: "Complete Electrical Safety Gear",
+      desc: "Dedicated safety switches, surge protection, earthing, and lightning arrestors to protect home appliances.",
       image:
         "https://images.unsplash.com/photo-1780445392417-68b9dccc45f2?q=80&w=800&auto=format&fit=crop",
     },
@@ -82,7 +82,7 @@ export default function ResidentialSolarPage() {
     <div className="flex flex-col bg-[#F7F7F3]">
       <PageHero
         title="Residential solar for homes & societies."
-        description="Custom-engineered rooftop solar for independent villas and housing societies. Sized accurately to your actual loads with turnkey DISCOM net metering."
+        description="Rooftop solar for independent villas and apartment communities. Sized accurately to your actual electricity bills with full net metering support."
         image="https://images.unsplash.com/photo-1780445392792-556e5609c5ab?q=80&w=1800&auto=format&fit=crop"
         imageAlt="Residential rooftop solar installation"
         primaryCtaText="Request Site Survey"
@@ -96,8 +96,8 @@ export default function ResidentialSolarPage() {
         <Container>
           <div className="max-w-3xl mb-10">
             <SectionHeading
-              title="Tailored rooftop engineering for every residential property."
-              description="Individual homes require high-efficiency generation for daily household consumption; apartment societies require communal load optimization and seamless utility coordination."
+              title="Rooftop solar tailored for your property."
+              description="Whether you own an independent home or manage an apartment community, we design systems that match your daily power needs."
             />
           </div>
 
@@ -166,8 +166,8 @@ export default function ResidentialSolarPage() {
         <Container>
           <div className="max-w-3xl mb-10">
             <SectionHeading
-              title="Built with Tier-1 engineering components."
-              description="A solar system is an investment designed to perform continuously for over 25 years. We never cut corners on electrical switchgear or structural materials."
+              title="Built with quality components."
+              description="A solar system should run reliably for over 25 years. We only install tested, certified hardware."
             />
           </div>
 
@@ -201,14 +201,14 @@ export default function ResidentialSolarPage() {
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <SectionHeading
-              title="Residential solar questions answered."
-              description="Direct, technical answers regarding rooftop suitability, RWA permissions, power outages, and waterproofing."
+              title="Residential solar FAQs."
+              description="Clear answers about roof safety, society approvals, power cuts, and savings."
               align="center"
             />
             <Accordion items={residentialFaqs} />
             <div className="text-center pt-2">
               <Button href="/contact" variant="ghost" size="sm" icon="arrow">
-                Have specific requirements? Speak with an engineer
+                Speak with our residential team
               </Button>
             </div>
           </div>
@@ -218,8 +218,8 @@ export default function ResidentialSolarPage() {
       {/* Bottom CTA */}
       <CTASection
         heading="Ready to switch your home or society to solar?"
-        description="Share your monthly electricity bill or request an on-site feasibility inspection with our engineering team."
-        primaryCtaText="Book Site Survey"
+        description="Share your monthly electricity bill for a free roof assessment and savings estimate."
+        primaryCtaText="Book a Free Roof Survey"
         primaryCtaHref="/contact"
       />
     </div>

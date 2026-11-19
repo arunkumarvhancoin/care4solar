@@ -15,12 +15,12 @@ export default function ProjectsPage() {
     <div className="flex flex-col bg-[#F7F7F3]">
       <PageHero
         title="Solar projects engineered in the real world."
-        description="Detailed project case studies illustrating rooftop structural designs, electrical switchgear integrations, and verified generation performance."
+        description="Real rooftop solar installations across residential, apartment, and commercial properties—delivering reliable power and verified bill savings."
         image="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1800&auto=format&fit=crop"
         imageAlt="Aerial rooftop solar installation array"
         primaryCtaText="Discuss Your Project"
         primaryCtaHref="/contact"
-        secondaryCtaText="Asset Maintenance"
+        secondaryCtaText="Maintenance Services"
         secondaryCtaHref="/operations-maintenance"
       />
 
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
           <div className="mb-10 max-w-2xl">
             <SectionHeading
               title="Featured solar installations."
-              description="Detailed engineering reviews of rooftop structural designs, electrical switchgear integrations, and verified generation performance."
+              description="Take a closer look at our completed rooftop installations and real performance results."
             />
           </div>
 
@@ -86,87 +86,87 @@ export default function ProjectsPage() {
                           </span>
                         </div>
 
-                          <h2 className="text-2xl sm:text-3xl font-semibold text-[#202720] leading-tight">
-                            {project.title}
-                          </h2>
+                        <h2 className="text-2xl sm:text-3xl font-semibold text-[#202720] leading-tight">
+                          {project.title}
+                        </h2>
 
-                          <p className="text-base text-[#374151] leading-relaxed">
-                            {project.description}
-                          </p>
+                        <p className="text-base text-[#374151] leading-relaxed">
+                          {project.description}
+                        </p>
 
-                          {/* 4-Stat Technical Specifications Grid */}
-                          <div className="pt-2 grid grid-cols-2 gap-3.5">
-                            <div className="p-3.5 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
-                              <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
-                                <Zap className="w-4 h-4 text-[#E5A100]" />
-                                <span className="font-mono uppercase text-xs">Capacity</span>
-                              </div>
-                              <span className="text-base font-bold text-[#15532E] block">
-                                {project.capacity}
-                              </span>
+                        {/* 4-Stat Technical Specifications Grid */}
+                        <div className="pt-2 grid grid-cols-2 gap-3.5">
+                          <div className="p-3.5 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
+                            <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
+                              <Zap className="w-4 h-4 text-[#E5A100]" />
+                              <span className="font-mono uppercase text-xs">Capacity</span>
                             </div>
-
-                            <div className="p-3.5 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
-                              <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
-                                <Gauge className="w-4 h-4 text-[#15532E]" />
-                                <span className="font-mono uppercase text-xs">Est. Yield</span>
-                              </div>
-                              <span className="text-sm sm:text-base font-semibold text-[#202720] block">
-                                {project.annualGeneration}
-                              </span>
-                            </div>
-
-                            <div className="p-3.5 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
-                              <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
-                                <Compass className="w-4 h-4 text-[#2D9F5A]" />
-                                <span className="font-mono uppercase text-xs">Structure</span>
-                              </div>
-                              <span className="text-sm text-[#202720] font-medium block leading-snug">
-                                {project.mountingType}
-                              </span>
-                            </div>
-
-                            <div className="p-3.5 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
-                              <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
-                                <Cpu className="w-4 h-4 text-[#15532E]" />
-                                <span className="font-mono uppercase text-xs">Inverters</span>
-                              </div>
-                              <span className="text-sm text-[#202720] font-medium block leading-snug">
-                                {project.inverterSetup}
-                              </span>
-                            </div>
-                          </div>
-
-                          {/* Engineering Highlights */}
-                          <div className="pt-3 border-t border-[#E5E8E3] space-y-2">
-                            <span className="text-xs font-mono uppercase tracking-wider text-[#374151] block">
-                              Engineering Deliverables:
+                            <span className="text-base font-bold text-[#15532E] block">
+                              {project.capacity}
                             </span>
-                            <div className="space-y-1.5">
-                              {project.highlights.map((highlight) => (
-                                <div key={highlight} className="flex items-start space-x-2 text-sm text-[#202720]">
-                                  <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0 mt-0.5" />
-                                  <span className="leading-relaxed">{highlight}</span>
-                                </div>
-                              ))}
+                          </div>
+
+                          <div className="p-3.5 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
+                            <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
+                              <Gauge className="w-4 h-4 text-[#15532E]" />
+                              <span className="font-mono uppercase text-xs">Est. Yield</span>
                             </div>
+                            <span className="text-sm sm:text-base font-semibold text-[#202720] block">
+                              {project.annualGeneration}
+                            </span>
+                          </div>
+
+                          <div className="p-3.5 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
+                            <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
+                              <Compass className="w-4 h-4 text-[#2D9F5A]" />
+                              <span className="font-mono uppercase text-xs">Structure</span>
+                            </div>
+                            <span className="text-sm text-[#202720] font-medium block leading-snug">
+                              {project.mountingType}
+                            </span>
+                          </div>
+
+                          <div className="p-3.5 bg-[#F7F7F3] border border-[#E5E8E3] space-y-1">
+                            <div className="flex items-center space-x-1.5 text-xs text-[#374151]">
+                              <Cpu className="w-4 h-4 text-[#15532E]" />
+                              <span className="font-mono uppercase text-xs">Inverters</span>
+                            </div>
+                            <span className="text-sm text-[#202720] font-medium block leading-snug">
+                              {project.inverterSetup}
+                            </span>
                           </div>
                         </div>
 
-                        {/* CTA in card */}
-                        <div className="pt-4 border-t border-[#E5E8E3] flex items-center justify-between">
-                          <span className="text-sm text-[#374151]">
-                            Custom engineered for site conditions
+                        {/* Engineering Highlights */}
+                        <div className="pt-3 border-t border-[#E5E8E3] space-y-2">
+                          <span className="text-xs font-mono uppercase tracking-wider text-[#374151] block">
+                            Key Highlights:
                           </span>
-                          <Button href="/contact" variant="primary" size="sm" icon="arrow" magnetic={true}>
-                            Consult for Similar Project
-                          </Button>
+                          <div className="space-y-1.5">
+                            {project.highlights.map((highlight) => (
+                              <div key={highlight} className="flex items-start space-x-2 text-sm text-[#202720]">
+                                <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0 mt-0.5" />
+                                <span className="leading-relaxed">{highlight}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
+                      </div>
+
+                      {/* CTA in card */}
+                      <div className="pt-4 border-t border-[#E5E8E3] flex items-center justify-between">
+                        <span className="text-sm text-[#374151]">
+                          Designed for local site conditions
+                        </span>
+                        <Button href="/contact" variant="primary" size="sm" icon="arrow" magnetic={true}>
+                          Plan a Similar Project
+                        </Button>
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              );
+            })}
           </div>
         </Container>
       </section>
@@ -174,8 +174,8 @@ export default function ProjectsPage() {
       {/* CTA Section */}
       <CTASection
         heading="Have a project in mind?"
-        description="Connect with our technical team for an initial engineering review and site consultation."
-        primaryCtaText="Contact Our Engineers"
+        description="Talk to our team for a free roof assessment and savings consultation."
+        primaryCtaText="Speak with Our Team"
         primaryCtaHref="/contact"
       />
     </div>

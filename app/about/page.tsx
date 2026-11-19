@@ -2,15 +2,117 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Accordion from "@/components/ui/Accordion";
 import CTASection from "@/components/sections/CTASection";
 import PageHero from "@/components/sections/PageHero";
-import { CheckCircle2 } from "lucide-react";
+import {
+  CheckCircle2,
+  XCircle,
+  ShieldCheck,
+  Scale,
+  Award,
+  Wrench,
+  MapPin,
+  Clock,
+  Zap,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
     "Care4Solar designs, installs, and maintains high-performance rooftop solar for homes, apartment communities, and businesses.",
 };
+
+const coreCommitments = [
+  {
+    icon: Scale,
+    title: "Honest Sizing",
+    desc: "We size systems strictly based on your actual 12-month power bills and usable roof space—never overselling panels you don't need.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Zero-Leak Roof Mounting",
+    desc: "We use weighted non-penetrating bases on flat roofs and seam clamps on metal sheds to protect your roof waterproofing completely.",
+  },
+  {
+    icon: Award,
+    title: "Tier-1 Certified Hardware",
+    desc: "We only install tested, certified solar panels and inverters that carry full 25-year performance warranties and proven durability.",
+  },
+  {
+    icon: Wrench,
+    title: "Lifelong Asset Care",
+    desc: "We don't disappear after installation. Our dedicated maintenance team provides regular purified washing and fast repairs.",
+  },
+];
+
+const comparisonData = [
+  {
+    aspect: "System Sizing",
+    others: "Pushes oversized standard packages to meet sales quotas.",
+    care4solar: "Sizes conservatively based on your past 12-month electricity bills and sun hours.",
+  },
+  {
+    aspect: "Terrace Usability",
+    others: "Clutters the terrace floor with ground frames, blocking walking space.",
+    care4solar: "Uses elevated pergolas or perimeter layouts so your terrace remains fully usable.",
+  },
+  {
+    aspect: "Roof Waterproofing",
+    others: "Drills anchors directly into the concrete slab, creating leak risks.",
+    care4solar: "Non-penetrative weighted ballasts or industrial sealants that preserve roof waterproofing.",
+  },
+  {
+    aspect: "Power Company Paperwork",
+    others: "Leaves DISCOM net metering applications and inspections to the customer.",
+    care4solar: "End-to-end liaisoning, documentation, and coordination with your electricity board.",
+  },
+  {
+    aspect: "Ongoing Maintenance",
+    others: "No after-sales service; owners are left on their own when dust settles.",
+    care4solar: "Scheduled purified water cleaning, phone app tracking, and AMC support.",
+  },
+];
+
+const serviceAreas = [
+  {
+    region: "Residential Communities",
+    locations: "Whitefield, Sarjapur Road, HSR Layout, Indiranagar, Koramangala, Yelahanka, JP Nagar, Electronic City",
+    highlight: "Home & Apartment Society Rooftops",
+  },
+  {
+    region: "Industrial & Commercial Hubs",
+    locations: "Peenya Industrial Area, Bommasandra, Hosur Road Corridor, Bidadi, Nelamangala, Whitefield EPIP",
+    highlight: "Factories, Warehouses & Campuses",
+  },
+];
+
+const aboutFaqs = [
+  {
+    id: "ab-1",
+    question: "Are Care4Solar installations approved by BESCOM and local electricity boards?",
+    answer:
+      "Yes. Every installation adheres strictly to state DISCOM and electrical safety guidelines. We manage the entire paperwork, technical clearances, and bi-directional net meter commissioning for you.",
+  },
+  {
+    id: "ab-2",
+    question: "What warranties come with a Care4Solar installation?",
+    answer:
+      "Our solar modules come with a 25-year linear performance warranty. Inverters carry 5 to 10-year manufacturer warranties, and our mounting structures and workmanship are covered by comprehensive Care4Solar guarantees.",
+  },
+  {
+    id: "ab-3",
+    question: "Can Care4Solar take over maintenance for systems installed by another company?",
+    answer:
+      "Yes. We regularly adopt orphaned or underperforming solar systems. Our team audits the installation, fixes any loose wiring or safety issues, and sets up scheduled cleaning and performance tracking.",
+  },
+  {
+    id: "ab-4",
+    question: "How do you ensure our roof won't leak after solar is installed?",
+    answer:
+      "On flat concrete roofs, we use precast weighted ballast blocks that sit on top of protective rubber pads without puncturing the roof slab. On metal shed roofs, we use non-piercing seam clamps that grip the standing ribs.",
+  },
+];
 
 export default function AboutPage() {
   const steps = [
@@ -49,7 +151,7 @@ export default function AboutPage() {
         secondaryCtaHref="/projects"
       />
 
-      {/* Core Engineering Philosophy — Clean & Balanced */}
+      {/* SECTION 01 — CORE PHILOSOPHY */}
       <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -95,7 +197,92 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 4-Step Process */}
+      {/* SECTION 02 — THE 4 PILLARS OF OUR COMMITMENT */}
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+        <Container>
+          <div className="max-w-2xl mb-8">
+            <SectionHeading
+              title="What makes our approach different."
+              description="Four clear commitments that protect your investment from day one to year 25."
+            />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {coreCommitments.map((pillar) => {
+              const PillarIcon = pillar.icon;
+              return (
+                <div
+                  key={pillar.title}
+                  className="bg-white border border-[#E5E8E3] p-6 space-y-3 flex flex-col justify-between"
+                >
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-sm bg-[#15532E]/10 text-[#15532E] flex items-center justify-center">
+                      <PillarIcon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-[#202720]">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-sm text-[#374151] leading-relaxed">
+                      {pillar.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 03 — COMPARISON TABLE: CARE4SOLAR VS TYPICAL INSTALLERS */}
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
+        <Container>
+          <div className="max-w-2xl mb-8">
+            <SectionHeading
+              title="How Care4Solar compares."
+              description="A clear look at how our engineering approach protects your rooftop and investment."
+            />
+          </div>
+
+          <div className="border border-[#E5E8E3] bg-[#F7F7F3] overflow-hidden">
+            {/* Header row */}
+            <div className="grid grid-cols-1 md:grid-cols-12 bg-white border-b border-[#E5E8E3] font-semibold text-sm">
+              <div className="md:col-span-3 p-4 text-[#374151] uppercase font-mono tracking-wider">
+                Area
+              </div>
+              <div className="md:col-span-4 p-4 text-[#8C1D1D] bg-red-50/40 border-l border-[#E5E8E3]">
+                Typical Solar Installers
+              </div>
+              <div className="md:col-span-5 p-4 text-[#15532E] bg-[#15532E]/5 border-l border-[#E5E8E3] font-bold">
+                Care4Solar Engineering
+              </div>
+            </div>
+
+            {/* Comparison Rows */}
+            <div className="divide-y divide-[#E5E8E3]">
+              {comparisonData.map((row) => (
+                <div
+                  key={row.aspect}
+                  className="grid grid-cols-1 md:grid-cols-12 text-sm items-stretch bg-white hover:bg-[#F7F7F3] transition-colors"
+                >
+                  <div className="md:col-span-3 p-4 font-semibold text-[#202720] flex items-center">
+                    {row.aspect}
+                  </div>
+                  <div className="md:col-span-4 p-4 text-[#4B5563] border-l border-[#E5E8E3] flex items-start space-x-2 bg-red-50/20">
+                    <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                    <span>{row.others}</span>
+                  </div>
+                  <div className="md:col-span-5 p-4 text-[#202720] border-l border-[#E5E8E3] flex items-start space-x-2 bg-[#15532E]/5 font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-[#2D9F5A] shrink-0 mt-0.5" />
+                    <span>{row.care4solar}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 04 — 4-STEP PROCESS */}
       <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
         <Container>
           <div className="max-w-2xl mb-8">
@@ -113,6 +300,77 @@ export default function AboutPage() {
                 <p className="text-sm sm:text-base text-[#374151] leading-relaxed">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 05 — SERVICE COVERAGE */}
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
+        <Container>
+          <div className="max-w-2xl mb-8">
+            <SectionHeading
+              title="Where we operate."
+              description="Active across Bengaluru and key Karnataka industrial corridors with dedicated installation and maintenance teams."
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {serviceAreas.map((area) => (
+              <div
+                key={area.region}
+                className="bg-[#F7F7F3] border border-[#E5E8E3] p-6 sm:p-7 space-y-3"
+              >
+                <div className="flex items-center space-x-2 text-[#15532E]">
+                  <MapPin className="w-5 h-5 shrink-0" />
+                  <span className="font-semibold text-lg text-[#202720]">{area.region}</span>
+                </div>
+                <div className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-medium">
+                  {area.highlight}
+                </div>
+                <p className="text-sm text-[#374151] leading-relaxed pt-1">
+                  {area.locations}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Quick Stats Strip */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-[#E5E8E3] pt-6">
+            <div className="flex items-center space-x-3">
+              <Clock className="w-5 h-5 text-[#15532E] shrink-0" />
+              <div>
+                <span className="font-bold text-base text-[#202720] block">24–48 Hour Visits</span>
+                <span className="text-xs text-[#374151]">Fast rooftop surveys across Bengaluru</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Zap className="w-5 h-5 text-[#E5A100] shrink-0" />
+              <div>
+                <span className="font-bold text-base text-[#202720] block">Turnkey Approvals</span>
+                <span className="text-xs text-[#374151]">Complete BESCOM/DISCOM coordination</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <ShieldCheck className="w-5 h-5 text-[#2D9F5A] shrink-0" />
+              <div>
+                <span className="font-bold text-base text-[#202720] block">25-Year Support</span>
+                <span className="text-xs text-[#374151]">Regular cleaning and ongoing AMC care</span>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION 06 — ABOUT & COMPANY FAQS */}
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+        <Container>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <SectionHeading
+              title="Frequently asked questions about Care4Solar."
+              description="Learn more about our standards, approvals, warranties, and maintenance commitments."
+              align="center"
+            />
+            <Accordion items={aboutFaqs} />
           </div>
         </Container>
       </section>

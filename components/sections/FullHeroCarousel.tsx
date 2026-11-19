@@ -27,7 +27,7 @@ const slides: HeroSlide[] = [
     category: "Residential Rooftop Solar",
     title: "Rooftop solar for your home.",
     description:
-      "Cut your monthly electricity bills with high-efficiency rooftop panels. We handle roof sizing, structural engineering, and turnkey net-metered installation.",
+      "Cut your monthly electricity bills with high-efficiency rooftop panels. We handle roof sizing, quality installation, and power company approvals.",
     primaryText: "Residential Solar",
     primaryHref: "/residential-solar",
     secondaryText: "Request Site Survey",
@@ -57,7 +57,7 @@ const slides: HeroSlide[] = [
     category: "Commercial & Industrial Solar",
     title: "Commercial & industrial solar.",
     description:
-      "Reduce heavy daytime power tariffs for factories, warehouses, and offices with custom-engineered arrays backed by accelerated depreciation benefits.",
+      "Lower daytime electricity bills for factories, warehouses, and offices with rooftop solar backed by commercial tax benefits.",
     primaryText: "Commercial Solar",
     primaryHref: "/commercial-industrial-solar",
     secondaryText: "Get a Quote",
@@ -72,7 +72,7 @@ const slides: HeroSlide[] = [
     category: "Operations & Maintenance",
     title: "Solar cleaning and maintenance.",
     description:
-      "Dust and bird droppings reduce solar generation by up to 30%. We provide specialized demineralized water cleaning, electrical health checks, and repairs.",
+      "Dust and bird droppings reduce solar power by up to 30%. We provide purified water panel washing, electrical safety checks, and repairs.",
     primaryText: "Maintenance Services",
     primaryHref: "/operations-maintenance",
     secondaryText: "Book Inspection",
@@ -80,7 +80,7 @@ const slides: HeroSlide[] = [
     image:
       "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=1800&auto=format&fit=crop",
     imageAlt: "Technician cleaning solar panels with specialized equipment",
-    projectTag: "Care4Solar O&M Team · Demineralized Reverse-Osmosis Wash",
+    projectTag: "Care4Solar Maintenance · Purified Panel Wash",
   },
 ];
 

@@ -46,30 +46,30 @@ const solutions = [
 
 const hardwareComponents = [
   {
-    title: "Tier-1 PV Modules",
+    title: "High-Efficiency Panels",
     description:
-      "TopCon & Mono PERC panels with 25-year output warranties and positive power tolerance for maximum solar yield.",
+      "Quality panels with 25-year warranties designed to generate strong power even on overcast days.",
     image:
       "https://images.unsplash.com/photo-1719848574124-2f66fa842fd6?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Smart Inverters",
     description:
-      "Dual MPPT tracking with 98.5%+ efficiency and real-time generation tracking on your smartphone.",
+      "Converts solar power for home use and tracks daily generation directly on your phone.",
     image:
       "https://images.unsplash.com/photo-1780445392484-38a4852a1fd8?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Elevated Structures",
     description:
-      "Hot-dip galvanized steel elevated high enough so your terrace remains completely usable for walking and leisure.",
+      "Rust-proof galvanized steel elevated to keep your terrace completely open for walking and daily use.",
     image:
       "https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "Electrical Protection",
+    title: "Electrical Safety Gear",
     description:
-      "Dual chemical earthing pits, Class-II surge arrestors, and lightning protection to safeguard your home.",
+      "Dedicated safety switches, surge protection, earthing, and lightning arrestors to protect appliances.",
     image:
       "https://images.unsplash.com/photo-1780445392417-68b9dccc45f2?q=80&w=800&auto=format&fit=crop",
   },
@@ -86,25 +86,25 @@ const processSteps = [
   },
   {
     number: "2",
-    title: "Design & Engineering",
+    title: "Design & Layout",
     description:
-      "We prepare a detailed 3D shadow analysis, structural layout, and transparent itemized bill of materials for your property.",
+      "We prepare a shadow analysis, custom roof layout, and a clear, transparent list of quality components.",
     image:
       "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop",
   },
   {
     number: "3",
-    title: "Installation & Net Metering",
+    title: "Installation & Approvals",
     description:
-      "We install Tier-1 hardware and coordinate with your electricity board (BESCOM/DISCOM) to commission your net meter.",
+      "We handle rooftop installation and complete all coordination with your power company for net metering.",
     image:
       "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?q=80&w=800&auto=format&fit=crop",
   },
   {
     number: "4",
-    title: "Scheduled Cleaning & Care",
+    title: "Regular Cleaning & Care",
     description:
-      "We provide regular demineralized panel washing and inverter monitoring so your system continues producing at peak capacity.",
+      "We provide regular panel washing and system checkups so your installation continues producing at peak capacity.",
     image:
       "https://images.unsplash.com/photo-1754619880959-2b0528375883?q=80&w=800&auto=format&fit=crop",
   },
@@ -115,31 +115,31 @@ const homeFaqs = [
     id: "roof-space",
     question: "How much rooftop space do I need?",
     answer:
-      "Approximately 80 to 100 sq.ft. of shadow-free terrace space per 1 kWp. A typical 3 kWp home system needs around 250 to 300 sq.ft.",
+      "About 80 to 100 square feet of open terrace space per 1 kW. A typical 3 kW home system needs around 250 to 300 square feet.",
   },
   {
     id: "net-metering",
     question: "How does net metering work?",
     answer:
-      "A bi-directional meter records power drawn from and exported to the grid. Your monthly bill reflects net consumption. Care4Solar manages the entire DISCOM application and meter installation.",
+      "A bi-directional meter records power drawn from and exported to the grid. Your monthly bill reflects net consumption. Care4Solar manages the entire power company application and meter connection.",
   },
   {
     id: "lifespan",
     question: "What is the expected lifespan of a rooftop solar system?",
     answer:
-      "Tier-1 solar panels are engineered for 25 to 30 years of operational life with linear degradation under 0.5% annually. Inverters carry 5 to 10 year warranties, and mounting structures are hot-dip galvanized to withstand outdoor weather.",
+      "Quality solar panels are designed to last 25+ years with a 25-year performance warranty. Inverters carry 5 to 10-year warranties, and structures are rust-proof to withstand outdoor weather.",
   },
   {
     id: "cleaning",
-    question: "Why does panel cleaning require demineralized water?",
+    question: "Why does panel cleaning require purified water?",
     answer:
-      "Tap water contains minerals that evaporate and form a stubborn white film, blocking sunlight and causing cell hotspots. Demineralized water dries completely spot-free, preserving 100% power generation.",
+      "Ordinary tap water contains minerals that dry into white stains on panel glass, blocking sunlight. We use purified water and soft brushes so panels dry spot-free and generate full power.",
   },
   {
     id: "power-cuts",
     question: "Will solar work during power cuts?",
     answer:
-      "Standard grid-tied systems automatically shut down during outages to protect utility line workers. For backup during power cuts, we design hybrid systems with lithium battery storage.",
+      "Standard grid-tied systems shut down during power cuts to keep utility repair workers safe. If you need backup during outages, we can add a lithium battery or connect solar to your backup generator.",
   },
 ];
 
@@ -167,7 +167,7 @@ const testimonials = [
   {
     id: "3",
     quote:
-      "Their monthly demineralized washing routine recovered nearly 18% of generation that we were losing to industrial dust. Highly recommended.",
+      "Their regular purified panel washing recovered nearly 18% of power that we were losing to factory dust. Highly recommended.",
     author: "Karthik N.",
     role: "Operations Manager · 60 kWp Array",
     location: "Peenya Industrial Area",
@@ -362,12 +362,12 @@ export default function HomePage() {
                 Dirty panels lose up to 30% of their power.
               </h2>
               <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
-                In Indian cities, dust and vehicle soot quickly coat solar glass. Washing with regular
-                tap water causes hard mineral scaling that permanently damages the panels.
+                In Indian cities, dust and soot settle quickly on solar glass. Washing with ordinary
+                tap water leaves white mineral stains that can permanently reduce output.
               </p>
               <p className="text-base sm:text-lg text-[#374151] leading-relaxed">
-                Care4Solar provides reverse-osmosis demineralized water washing with soft brushes,
-                recovering lost output and protecting your 25-year investment.
+                Care4Solar cleans panels safely using purified water and soft brushes, restoring
+                lost power and protecting your 25-year investment.
               </p>
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Button href="/operations-maintenance" variant="secondary" size="md" icon="arrow">

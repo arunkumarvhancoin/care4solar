@@ -3,10 +3,23 @@
 import { useState } from "react";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import PageHero from "@/components/sections/PageHero";
 import { companyInfo } from "@/data/company";
-import { MapPin, Phone, Mail, Clock, CheckCircle2, RotateCcw } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  CheckCircle2,
+  RotateCcw,
+  ExternalLink,
+  CalendarCheck,
+  FileSearch,
+  FileSpreadsheet,
+} from "lucide-react";
 
 interface ContactFormData {
   fullName: string;
@@ -35,6 +48,54 @@ const requiredServices = [
   "Inspection",
   "Solar quotation",
   "Other",
+];
+
+const nextSteps = [
+  {
+    num: "1",
+    title: "Quick Call & Bill Review",
+    desc: "Within 24 hours, our team calls to review your electricity bills, discuss your goals, and answer initial questions.",
+    icon: FileSearch,
+  },
+  {
+    num: "2",
+    title: "Free On-Site Roof Visit",
+    desc: "An engineer visits your property to inspect roof layout, measure shadow-free space, and check the electrical connection.",
+    icon: CalendarCheck,
+  },
+  {
+    num: "3",
+    title: "Itemized Solar Proposal",
+    desc: "You get a custom proposal showing recommended system size, equipment specifications, total cost, and estimated payback.",
+    icon: FileSpreadsheet,
+  },
+];
+
+const contactFaqs = [
+  {
+    id: "cf-1",
+    question: "Is the initial rooftop survey really free?",
+    answer:
+      "Yes. Our site survey and electricity bill review are completely free with zero obligation. An engineer visits your roof, evaluates sunlight and space, and answers all your questions.",
+  },
+  {
+    id: "cf-2",
+    question: "What information should I have ready for the call?",
+    answer:
+      "Having your latest electricity bill (or average monthly bill amount) is helpful. It tells us your connected load, tariff rate, and seasonal power usage so we can accurately size your system.",
+  },
+  {
+    id: "cf-3",
+    question: "How quickly can you survey my property?",
+    answer:
+      "For Bengaluru and nearby areas, we typically schedule rooftop visits within 24 to 48 hours of your request, including weekends for residential homeowners.",
+  },
+  {
+    id: "cf-4",
+    question: "Do you also assist with power company approvals?",
+    answer:
+      "Yes. We handle the entire application process, paperwork, and technical coordination with your local power company (such as BESCOM) for net metering.",
+  },
 ];
 
 const initialContactForm: ContactFormData = {
@@ -137,11 +198,11 @@ export default function ContactPage() {
                   Head Office & Advisory
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-semibold text-[#202720]">
-                  Care4Solar Engineering Office
+                  Care4Solar Office
                 </h2>
                 <p className="mt-2 text-base text-[#374151] leading-relaxed">
-                  Our engineers are available for technical assessments, rooftop shadow studies,
-                  and Annual Maintenance Contract evaluations.
+                  Our team is available for rooftop assessments, electricity bill evaluations, and
+                  maintenance planning.
                 </p>
               </div>
 
@@ -209,10 +270,10 @@ export default function ContactPage() {
                   />
                   <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-4 text-white">
                     <span className="text-sm font-semibold block text-[#E5A100]">
-                      Complimentary On-Site Survey
+                      Free On-Site Roof Survey
                     </span>
                     <span className="text-xs sm:text-sm text-white/90 block mt-0.5">
-                      Our engineers evaluate shadow patterns &amp; structural load directly on your roof.
+                      We evaluate sunlight patterns and roof space directly at your property.
                     </span>
                   </div>
                 </div>
@@ -444,6 +505,142 @@ export default function ContactPage() {
                 </form>
               )}
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION — WHAT HAPPENS NEXT */}
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+        <Container>
+          <div className="max-w-2xl mb-8">
+            <SectionHeading
+              title="What happens after you reach out."
+              description="A clear, hassle-free path from your first enquiry to a detailed solar feasibility plan."
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {nextSteps.map((step) => {
+              const StepIcon = step.icon;
+              return (
+                <div
+                  key={step.num}
+                  className="bg-white border border-[#E5E8E3] p-6 sm:p-7 space-y-3.5 flex flex-col justify-between"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="w-8 h-8 rounded-full bg-[#15532E]/10 text-[#15532E] font-mono font-bold text-sm flex items-center justify-center">
+                        {step.num}
+                      </span>
+                      <StepIcon className="w-5 h-5 text-[#15532E]" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-[#202720]">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-[#374151] leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t border-[#E5E8E3] text-xs font-mono uppercase tracking-wider text-[#15532E] font-medium">
+                    Zero Obligation
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION — OFFICE LOCATION & INTERACTIVE MAP */}
+      <section className="py-10 sm:py-14 bg-white border-b border-[#E5E8E3]">
+        <Container>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div className="max-w-2xl">
+              <SectionHeading
+                title="Visit our office."
+                description="We're located on Outer Ring Road, Bengaluru. Drop by for an in-person discussion or site planning session."
+              />
+            </div>
+            <a
+              href="https://maps.google.com/?q=Sector+4+Outer+Ring+Road+Bangalore+Karnataka+560103"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 bg-[#15532E] hover:bg-[#2D9F5A] text-white px-5 py-3 font-semibold text-sm transition-colors shrink-0"
+            >
+              <MapPin className="w-4 h-4" />
+              <span>Get Directions</span>
+              <ExternalLink className="w-3.5 h-3.5 ml-1" />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Map Frame */}
+            <div className="lg:col-span-8 relative min-h-[340px] sm:min-h-[420px] border border-[#E5E8E3] bg-[#F7F7F3] overflow-hidden">
+              <iframe
+                title="Care4Solar Office Location Map"
+                src="https://maps.google.com/maps?q=Sector+4+Outer+Ring+Road+HSR+Layout+Bangalore+Karnataka+560103&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full min-h-[340px] sm:min-h-[420px] border-0"
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
+
+            {/* Quick Visit Details Card */}
+            <div className="lg:col-span-4 bg-[#F7F7F3] border border-[#E5E8E3] p-6 sm:p-7 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <span className="text-xs font-mono uppercase tracking-wider text-[#15532E] font-semibold block">
+                  Location Highlights
+                </span>
+                <h3 className="text-xl font-semibold text-[#202720]">
+                  Care4Solar Bengaluru
+                </h3>
+                <p className="text-sm text-[#374151] leading-relaxed">
+                  Easily accessible via Outer Ring Road connecting Silk Board, HSR Layout, Bellandur, and Sarjapur Road.
+                </p>
+
+                <div className="space-y-3 pt-2 text-sm text-[#202720]">
+                  <div className="flex items-start space-x-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#15532E] shrink-0 mt-0.5" />
+                    <span>Dedicated visitor parking available on premises</span>
+                  </div>
+                  <div className="flex items-start space-x-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#15532E] shrink-0 mt-0.5" />
+                    <span>Working display of solar modules, inverters &amp; mounting clamps</span>
+                  </div>
+                  <div className="flex items-start space-x-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#15532E] shrink-0 mt-0.5" />
+                    <span>In-person 3D shadow modeling consultation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-[#E5E8E3]">
+                <div className="text-xs font-mono text-[#374151] mb-2">
+                  Operating Hours: Mon–Sat, 9:00 AM – 6:30 PM
+                </div>
+                <a
+                  href={`tel:${companyInfo.phone}`}
+                  className="text-sm font-semibold text-[#15532E] hover:underline inline-flex items-center space-x-1.5"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call before you visit: {companyInfo.phone}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SECTION — CONTACT & CONSULTATION FAQS */}
+      <section className="py-10 sm:py-14 bg-[#F7F7F3] border-b border-[#E5E8E3]">
+        <Container>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <SectionHeading
+              title="Frequently asked questions."
+              description="Quick answers about our site visits, quotation process, and timeline."
+              align="center"
+            />
+            <Accordion items={contactFaqs} />
           </div>
         </Container>
       </section>
